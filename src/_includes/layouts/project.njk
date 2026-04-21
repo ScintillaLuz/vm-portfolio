@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+<article class="case-study">
+  <header class="case-study__header">
+    <h1>{{ title }}</h1>
+    {% if date %}<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% endif %}
+    {% if description %}<p class="case-study__description">{{ description }}</p>{% endif %}
+  </header>
+
+  <div class="case-study__body">
+    {{ content | safe }}
+  </div>
+</article>

@@ -1,0 +1,16 @@
+---
+layout: base
+title: Projects
+---
+
+<section>
+  <h1>Projects</h1>
+  <ul>
+    {% for project in collections.projects %}
+      <li>
+        <a href="{{ project.url }}">{{ project.data.title }}</a>
+        {% if project.data.description %}<p>{{ project.data.description }}</p>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
