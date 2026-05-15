@@ -1,32 +1,93 @@
 ---
-layout: base
+layout: layouts/base.njk
 title: Home
 ---
 
-<section class="intro">
-  <h1>Valentina Montagna</h1>
-  <p><!-- tagline or short intro goes here --></p>
-</section>
+<div class="layout">
 
-<section class="featured-projects">
-  <h2>Selected Projects</h2>
-  <ul>
-    {% for project in collections.projects | reverse %}
-      <li>
-        <a href="{{ project.url }}">{{ project.data.title }}</a>
-        {% if project.data.description %}<p>{{ project.data.description }}</p>{% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+  <main>
 
-<section class="recent-writing">
-  <h2>Writing</h2>
-  <ul>
-    {% for post in collections.writing | reverse %}
-      <li>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+    <section class="hero">
+      <div class="text-container">
+        <h1>Hello!</h1>
+        <p>My name is Valentina Montagna. I'm a Senior Product Designer with over twelve years of experience in the digital space and a deep commitment for connecting product strategy with design execution.</p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Design work</h2>
+
+      {% for project in collections.projects %}
+      <article class="project-card">
+
+        <header class="project-meta">
+          <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
+          <span class="company">{{ project.data.company }}</span>
+        </header>
+
+        <h3 class="project-title">
+          {% if project.data.case_study %}
+            <a href="{{ project.url }}">{{ project.data.title }}</a>
+          {% else %}
+            {{ project.data.title }}
+          {% endif %}
+        </h3>
+
+        <p class="project-blurb">{{ project.data.blurb }}</p>
+
+        <div class="project-gallery">
+          <figure class="gallery-main">
+            {% set firstImage = project.data.preview_images[0] if project.data.preview_images else project.data.images[0] %}
+            <img src="{{ firstImage }}" alt="{{ project.data.title }} preview">
+          </figure>
+          <ul class="gallery-thumbs" role="list">
+            {% set galleryImages = project.data.preview_images if project.data.preview_images else project.data.images %}
+            {% for image in galleryImages %}
+            <li>
+              <button class="thumb-btn" data-src="{{ image }}" aria-label="View image {{ loop.index }}">
+                <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}">
+              </button>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <ul class="project-tags" role="list">
+          {% for tag in project.data.tags %}
+          <li><a class="tag">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+
+      </article>
+      {% endfor %}
+
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-icons">
+      <button class="icon-btn" aria-label="Icon one">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect width="48" height="48" rx="4" fill="currentColor" opacity="0.1"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Icon two">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect width="48" height="48" rx="4" fill="currentColor" opacity="0.1"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Icon three">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect width="48" height="48" rx="4" fill="currentColor" opacity="0.1"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Icon four">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect width="48" height="48" rx="4" fill="currentColor" opacity="0.1"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+</div>

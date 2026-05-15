@@ -1,0 +1,168 @@
+
+@layer reset, theme, base, components;
+
+/* Reset */
+
+@layer reset {
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      hanging-punctuation: first allow-end last;
+      word-break: break-word;
+      line-height: 1.5;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      min-block-size: 100%;
+    }
+
+    img, picture, iframe, video, audio, canvas {
+      display: block;
+      max-inline-size: 100%;
+      block-size: auto;
+    }
+
+    iframe {
+	    border: none;
+    }
+
+    svg {
+      max-inline-size: 100%;
+    }
+
+    svg:not([fill]) {
+	    fill: currentColor;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+      margin-block-start: 0;
+    }
+
+    p, li, dd {
+      text-wrap: pretty;
+    }
+
+    ul, ol, dl {
+      margin: 0;
+      padding: 0;
+      list-style-position: inside;
+        ul,
+        ol,
+        dl {
+          padding-inline-start: 2ch;
+        }
+    }
+
+    input, button, textarea, select {
+	    font: inherit;
+    }
+
+    :target {
+      scroll-margin: 3rlh;
+    }
+
+    :focus-visible {
+	    outline-offset: 0.2rem;
+    }
+
+  }
+
+
+@layer theme {
+  /* Light theme variables */
+  :root {
+    --color-primary300: #C0BEF3;
+    --color-primary600: #413CDC;
+    --color-primary800: #1F1B98;
+    --color-primary1000: #040416;
+    --color-light100: #FFFCFA;
+    --color-light200: #FEF6F2;
+    --color-grey100: #F1F2F6;
+    --base-unit: 4px; 
+  }
+  
+  /* Dark theme variables */
+  :root[data-theme="dark"] {
+
+  }
+
+}
+
+@layer base {
+
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    background-color: var(--color-light100);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: var(--color-primary1000);
+  }
+  
+  h1 {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 
+  }
+  
+  a {
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-primary600);
+    text-decoration: underline;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid var(--color-primary600);
+    background: var(--color-light100);
+    box-shadow: 4px 4px 0 0 var(--color-primary300);
+  }
+}
+
+
+
+/* ============================================
+   Layout
+   ============================================ */
+
+.site-wrapper {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+/* ============================================
+   Footer
+   ============================================ */
+
+/* ============================================
+   Homepage
+   ============================================ */
+
+/* ============================================
+   Project / Post pages
+   ============================================ */

@@ -19,9 +19,9 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("src/projects/*.md").reverse()
   );
 
-  // Writing collection — all markdown in src/writing/
-  eleventyConfig.addCollection("writing", (api) =>
-    api.getFilteredByGlob("src/writing/*.md").reverse()
+  // Design notes collection — all markdown in src/design-notes/
+  eleventyConfig.addCollection("designNotes", (api) =>
+    api.getFilteredByGlob("src/design-notes/*.md").reverse()
   );
 
   return {
