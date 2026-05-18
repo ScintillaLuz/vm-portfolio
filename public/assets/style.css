@@ -1,5 +1,5 @@
 
-@layer reset, theme, base, components;
+@layer reset, theme, base, layout,components;
 
 /* Reset */
 
@@ -91,7 +91,17 @@
     --color-light100: #FFFCFA;
     --color-light200: #FEF6F2;
     --color-grey100: #F1F2F6;
-    --base-unit: 4px; 
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
   }
   
   /* Dark theme variables */
@@ -113,7 +123,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.6rem;
     color: var(--color-primary1000);
   }
   
@@ -121,7 +131,6 @@
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 
   }
   
   a {
@@ -131,38 +140,158 @@
     text-decoration: underline;
   }
   
-  button {
+/*   button {
     border-radius: 8px;
     border: 1px solid var(--color-primary600);
     background: var(--color-light100);
     box-shadow: 4px 4px 0 0 var(--color-primary300);
+  } */
+}
+
+/* Layout */
+
+@layer layout {
+
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* creating 12 cols */
+    gap: var(--space-4);
+    align-items: start;
+    max-width: 1200px;
   }
+
+  main {
+    grid-column: 1 / 9;
+  }
+
+  .sidebar {
+    grid-column: 9 / 13;
+  }
+
+  .site-wrapper {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: var(--space-10); /* 40px each side */
+  }
+
+  /* Header */
+
+  header {
+    position: sticky;
+    top: 0;
+    height: 90px;
+    z-index: 100;
+    background-color: var(--color-light100);
+    display: flex;
+    align-items: center;
+  }
+
+  header ul, header ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header li {
+    display: inline-block;
+  }
+
+  .hero, .projects {
+    padding-inline-start: var(--space-6);
+    padding-inline-end: var(--space-20);    
+  }
+
+  .sidebar-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
+  }
+
+  .icon-btn {
+    aspect-ratio: 1;
+    width: 100%;
+    background: var(--color-grey100);
+    border: none;
+    border-radius: var(--space-1);
+    padding: var(--space-2);
+    cursor: pointer;
+  }
+
+  .gallery-main img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--space-1);
+  }
+
+  .gallery-thumbs {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-2);
+    margin-block-start: var(--space-2);
+    list-style: none;
+  }
+
+  .gallery-thumbs li {
+    flex: 1;
+  }
+
+  .gallery-thumbs img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--space-1);
+    display: block;
+  }
+
+  .thumb-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: var(--space-1);
+    background: none;
+    cursor: pointer;
+  }
+
+  .thumb-btn.is-active {
+    border-color: var(--color-primary600);
+  }
+
+  @media (max-width: 1024px) {
+    .site-wrapper {
+      padding-inline: var(--space-10);
+    }
+
+    main {
+      grid-column: 1 / 10;
+    }
+    .sidebar {
+      grid-column: 10 / 13;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .site-wrapper {
+      padding-inline: var(--space-5); /* 20px */
+    }
+
+    main {
+      grid-column: 1 / -1; /* full width, -1 means last line */
+    }
+    .sidebar {
+      display: none;
+    }
+  }
+
 }
 
 
+/* Navigation */
 
-/* ============================================
-   Layout
-   ============================================ */
+/* Footer */
 
-.site-wrapper {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+/* Homepage */
 
-/* ============================================
-   Navigation
-   ============================================ */
 
-/* ============================================
-   Footer
-   ============================================ */
-
-/* ============================================
-   Homepage
-   ============================================ */
-
-/* ============================================
-   Project / Post pages
-   ============================================ */
+/* Project / Post pages */
