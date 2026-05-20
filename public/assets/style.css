@@ -140,12 +140,15 @@
     text-decoration: underline;
   }
   
-/*   button {
+  .primary-btn {
     border-radius: 8px;
     border: 1px solid var(--color-primary600);
     background: var(--color-light100);
-    box-shadow: 4px 4px 0 0 var(--color-primary300);
-  } */
+    color: var(--color-primary600);
+    padding: var(--space-2) var(--space-4);
+    font-weight: 500;
+    font-style: normal;
+  }
 }
 
 /* Layout */
@@ -174,27 +177,78 @@
     padding-inline: var(--space-10); /* 40px each side */
   }
 
-  /* Header */
+  /* ======== Header ======== */
 
-  header {
+  .page-header {
     position: sticky;
     top: 0;
     height: 90px;
     z-index: 100;
     background-color: var(--color-light100);
     display: flex;
-    align-items: center;
+    font-size: 0.875rem; /* 14px */
   }
 
-  header ul, header ol {
+  .page-header a {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--space-10);
+  }
+
+  .navigation-logo .vm-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .navigation-logo .vm-logo svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navigation-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .navigation-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
-  header li {
-    display: inline-block;
+
+  /* Mobile menu button is hidden by default and shown on smaller screens */
+  .mobile-menu-btn {
+    display: none;
   }
+
+  /* Adding scroll effect to header */
+  .page-header {
+    border-block-end: 1px solid transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .page-header.is-scrolled {
+    border-block-end-color: #E4E4E4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+
+  
+  /* Hero section */
 
   .hero, .projects {
     padding-inline-start: var(--space-6);
@@ -281,6 +335,16 @@
     }
     .sidebar {
       display: none;
+    }
+
+    /* Hiding the navigation links and showing the mobile menu button */
+
+    .main-navigation .navigation-menu {
+      display: none;
+    }
+
+    .main-navigation .mobile-menu-btn {
+      display: block;
     }
   }
 
