@@ -9,10 +9,12 @@ tags:
   - Systems
   - Print
 images:
-  - /assets/projects/sample/full1.webp
-  - /assets/projects/sample/full2.webp
+  - /projects/rockin1000-brand/full1.webp
+  - /projects/rockin1000-brand/full2.webp
+  - /projects/rockin1000-brand/full3.webp
 preview_images:
-  - /assets/projects/sample/thumb1.webp
-  - /assets/projects/sample/thumb2.webp
+  - /projects/rockin1000-brand/thumb1.webp
+  - /projects/rockin1000-brand/thumb2.webp
+  - /projects/rockin1000-brand/thumb3.webp
 layout: project.njk
 ---

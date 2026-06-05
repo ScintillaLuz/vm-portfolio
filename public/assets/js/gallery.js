@@ -1,6 +1,6 @@
 document.querySelectorAll('.project-gallery').forEach(gallery => {
   const mainImg = gallery.querySelector('.gallery-main img');
-  const thumbBtns = gallery.querySelectorAll('.thumb-btn');
+  const thumbBtns = gallery.querySelectorAll('.thumb-button');
 
   thumbBtns.forEach(btn => {
     btn.addEventListener('click', () => {
