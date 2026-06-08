@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Home
+has_sidebar: true
 ---
 
 <div class="layout">
@@ -16,56 +17,6 @@ title: Home
         <p class="intro-text">In my spare time, I am a voracious reader and a maker, filling up sketchbooks with drawings and lettering, experimenting with printmaking, and playing with frontend development. Finally, designers who code are cool again ♥ </p>
         <p class="intro-text">I am currently freelancing.</p>
       </div>
-    </section>
-
-    <section class="projects">
-      <h2 class="section-title">Design work</h2>
-      <hr class="section-separator">
-
-      {% for project in collections.projects %}
-      <article class="project-card">
-
-        <header class="project-meta">
-          <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
-          <span class="company">{{ project.data.company }}</span>
-        </header>
-
-        <h3 class="project-title">
-          {% if project.data.case_study %}
-            <a href="{{ project.url }}">{{ project.data.title }}</a>
-          {% else %}
-            {{ project.data.title }}
-          {% endif %}
-        </h3>
-
-        <p class="project-blurb">{{ project.data.blurb }}</p>
-
-        <div class="project-gallery">
-          <figure class="gallery-main">
-            {% set firstImage = project.data.preview_images[0] if project.data.preview_images else project.data.images[0] %}
-            <img src="{{ firstImage }}" alt="{{ project.data.title }} preview">
-          </figure>
-          <ul class="gallery-thumbs" role="list">
-            {% set galleryImages = project.data.preview_images if project.data.preview_images else project.data.images %}
-            {% for image in galleryImages %}
-            <li>
-              <button class="thumb-button" data-src="{{ image }}" aria-label="View image {{ loop.index }}">
-                <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}">
-              </button>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <ul class="project-tags" role="list">
-          {% for tag in project.data.tags %}
-          <li><a class="tag">{{ tag }}</a></li>
-          {% endfor %}
-        </ul>
-
-      </article>
-      {% endfor %}
-
     </section>
 
   </main>
@@ -88,3 +39,60 @@ title: Home
   </aside>
 
 </div>
+
+<section class="projects">
+  <hr class="section-separator">
+  <h2 class="section-title">Design work</h2>
+
+  {% for project in collections.projects %}
+  <article class="project-card">
+
+    <div class="project-content">
+
+      <div class="project-meta">
+        <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
+        <span class="company">{{ project.data.company }}</span>
+      </div>
+
+      <h3 class="project-title">
+        {% if project.data.case_study %}
+          <a href="{{ project.url }}">{{ project.data.title }}</a>
+        {% else %}
+          {{ project.data.title }}
+        {% endif %}
+      </h3>
+
+      <p class="project-blurb">{{ project.data.blurb }}</p>
+
+      <div class="project-gallery">
+        <figure class="gallery-main">
+          {% set firstImage = project.data.preview_images[0] if project.data.preview_images else project.data.images[0] %}
+          <img src="{{ firstImage }}" alt="{{ project.data.title }} preview">
+        </figure>
+        <ul class="gallery-thumbs" role="list">
+          {% set galleryImages = project.data.preview_images if project.data.preview_images else project.data.images %}
+          {% for image in galleryImages %}
+          <li>
+            <button class="thumb-button" data-src="{{ image }}" aria-label="View image {{ loop.index }}">
+              <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}">
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+
+    <ul class="project-tags" role="list">
+      <li>Categories</li>
+      {% if project.data.tags %}
+      {% for tag in project.data.tags %}
+      <li><a class="tag" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+      {% endfor %}
+      {% endif %}
+    </ul>
+
+  </article>
+  {% endfor %}
+
+</section>

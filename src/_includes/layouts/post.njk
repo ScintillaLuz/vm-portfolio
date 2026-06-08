@@ -1,5 +1,6 @@
 ---
 layout: base
+has_sidebar: true
 ---
 
 <article class="post">
@@ -9,7 +10,9 @@ layout: base
     {% if description %}<p class="post__description">{{ description }}</p>{% endif %}
   </header>
 
-  <div class="post__body">
-    {{ content | safe }}
+  <div class="post__layout">
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
   </div>
 </article>

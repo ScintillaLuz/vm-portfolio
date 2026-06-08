@@ -9,15 +9,15 @@ tags:
   - Research
   - Navigation
 images:
-  - /projects/sample-project/full1.webp
-  - /projects/sample-project/full2.webp
-  - /projects/sample-project/full3.webp
-  - /projects/sample-project/full4.webp
+  - /assets/projects/sample-project/full1.webp
+  - /assets/projects/sample-project/full2.webp
+  - /assets/projects/sample-project/full3.webp
+  - /assets/projects/sample-project/full4.webp
 preview_images:
-  - /projects/sample-project/thumb1.webp
-  - /projects/sample-project/thumb2.webp
-  - /projects/sample-project/thumb3.webp
-  - /projects/sample-project/thumb4.webp
+  - /assets/projects/sample-project/thumb1.webp
+  - /assets/projects/sample-project/thumb2.webp
+  - /assets/projects/sample-project/thumb3.webp
+  - /assets/projects/sample-project/thumb4.webp
 layout: project.njk
 ---
 

@@ -1,5 +1,6 @@
 ---
 layout: base
+has_sidebar: true
 ---
 
 <article class="case-study">
@@ -9,7 +10,9 @@ layout: base
     {% if description %}<p class="case-study__description">{{ description }}</p>{% endif %}
   </header>
 
-  <div class="case-study__body">
-    {{ content | safe }}
+  <div class="case-study__layout"> 
+    <div class="case-study__body">
+      {{ content | safe }}
+    </div>
   </div>
 </article>
