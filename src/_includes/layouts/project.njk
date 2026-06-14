@@ -3,16 +3,25 @@ layout: base
 has_sidebar: true
 ---
 
-<article class="case-study">
-  <header class="case-study__header">
+<div class="grid-layout">
+  <article class="main-content case-study">
     <h1>{{ title }}</h1>
-    {% if date %}<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% endif %}
-    {% if description %}<p class="case-study__description">{{ description }}</p>{% endif %}
-  </header>
-
-  <div class="case-study__layout"> 
-    <div class="case-study__body">
-      {{ content | safe }}
+    <div class="project-meta">
+      <time datetime="{{ date }}">{{ date }}</time>
+      <span class="company">{{ company }}</span>
     </div>
-  </div>
-</article>
+    {{ content | safe }}
+  </article>
+
+  <nav class="sidebar case-study-toc" aria-label="Table of contents">
+    <h3>Contents</h3>
+    <ul>
+      {% set headings = content | toc %}
+      {% for heading in headings %}
+      <li>
+        <a href="#{{ heading.id }}">{{ heading.text }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

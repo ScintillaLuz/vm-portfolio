@@ -1,3 +1,6 @@
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownIt = require("markdown-it");
+
 module.exports = function (eleventyConfig) {
   // Date filters used in project and post layouts
   eleventyConfig.addFilter("htmlDateString", (date) =>
@@ -24,6 +27,28 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("src/design-notes/*.md").reverse()
   );
 
+  const mdOptions = {
+    html: true,
+  };
+
+  const mdAnchorOptions = {
+    permalink: false,
+    slugify: s => s.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, ''),
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(mdOptions).use(markdownItAnchor, mdAnchorOptions));
+
+  // Collecting the H2 for the sidebar index
+  eleventyConfig.addFilter("toc", (content) => {
+    const headings = [];
+    const regex = /<h2[^>]*id="([^"]*)"[^>]*>(.*?)<\/h2>/gi;
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      headings.push({ id: match[1], text: match[2] });
+    }
+    return headings;
+  });
+
   return {
     dir: {
       input: "src",
@@ -35,4 +60,7 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };
+
 };
+
+

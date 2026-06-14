@@ -1,5 +1,6 @@
 ---
 title: Rockin'1000 brand identity system
+short_title: Rockin' stuff
 date: 2023-09
 company: Rockin'1000
 blurb: Developed a cohesive brand identity system for the world's largest rock band, balancing the energy of a mass participation event with the need for a scalable visual language across digital and physical touchpoints.
