@@ -1,4 +1,4 @@
-document.querySelectorAll('.project-gallery').forEach(gallery => {
+document.querySelectorAll('.project-card-gallery').forEach(gallery => {
   const mainImg = gallery.querySelector('.gallery-main img');
   const thumbBtns = gallery.querySelectorAll('.thumb-button');
 

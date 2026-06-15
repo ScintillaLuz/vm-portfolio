@@ -198,7 +198,7 @@
 
   h1 {
     font-size: var(--font-size-72);
-    line-height: 1.2em;
+    line-height: 1.25em;
     font-weight: 900;
   }
 
@@ -234,18 +234,33 @@
 
 @layer layout {
 
-  .grid-layout,
-  .post__layout,
-  .case-study__layout {
+  /* Sticky footer */
+  body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-wrapper {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-wrapper > main {
+    flex: 1;
+  }
+
+  .grid-layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr); /* creating 12 cols */
     gap: var(--space-4);
     align-items: start;
   }
 
-  .main-content,
-  .post__body,
-  .case-study__body {
+  .main-content {
     grid-column: 1 / 9;
   }
 
@@ -260,9 +275,10 @@
     padding-inline: var(--space-10);  /* 40px each side */
   }
 
-  /* Centering column on pages without sidebar */
+  /* Left-aligned column on pages without sidebar */
   .page-content {
     max-width: 795px;
+    margin-inline-start: 0;
   }
 
 
@@ -416,19 +432,19 @@
     line-height: 1.2em;
   }
 
-  .projects .project-meta {
+  .projects .project-card-meta {
     font-size: var(--font-size-14);
     font-weight: 600;
     margin-block-end: var(--space-2);
   }
 
-  .projects .project-title {
-    font-size: var(--font-size-32);
+  .projects .project-card-title {
+    font-size: var(--font-size-28);
     line-height: 1.5em;
-    margin-block-end: var(--space-4);
+    margin-block-end: var(--space-2);
   }
 
-  .projects .project-blurb {
+  .projects .project-card-blurb {
     margin-block-end: var(--space-5);
   }
 
@@ -439,7 +455,7 @@
     margin-block-end: var(--space-16);
   }
 
-  .project-card .project-blurb {
+  .project-card .project-card-blurb {
     font-size: var(--font-size-20);
   }
 
@@ -457,7 +473,7 @@
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: var(--space-4);
+    border-radius: var(--space-2);
   }
 
   .gallery-thumbs {
@@ -469,15 +485,15 @@
   }
 
   .gallery-thumbs li {
-    flex: 0 0 calc((100% - 3 * var(--space-2)) / 4);
-    border-radius: var(--space-3);
+    flex: 0 0 calc((100% - 6 * var(--space-2)) / 4);
+    border-radius: var(--space-2);
   }
 
   .gallery-thumbs img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: var(--space-3);
+    border-radius: var(--space-2);
     display: block;
   }
 
@@ -486,7 +502,7 @@
     width: 100%;
     padding: 0;
     border: 2px solid transparent;
-    border-radius: calc(var(--space-3) + 2px);
+    border-radius: calc(var(--space-2) + 2px);
     background: none;
     cursor: pointer;
     transition: border-color 0.08s ease-out;
@@ -502,7 +518,7 @@
 
   /**** Tags ****/
 
-    .project-tags {
+    .project-card-tags {
       list-style: none;
       font-size: var(--font-size-14);
       font-weight: 600;
@@ -510,23 +526,23 @@
       margin-block-start: var(--space-8);
     }
 
-    .project-tags .tags-label::after {
+    .project-card-tags .tags-label::after {
       content: ":";
     }
-    
-    .project-tags li {
+
+    .project-card-tags li {
       display: inline-block;
     }
-    
-    .project-tags li a {
+
+    .project-card-tags li a {
       text-transform: lowercase;
     }
 
-    .project-tags li:not(:last-child) {
+    .project-card-tags li:not(:last-child) {
       margin-right: var(--space-2);
     }
 
-    .project-tags li a::before {
+    .project-card-tags li a::before {
       content: "#";
     }
 
@@ -574,52 +590,108 @@
   }
 
 
-  /**** Posts and case-studies ****/
+  /**** Project detail and Note detail styling ****/
 
-  .case-study h1 {
+  .project-detail-title,
+  .note-detail-title {
     margin-block-end: var(--space-6);
   }
 
-  .case-study .project-meta {
+  .project-detail-meta,
+  .note-detail-meta {
+    font-size: var(--font-size-14);
+    font-weight: 600;
     margin-block-end: var(--space-12);
   }
+  
+  .project-detail h2:first-of-type,
+  .note-detail h2:first-of-type,
+  .page-content h2:first-of-type {
+    margin-block-start: 0;
+  }
 
-  .case-study h2 {
-    font-size: var(--font-size-24);
+  .project-detail h2,
+  .note-detail h2,
+  .page-content h2 {
+    font-size: var(--font-size-28);
+    margin-block-start: var(--space-10);
     margin-block-end: var(--space-2);
   }
-
-  .case-study h2:not(:first-child) {
-    margin-block-start: var(--space-12);
+  
+  .note-detail-meta .note-detail-description {
+    margin-block-start: var(--space-3);
+    font-size: var(--font-size-24);
+    font-weight: 700;
   }
-
-  .case-study p {
-    margin-block-end: var(--space-4);
+  
+  .note-detail-meta time {
+    margin-block-end: var(--space-10);
+  }
+  
+  .project-detail p,
+  .note-detail p,
+  .page-content p {
+    margin-block-end: var(--space-6);
     font-size: var(--font-size-20);
   }
+  
+  .project-detail p:last-of-type,
+  .note-detail p:last-of-type,
+  .page-content p:last-of-type {
+    margin-block-end: var(--space-16);
+  }
 
-  /* Sticky TOC */
-  .case-study-toc {
+  /* Sticky TOC for project detail page */
+  .project-toc {
     position: sticky;
     top: calc(90px + var(--space-6));  /* header height + breathing room */
     margin-left: var(--space-16);
-    margin-block-start: var(--space-12);
+    margin-block-start: var(--space-4);
   }
-  
-  .case-study-toc h3 {
+
+  .project-toc h3 {
     margin-block-end: var(--space-2);
     font-size: var(--font-size-14);
   }
-  
-  .case-study-toc ul {
+
+  .project-toc ul {
     list-style: none;
     font-size: var(--font-size-14);
   }
 
-  .case-study-toc ul li:not(:last-child) {
+  .project-toc ul li:not(:last-child) {
     margin-block-end: var(--space-2);
   }
   
+  /**** Styling internal pages: About, Other Projects, Contact ****/
+
+  .page-content h1,
+  .design-notes h1 {
+    margin-block-end: var(--space-12);
+  }
+
+  .design-notes .note-card h2 {
+    margin-block-end: var(--space-2);
+  }
+
+  .page-content h2 {
+    font-size: var(--font-size-28);
+    margin-block-end: var(--space-4);
+  }
+
+  .note-card {
+    margin-block-end: var(--space-12);
+  }
+
+  .note-card:last-of-type {
+    margin-block-end: var(--space-16);
+  }
+
+  .page-content p,
+  .design-notes .note-card p {
+    font-size: var(--font-size-20);
+    margin-block-end: var(--space-4);
+  }
 
   /**** Layout changes for tablet and below ****/
 
@@ -667,7 +739,7 @@
       grid-template-columns: 1fr;
     }
 
-    .project-tags {
+    .project-card-tags {
       grid-column: 1 / -1;
       order: -1;
     }
@@ -745,10 +817,6 @@
 
     .project-index {
       display: none;  /* Hiding the projects index sidebar */
-    }
-
-    .projects .project-title {
-      font-size: var(--font-size-24);
     }
 
   }

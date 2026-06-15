@@ -3,14 +3,14 @@ layout: base
 has_sidebar: true
 ---
 
-<h1 class="project-detail-title">{{ title }}</h1>
-<div class="project-detail-meta">
-  <time datetime="{{ date }}">{{ date }}</time>
-  <span class="company">{{ company }}</span>
-</div>
+<h1 class="note-detail-title">{{ title }}</h1>
 
 <div class="grid-layout">
-  <article class="main-content project-detail">
+  <article class="main-content note-detail">
+    <div class="note-detail-meta">
+      {% if date %}<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% endif %}
+      {% if description %}<p class="note-detail-description">{{ description }}</p>{% endif %}
+    </div>
     {{ content | safe }}
   </article>
 

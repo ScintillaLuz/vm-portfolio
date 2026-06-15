@@ -6,7 +6,7 @@ has_sidebar: true
 
 <div class="grid-layout">
 
-  <main class="main-content">
+  <div class="main-content">
 
     <section class="hero">
       <div class="introduction">
@@ -19,7 +19,7 @@ has_sidebar: true
       </div>
     </section>
 
-  </main>
+  </div>
 
   <aside class="sidebar">
     <div class="sidebar-icons">
@@ -48,20 +48,20 @@ has_sidebar: true
     <div class="main-content"> 
       {% for project in collections.projects %}
         <article class="project-card">
-          <div class="project-content">
-            <div class="project-meta">
+          <div class="project-card-content">
+            <div class="project-card-meta">
               <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
               <span class="company">{{ project.data.company }}</span>
             </div>
-            <h3 class="project-title">
+            <h3 class="project-card-title">
               {% if project.data.case_study %}
                 <a href="{{ project.url }}">{{ project.data.title }}</a>
               {% else %}
                 {{ project.data.title }}
               {% endif %}
             </h3>
-          <p class="project-blurb">{{ project.data.blurb }}</p>
-          <div class="project-gallery">
+          <p class="project-card-blurb">{{ project.data.blurb }}</p>
+          <div class="project-card-gallery">
             <figure class="gallery-main">
               {% set firstImage = project.data.preview_images[0] if project.data.preview_images else project.data.images[0] %}
               <img src="{{ firstImage }}" alt="{{ project.data.title }} preview">
@@ -77,7 +77,7 @@ has_sidebar: true
               {% endfor %}
             </ul>
           </div>
-          <ul class="project-tags" role="list">
+          <ul class="project-card-tags" role="list">
             <li class="tags-label">Categories</li>
             {% if project.data.tags %}
             {% for tag in project.data.tags %}

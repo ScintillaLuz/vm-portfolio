@@ -4,14 +4,32 @@ title: Design Notes
 has_sidebar: true
 ---
 
-<section>
+<section class="design-notes">
   <h1>Design Notes</h1>
-  <ul>
+  <div class="grid-layout">
+
+  <div class="main-content">
     {% for post in collections.designNotes %}
-      <li>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <article class="note-card">
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
         {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
-      </li>
+      </article>
     {% endfor %}
-  </ul>
+  </div>
+
+    <nav class="sidebar project-index" aria-label="Notes index">
+      <h3>Notes index</h3>
+      <ul>
+        {% for post in collections.designNotes %}
+          <li>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+          </li>
+        {% endfor %}
+        <li class="back-to-top">
+          <a href="#top" class="primary-button">Top ↑</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
 </section>
