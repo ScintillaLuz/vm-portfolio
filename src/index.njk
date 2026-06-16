@@ -11,10 +11,20 @@ has_sidebar: true
     <section class="hero">
       <div class="introduction">
         <h1>Hello!</h1>
-        <p class="lede">My name is Valentina Montagna, I’m a Principal Product Designer with over 14 years of experience in the digital space and a deep commitment for connecting product strategy with design execution.</p>
-        <p class="intro-text">Born and raised in Italy, I took my career through the UK and Berlin before landing in Silicon Valley, where I worked as a Senior Growth Designer on consumer apps like <a href="https://bandcamp.com/" target="_blank">Bandcamp</a>, <a href="https://evernote.com/" target="_blank">Evernote</a>, <a href="https://www.everand.com/" target="_blank">Everand</a>, and <a href="https://www.masterclass.com/" target="_blank">MasterClass</a>. </p>
-        <p class="intro-text">To a team, I bring craft prowess and a systemic mindset I stubbornly stick to. Working on digital products means I get to combine my art and graphic design background with a data-informed mindset. I take a lean approach to problem-solving, and love finding an artful way to put an idea to the test. I believe better interfaces result from better product decisions. That’s what turns design into a strategic force.</p>
-        <p class="intro-text">In my spare time, I am a voracious reader and a maker, filling up sketchbooks with drawings and lettering, experimenting with printmaking, and playing with frontend development. Finally, designers who code are cool again ♥ </p>
+        <p class="lede">My name is Valentina Montagna, I’m a Principal Product Designer with over 14 years of experience
+          in the digital space and a deep commitment for connecting product strategy with design execution.</p>
+        <p class="intro-text">Born and raised in Italy, I took my career through the UK and Berlin before landing in
+          Silicon Valley, where I worked as a Senior Growth Designer on consumer apps like <a
+            href="https://bandcamp.com/" target="_blank">Bandcamp</a>, <a href="https://evernote.com/"
+            target="_blank">Evernote</a>, <a href="https://www.everand.com/" target="_blank">Everand</a>, and <a
+            href="https://www.masterclass.com/" target="_blank">MasterClass</a>. </p>
+        <p class="intro-text">To a team, I bring craft prowess and a systemic mindset I stubbornly stick to. Working on
+          digital products means I get to combine my art and graphic design background with a data-informed mindset. I
+          take a lean approach to problem-solving, and love finding an artful way to put an idea to the test. I believe
+          better interfaces result from better product decisions. That’s what turns design into a strategic force.</p>
+        <p class="intro-text">In my spare time, I am a voracious reader and a maker, filling up sketchbooks with
+          drawings and lettering, experimenting with printmaking, and playing with frontend development. Finally,
+          designers who code are cool again ♥ </p>
         <p class="intro-text">I am currently freelancing.</p>
       </div>
     </section>
@@ -23,16 +33,16 @@ has_sidebar: true
 
   <aside class="sidebar">
     <div class="sidebar-icons">
-      <button class="icon-button" aria-label="Toggle theme">
+      <button class="icon-button" aria-label="Toggle on dark mode">
         <img src="/assets/icons/switch_light.svg" alt="" width="112" height="112">
       </button>
-      <button class="icon-button" aria-label="Change color">
+      <button class="icon-button" aria-label="Change color theme">
         <img src="/assets/icons/pencils_light.svg" alt="" width="112" height="112">
       </button>
-      <button class="icon-button" aria-label="Save">
+      <button class="icon-button" aria-label="Download resume PDF">
         <img src="/assets/icons/floppy_light.svg" alt="" width="112" height="112">
       </button>
-      <button class="icon-button" aria-label="Cursor">
+      <button class="icon-button" aria-label="Change to old school theme">
         <img src="/assets/icons/mouse_light.svg" alt="" width="112" height="112">
       </button>
     </div>
@@ -41,69 +51,70 @@ has_sidebar: true
 </div>
 
 <section class="projects">
-  <hr class="section-separator">
   <h2 class="section-title">Design work</h2>
 
   <div class="grid-layout">
-    <div class="main-content"> 
+    <div class="main-content">
       {% for project in collections.projects %}
-        <article class="project-card">
-          <div class="project-card-content">
-            <div class="project-card-meta">
-              <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
-              <span class="company">{{ project.data.company }}</span>
-            </div>
-            <h3 class="project-card-title">
-              {% if project.data.case_study %}
-                <a href="{{ project.url }}">{{ project.data.title }}</a>
-              {% else %}
-                {{ project.data.title }}
-              {% endif %}
-            </h3>
+      <article class="project-card" id="{{ project.data.title | slugify }}">
+        <div class="project-card-content">
+          <div class="project-card-meta">
+            <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
+            <span class="company">{{ project.data.company }}</span>
+          </div>
+          <h3 class="project-card-title">
+            {% if project.data.case_study %}
+            <a href="{{ project.url }}">{{ project.data.title }}</a>
+            {% else %}
+            {{ project.data.title }}
+            {% endif %}
+          </h3>
           <p class="project-card-blurb">{{ project.data.blurb }}</p>
           <div class="project-card-gallery">
-            <figure class="gallery-main">
-              {% set firstImage = project.data.preview_images[0] if project.data.preview_images else project.data.images[0] %}
+            <figure class="gallery-main" aria-live="polite">
+              {% set firstImage = project.data.preview_images[0] if project.data.preview_images else
+              project.data.images[0] %}
               <img src="{{ firstImage }}" alt="{{ project.data.title }} preview">
             </figure>
             <ul class="gallery-thumbs" role="list">
-              {% set galleryImages = project.data.preview_images if project.data.preview_images else project.data.images %}
+              {% set galleryImages = project.data.preview_images if project.data.preview_images else project.data.images
+              %}
               {% for image in galleryImages %}
               <li>
-                <button class="thumb-button" data-src="{{ image }}" aria-label="View image {{ loop.index }}">
+                <button class="thumb-button" data-src="{{ image }}"
+                  aria-label="View preview {{ loop.index }} of {{ project.data.title }}">
                   <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}">
                 </button>
               </li>
               {% endfor %}
             </ul>
           </div>
-          <ul class="project-card-tags" role="list">
-            <li class="tags-label">Categories</li>
-            {% if project.data.tags %}
-            {% for tag in project.data.tags %}
-            <li><a class="tag" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
-            {% endfor %}
-            {% endif %}
-          </ul>
+          <div class="project-card-tags">
+            <span class="tags-label">Categories</span>
+            <ul role="list">
+              {% if project.data.tags %}
+              {% for tag in project.data.tags %}
+              <li><a class="tag" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+              {% endfor %}
+              {% endif %}
+            </ul>
           </div>
-        </article>
+        </div>
+      </article>
       {% endfor %}
     </div>
     <nav class="sidebar project-index" aria-label="Project index">
-        <h3>Projects index</h3>
-        <ul>
-          {% for project in collections.projects %}
-          <li>
-            <a href="#{{ project.data.title | slugify }}">
-              {{ project.data.short_title if project.data.short_title else project.data.title }}
-            </a>
-          </li>
-          {% endfor %}
-          <li class="back-to-top">
-            <a href="#top" class="primary-button">Top ↑</a>
-          </li>
-        </ul>
-        
+      <h3>Projects index</h3>
+      <ul>
+        {% for project in collections.projects %}
+        <li>
+          <a href="#{{ project.data.title | slugify }}">
+            {{ project.data.short_title if project.data.short_title else project.data.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="#top" class="primary-button back-to-top">Back to top <span aria-hidden="true">↑</span></a>
     </nav>
   </div>
 

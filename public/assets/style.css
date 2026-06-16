@@ -126,30 +126,52 @@
     --color-grey900: #282C3E;
 
     /* Space variables (spacing scale based on 4px increments) */
-    --space-1: 0.25rem; /* 4px */
-    --space-2: 0.5rem;  /* 8px */
-    --space-3: 0.75rem; /* 12px */
-    --space-4: 1rem;    /* 16px */
-    --space-5: 1.25rem; /* 20px */
-    --space-6: 1.5rem;  /* 24px */
-    --space-8: 2rem;    /* 32px */
-    --space-10: 2.5rem; /* 40px */
-    --space-12: 3rem;   /* 48px */
-    --space-16: 4rem;   /* 64px */
-    --space-18: 4.5rem; /* 72px */
-    --space-20: 5rem;   /* 80px */
-    --space-30: 7.5rem; /* 120px */
+    --space-1: 0.25rem;
+/* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-5: 1.25rem;
+    /* 20px */
+    --space-6: 1.5rem;
+    /* 24px */
+    --space-8: 2rem;
+    /* 32px */
+    --space-10: 2.5rem;
+    /* 40px */
+    --space-12: 3rem;
+    /* 48px */
+    --space-16: 4rem;
+    /* 64px */
+    --space-18: 4.5rem;
+    /* 72px */
+    --space-20: 5rem;
+    /* 80px */
+    --space-30: 7.5rem;
+    /* 120px */
 
     /* Font size variables (based on a 16px base font size) */
-    --font-size-12: 0.75rem; /* 12px */
-    --font-size-14: 0.875rem; /* 14px */
-    --font-size-base: 1rem;   /* 16px */
-    --font-size-20: 1.25rem;  /* 20px */
-    --font-size-24: 1.5rem;   /* 24px */
-    --font-size-28: 1.75rem;  /* 28px */
-    --font-size-32: 2rem;     /* 32px */
-    --font-size-50: 3.125rem; /* 50px */
-    --font-size-72: 4.5rem;  /* 72px */
+    --font-size-12: 0.75rem;
+    /* 12px */
+    --font-size-14: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-20: 1.25rem;
+    /* 20px */
+    --font-size-24: 1.5rem;
+    /* 24px */
+    --font-size-28: 1.75rem;
+    /* 28px */
+    --font-size-32: 2rem;
+    /* 32px */
+    --font-size-50: 3.125rem;
+    /* 50px */
+    --font-size-72: 4.5rem;
+    /* 72px */
   }
 
   /* Dark theme variables */
@@ -175,20 +197,30 @@
   }
 
   a {
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     text-decoration: underline;
     text-decoration-thickness: 0.08rem;
     text-underline-offset: 3px;
     text-decoration-skip-ink: none;
     color: var(--color-primary600);
-    transition: all 0.08s ease-out;
+    transition: color 0.08s ease-out, text-decoration-thickness 0.08s ease-out;
   }
 
   a:hover {
     color: var(--color-primary900);
     text-decoration-thickness: 0.1rem;
   }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-primary600);
+    outline-offset: 3px;
+    text-decoration: none;
+  }
+
+  /*   a:visited {
+    color: var(--color-primary800);
+  } */
 
   h1,
   h2 {
@@ -212,7 +244,8 @@
     background: var(--color-light100);
     color: var(--color-primary600);
     box-shadow: 4px 4px 0 0 var(--color-primary600);
-    transition: all 0.08s ease-out;
+    transition: box-shadow 0.08s ease-out, background-color 0.08s ease-out, border-color 0.08s ease-out, color 0.08s ease-out;
+    cursor: pointer;
   }
 
   .primary-button:hover {
@@ -226,6 +259,11 @@
     background: var(--color-primary100);
     box-shadow: 2px 2px 0 0 var(--color-primary900);
     color: var(--color-light900);
+  }
+
+  .primary-button:focus-visible {
+    outline: 2px solid var(--color-primary600);
+    outline-offset: 3px;
   }
 
 }
@@ -249,13 +287,14 @@
     align-items: flex-start;
   }
 
-  .site-wrapper > main {
+  .site-wrapper>main {
     flex: 1;
   }
 
+  /* Creating a grid with 12 columns */
   .grid-layout {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* creating 12 cols */
+    grid-template-columns: repeat(12, 1fr);
     gap: var(--space-4);
     align-items: start;
   }
@@ -271,18 +310,18 @@
   .site-wrapper {
     max-width: 1280px;
     margin-inline: auto;
-    margin-block-start: var(--space-16);  /* 64px margin from the top */
-    padding-inline: var(--space-10);  /* 40px each side */
+    margin-block-start: var(--space-16);
+    padding-inline: var(--space-10);
   }
 
-  /* Left-aligned column on pages without sidebar */
+  /* Styling pages without sidebar to have 1 left aligned column */
   .page-content {
     max-width: 795px;
     margin-inline-start: 0;
   }
 
 
-  /**** Top navigation header ****/
+  /**** Header nav styles ****/
 
   .page-header {
     display: flex;
@@ -292,6 +331,13 @@
     z-index: 100;
     background-color: var(--color-light100);
     font-size: var(--font-size-14);
+    border-block-end: 1px solid transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .page-header.is-scrolled {
+    border-block-end-color: var(--color-grey200);
+    box-shadow: 0 2px 4px rgba(40, 44, 62, 0.09);
   }
 
   .main-navigation {
@@ -315,6 +361,18 @@
     height: 50px;
   }
 
+  .vm-logo[aria-current="page"] {
+    text-decoration: none;
+  }
+
+  .vm-logo[aria-current="page"] .logo-label {
+    text-decoration: underline;
+    text-decoration-thickness: 0.14rem;
+    text-underline-offset: 3px;
+    color: var(--color-primary900);
+    font-weight: 700;
+  }
+
   .navigation-menu {
     display: flex;
     align-items: center;
@@ -326,27 +384,24 @@
     align-items: center;
     gap: var(--space-4);
     list-style: none;
-    margin: 0 var(--space-4) 0 0;
+    margin: 0;
+    margin-inline-end: var(--space-4);
     padding: 0;
   }
 
   /* Adding decorative dot between nav links */
-  .navigation-links li + li::before {
-    content: "•";
+  .navigation-links li+li::before {
+    content: "•" / "";
     margin-inline-end: var(--space-4);
     color: var(--color-primary600);
     font-weight: 900;
+    user-select: none;
   }
 
-  /* Adding scroll effect to header */
-  .page-header {
-    border-block-end: 1px solid transparent;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-
-  .page-header.is-scrolled {
-    border-block-end-color: var(--color-grey200);
-    box-shadow: 0 2px 4px rgba(40, 44, 62, 0.09);
+  .navigation-links a[aria-current="page"] {
+    color: var(--color-primary900);
+    font-weight: 700;
+    text-decoration-thickness: 0.14rem;
   }
 
   /* Mobile nav is only visible below 640px */
@@ -396,13 +451,18 @@
     border: none;
     border-radius: var(--space-5);
     cursor: pointer;
-    outline: 0px solid var(--color-primary600);
-    transition: all 0.08s ease-out;
+    outline: 2px solid transparent;
+    transition: background-color 0.08s ease-out, outline 0.08s ease-out;
   }
 
   .icon-button:hover {
     background: var(--color-primary100);
+    outline-color: var(--color-primary600);
+  }
+
+  .icon-button:focus-visible {
     outline: 2px solid var(--color-primary600);
+    background: var(--color-primary100);
   }
 
   .icon-button img {
@@ -410,30 +470,27 @@
     height: auto;
   }
 
+
+  /**** Projects ****/
+
   main .projects .section-title {
     font-size: var(--font-size-50);
     line-height: 1em;
     margin-block-end: var(--space-18);
+    border-block-start: 1px solid var(--color-primary300);
+    padding-block-start: var(--space-16);
   }
-
-  main .projects .section-separator {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: var(--color-primary300) 1px solid;
-    margin-block-end: var(--space-16);
-  }
-
-
-  /**** Projects ****/
 
   .projects h2 {
     font-weight: 900;
     line-height: 1.2em;
   }
 
+  .project-card {
+    margin-block-end: var(--space-16);
+  }
+
   .projects .project-card-meta {
-    font-size: var(--font-size-14);
     font-weight: 600;
     margin-block-end: var(--space-2);
   }
@@ -446,24 +503,7 @@
 
   .projects .project-card-blurb {
     margin-block-end: var(--space-5);
-  }
-
-
-  /**** Project card grid ****/
-
-  .project-card {
-    margin-block-end: var(--space-16);
-  }
-
-  .project-card .project-card-blurb {
     font-size: var(--font-size-20);
-  }
-
-  /**** Projects index sidebar ****/
-
-  .project-index {
-    position: sticky;
-    top: calc(90px + var(--space-20));
   }
 
 
@@ -479,13 +519,12 @@
   .gallery-thumbs {
     display: flex;
     gap: var(--space-2);
-    justify-content: center;
     margin-block-start: var(--space-2);
     list-style: none;
   }
 
   .gallery-thumbs li {
-    flex: 0 0 calc((100% - 6 * var(--space-2)) / 4);
+    flex: 0 0 calc((100% - 3 * var(--space-2)) / 4);
     border-radius: var(--space-2);
   }
 
@@ -509,51 +548,59 @@
   }
 
   .thumb-button:hover {
-    border-color: var(--color-primary600);
+    border-color: var(--color-primary300);
   }
 
   .thumb-button.is-active {
     border-color: var(--color-primary600);
   }
 
-  /**** Tags ****/
+  .thumb-button:focus-visible {
+    outline: 2px solid var(--color-primary600);
+    outline-offset: 2px;
+  }
 
-    .project-card-tags {
-      list-style: none;
-      font-size: var(--font-size-14);
-      font-weight: 600;
-      line-height: 1.8em;
-      margin-block-start: var(--space-8);
-    }
+  /**** Project tags list at the bottom of the project card ****/
 
-    .project-card-tags .tags-label::after {
-      content: ":";
-    }
+  .project-card-tags {
+    list-style: none;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-block-start: var(--space-8);
+  }
+  
+  .project-card-tags .tags-label::after {
+    content: ":";
+  }
 
-    .project-card-tags li {
-      display: inline-block;
-    }
+  .project-card-tags ul {
+    display: inline-block;
+    padding-inline-start: var(--space-1);
+  }
+  
+  .project-card-tags li {
+    display: inline-block;
+  }
 
-    .project-card-tags li a {
-      text-transform: lowercase;
-    }
+  .project-card-tags li a {
+    text-transform: lowercase;
+  }
 
-    .project-card-tags li:not(:last-child) {
-      margin-right: var(--space-2);
-    }
+  .project-card-tags li:not(:last-child) {
+    margin-inline-end: var(--space-2);
+  }
 
-    .project-card-tags li a::before {
-      content: "#";
-    }
+  .project-card-tags li a::before {
+    content: "#";
+  }
 
 
-  /**** Projects index sidebar ****/
+  /**** Homepage Projects index sidebar ****/
 
-  /* Sticky sidebar */
   .project-index {
     position: sticky;
-    top: calc(90px + var(--space-6));  /* header height + breathing room */
-    margin-left: var(--space-16);
+    top: calc(90px + var(--space-6));
+    margin-inline-start: var(--space-16);
   }
 
   .project-index h3 {
@@ -573,9 +620,13 @@
     margin-block-end: var(--space-2);
   }
 
+  /* Styling the back-to-top button */
   .project-index .back-to-top {
+    font-size: var(--font-size-14);
+    display: inline-block;
     margin-block-start: var(--space-6);
   }
+
 
   /**** Footer ****/
 
@@ -586,11 +637,11 @@
 
   footer p {
     font-size: var(--font-size-12);
-    line-height: 1.2em;
+    line-height: 1.2;
   }
 
 
-  /**** Project detail and Note detail styling ****/
+  /**** Project detail page and Note detail page ****/
 
   .project-detail-title,
   .note-detail-title {
@@ -599,11 +650,10 @@
 
   .project-detail-meta,
   .note-detail-meta {
-    font-size: var(--font-size-14);
     font-weight: 600;
     margin-block-end: var(--space-12);
   }
-  
+
   .project-detail h2:first-of-type,
   .note-detail h2:first-of-type,
   .page-content h2:first-of-type {
@@ -617,34 +667,36 @@
     margin-block-start: var(--space-10);
     margin-block-end: var(--space-2);
   }
-  
+
   .note-detail-meta .note-detail-description {
     margin-block-start: var(--space-3);
     font-size: var(--font-size-24);
     font-weight: 700;
   }
-  
+
   .note-detail-meta time {
     margin-block-end: var(--space-10);
   }
-  
+
   .project-detail p,
   .note-detail p,
   .page-content p {
     margin-block-end: var(--space-6);
     font-size: var(--font-size-20);
   }
-  
+
   .project-detail p:last-of-type,
   .note-detail p:last-of-type,
   .page-content p:last-of-type {
     margin-block-end: var(--space-16);
   }
 
-  /* Sticky TOC for project detail page */
+  /* Project detail page H2 index sidebar */
+
   .project-toc {
     position: sticky;
-    top: calc(90px + var(--space-6));  /* header height + breathing room */
+    top: calc(90px + var(--space-6));
+    /* header height + breathing room */
     margin-left: var(--space-16);
     margin-block-start: var(--space-4);
   }
@@ -662,8 +714,9 @@
   .project-toc ul li:not(:last-child) {
     margin-block-end: var(--space-2);
   }
-  
-  /**** Styling internal pages: About, Other Projects, Contact ****/
+
+
+  /**** Internal pages: About, Other Projects, Contact ****/
 
   .page-content h1,
   .design-notes h1 {
@@ -687,15 +740,22 @@
     margin-block-end: var(--space-16);
   }
 
+  .note-card-meta {
+    font-weight: 600;
+    margin-block-end: var(--space-2)
+  }
+
   .page-content p,
   .design-notes .note-card p {
     font-size: var(--font-size-20);
     margin-block-end: var(--space-4);
   }
 
-  /**** Layout changes for tablet and below ****/
+
+  /**** Tablet and phones adjustments ****/
 
   @media (max-width: 1024px) {
+
     .site-wrapper {
       margin-block-start: var(--space-8);
       padding-inline: var(--space-10);
@@ -726,11 +786,10 @@
 
     .sidebar-icons {
       grid-template-columns: repeat(4, 1fr);
-      max-width: 70%;
+      max-width: 480px;
       padding-inline: 0;
-      gap: var(--space-3);
     }
-    
+
     main .projects .section-title {
       margin-block-end: var(--space-12);
     }
@@ -744,47 +803,37 @@
       order: -1;
     }
 
+    /* Hiding the Projects index sidebar */
     .project-index {
-      position: static;
-    }
-
-    .project-index {
-      margin-left: 0;
-    }
-
-    .project-index .back-to-top {
       display: none;
     }
   }
 
   @media (max-width: 840px) {
 
-    /* Navigation changes */
     .main-navigation {
       padding-inline: var(--space-5);
     }
-  
-    .navigation-menu {
-      display: none;
-    }
-  
+
+    .navigation-menu,
     .navigation-logo .logo-label {
       display: none;
     }
-  
+
     .mobile-nav {
       display: block;
     }
-  
+
     .mobile-nav summary {
-      list-style: none; /* removes default triangle marker */
+      list-style: none;
       cursor: pointer;
     }
-  
+
+    /* Safari marker removal */
     .mobile-nav summary::-webkit-details-marker {
-      display: none;  /* Safari marker removal */
+      display: none;
     }
-  
+
     .mobile-menu-panel {
       position: absolute;
       top: 90px;
@@ -795,7 +844,7 @@
       box-shadow: 0 4px 8px rgba(40, 44, 62, 0.09);
       padding: var(--space-6) var(--space-10);
     }
-  
+
     .mobile-menu-panel .navigation-links {
       display: flex;
       flex-direction: column;
@@ -806,23 +855,21 @@
       padding: 0;
       font-size: var(--font-size-24);
     }
-  
+
     .navigation-links li {
       margin: var(--space-3) 0;
     }
-  
-    .navigation-links li + li::before {
+
+    .navigation-links li+li::before {
       display: none;
     }
 
-    .project-index {
-      display: none;  /* Hiding the projects index sidebar */
+    .project-detail-title,
+    .note-detail-title {
+      font-size: var(--font-size-50);
     }
 
   }
-
-
-  /**** Responsive styles for mobile devices ****/
 
   @media (max-width: 640px) {
     .site-wrapper {
@@ -831,7 +878,8 @@
     }
 
     .main-content {
-      grid-column: 1 / -1;  /* full width, -1 means last line */
+      grid-column: 1 / -1;
+      /* full width, -1 means last line */
     }
 
     .sidebar {
@@ -851,12 +899,11 @@
       margin-block-end: var(--space-8);
     }
 
-    /*** Changing gallery to 2 cols ****/
-
     .gallery-thumbs {
       flex-wrap: wrap;
     }
 
+    /*** Gallery thumbs for preview get arranged in 2 columns ****/
     .gallery-thumbs li {
       flex: 0 0 calc((100% - var(--space-2)) / 2);
     }
