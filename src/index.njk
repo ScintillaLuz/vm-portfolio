@@ -70,7 +70,7 @@ has_sidebar: true
             {% endif %}
           </h3>
           {% if project.data.subtitle %}<p class="project-card-subtitle">{{ project.data.subtitle }}</p>{% endif %}
-          <p class="project-card-blurb">{{ project.data.blurb }}</p>
+          <div class="project-card-blurb">{{ project.data.blurb | paragraphs | safe }}</div>
             {% if project.data.case_study %}
               <a class="keep-reading" href="{{ project.url }}">
                 Keep reading<span class="visually-hidden">: {{ project.data.title }}</span><span aria-hidden="true"> →</span>
