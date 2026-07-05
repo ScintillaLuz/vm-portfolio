@@ -59,7 +59,7 @@ has_sidebar: true
       <article class="project-card" id="{{ project.data.title | slugify }}">
         <div class="project-card-content">
           <div class="project-card-meta">
-            <time datetime="{{ project.data.date }}">{{ project.data.date }}</time>
+            <time datetime="{{ project.data.date }}">{{ project.data.date | monthYear }}</time>
             <span class="company">{{ project.data.company }}</span>
           </div>
           <h3 class="project-card-title">
@@ -69,21 +69,23 @@ has_sidebar: true
             {{ project.data.title }}
             {% endif %}
           </h3>
+          {% if project.data.subtitle %}<p class="project-card-subtitle">{{ project.data.subtitle }}</p>{% endif %}
           <p class="project-card-blurb">{{ project.data.blurb }}</p>
+            {% if project.data.case_study %}
+              <a class="keep-reading" href="{{ project.url }}">
+                Keep reading<span class="visually-hidden">: {{ project.data.title }}</span><span aria-hidden="true"> →</span>
+              </a>
+            {% endif %}
           <div class="project-card-gallery">
             <figure class="gallery-main" aria-live="polite">
-              {% set firstImage = project.data.preview_images[0] if project.data.preview_images else
-              project.data.images[0] %}
-              <img src="{{ firstImage }}" alt="{{ project.data.title }} preview">
+              <img src="{{ project.data.images[0] }}" alt="{{ project.data.title }} preview" loading="lazy">
             </figure>
             <ul class="gallery-thumbs" role="list">
-              {% set galleryImages = project.data.preview_images if project.data.preview_images else project.data.images
-              %}
-              {% for image in galleryImages %}
+              {% for image in project.data.images %}
               <li>
                 <button class="thumb-button" data-src="{{ image }}"
                   aria-label="View preview {{ loop.index }} of {{ project.data.title }}">
-                  <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}">
+                  <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}" loading="lazy">
                 </button>
               </li>
               {% endfor %}

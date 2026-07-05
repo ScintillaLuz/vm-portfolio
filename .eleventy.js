@@ -14,6 +14,13 @@ module.exports = function (eleventyConfig) {
     })
   );
 
+  eleventyConfig.addFilter("monthYear", (date) =>
+  new Date(date).toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+  })
+);
+
   // Copy public/ to _site/ root
   eleventyConfig.addPassthroughCopy({ "public": "/" });
 
@@ -37,6 +44,11 @@ module.exports = function (eleventyConfig) {
   };
 
   eleventyConfig.setLibrary("md", markdownIt(mdOptions).use(markdownItAnchor, mdAnchorOptions));
+
+  // Splits a string on double newlines and wraps each chunk in <p>
+  eleventyConfig.addFilter("paragraphs", (text) =>
+    String(text).trim().split(/\n\n+/).map(p => `<p>${p.trim()}</p>`).join("")
+  );
 
   // Collecting the H2 for the sidebar index
   eleventyConfig.addFilter("toc", (content) => {

@@ -1,5 +1,5 @@
 ---
-title: Why chatbots don't lie
+title: Libby is awesome, and keeps getting better
 description: Lying is a human activity, the AI is just a powerful prediction model. It gives you the wrong answer not because of an intention it doesn't think nor the humans creating the model can inject their thinking since the answer is creating the moment the prompt is sent to it.
 date: 2024-01-01
 ---

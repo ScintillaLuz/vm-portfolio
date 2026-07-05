@@ -1,24 +1,23 @@
 ---
-title: Redesigning the mobile Discovery experience
-short_title: MasterClass Discovery
-date: 2024-03
-company: MasterClass
-blurb: Discovery on mobile was buried under a navigation pattern that made sense on desktop but failed users on smaller screens. I led the end-to-end redesign, from research through to shipping, working closely with engineering and content strategy.
+title: Rethinking Tubi’s carousel content design
+subtitle: A framework proposal for turning research insights into greater trust and engagement
+short_title: Content Design framework, Tubi
+date: 2024-05
+company: Tubi
+blurb: |
+  It happens to all of us. We sit in front of our TV or open up a streaming app and, trying to decide what to watch, we get sucked into scrolling through endless rows of content. Time passes; we get frustrated with decision paralysis, we give up, and go to bed. Maybe we turn to social media. With over 50K titles, many of them old or obscure, Tubi’s catalog has something for anyone, but it’s easy for users to drift into a black hole, only to never find their way out.
+
+  Our research showed that users don’t start their journey as a blank slate, but rather know right from the start whether they would pick a movie or a TV Show, what mood they seek, and which genres are a no-go. Keeping this in mind, I set to work on making it easier to find the right match, with a special eye on TV Shows, a type of content our audience was looking for, but hard to tell apart in our content rows.
 case_study: true
 tags:
-  - Mobile
-  - Research
-  - Navigation
+  - TV
+  - Machine Learning
+  - Design strategy
 images:
-  - /assets/projects/sample-project/full1.webp
-  - /assets/projects/sample-project/full2.webp
-  - /assets/projects/sample-project/full3.webp
-  - /assets/projects/sample-project/full4.webp
-preview_images:
-  - /assets/projects/sample-project/thumb1.webp
-  - /assets/projects/sample-project/thumb2.webp
-  - /assets/projects/sample-project/thumb3.webp
-  - /assets/projects/sample-project/thumb4.webp
+  - /assets/projects/content-design-framework-tubi/1.webp
+  - /assets/projects/content-design-framework-tubi/2.webp
+  - /assets/projects/content-design-framework-tubi/3.webp
+  - /assets/projects/content-design-framework-tubi/4.webp
 layout: project.njk
 ---
 

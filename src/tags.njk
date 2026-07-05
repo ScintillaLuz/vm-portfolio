@@ -11,14 +11,13 @@ pagination:
 permalink: /tags/{{ tag | slugify }}/
 ---
 
-<section>
+<section class="tag-page">
   <h1>Projects tagged "{{ tag }}"</h1>
   <ul>
     {% set taggedProjects = collections[tag] %}
     {% for project in taggedProjects %}
     <li>
       <a href="{{ project.url }}">{{ project.data.title }}</a>
-      {% if project.data.blurb %}<p>{{ project.data.blurb }}</p>{% endif %}
     </li>
     {% endfor %}
   </ul>
