@@ -740,6 +740,22 @@
     margin-block-end: var(--space-4);
   }
 
+  .case-study-figure {
+    margin-block: var(--space-10);
+  }
+
+  .case-study-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--space-2);
+  }
+
+  .case-study-figure figcaption {
+    margin-block-start: var(--space-2);
+    font-size: var(--font-size-14);
+    color: var(--color-grey900);
+  }
+
   /**** Tag page ****/
 
   .tag-page h1 {

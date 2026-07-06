@@ -5,9 +5,9 @@ short_title: Mobile redesign, Tubi
 date: 2024-06
 company: Tubi
 blurb: |
-  It happens all the time. We sit in front of our TV or open a streaming app and, trying to decide what to watch, we get sucked into endless scrolling. Time passes; we get frustrated with decision paralysis, we give up, and go to bed. Maybe we turn to social media. With over 50K titles, many of them old or obscure, Tubi’s catalog has something for anyone, but it’s easy for users to drift into a black hole and never find their way out.
-
-  Research showed us that users don’t start their journey as a blank slate, but rather know right from the start whether they would pick a movie or a TV Show, what mood they seek, and which genres are a no-go. Keeping this in mind, I set to work on making it easier to find the right match, with a special eye on TV Shows, a type of content our audience was looking for, but hard to tell apart in our content rows.
+  The iOS Lead Engineer at Tubi reached out to me for a self-initiated project: she had a strong conviction that the mobile experience needed work, and a green light from Product to go ahead and come up with proposals. Together we also found, and claimed, a parked ticket for increasing the visibility and discoverability of TV Series. We brought the two goals together into one project, giving the iOS and Android teams an opportunity to better sync on experiments and feature releases.
+  
+  My approach to this revamp is one I like and cheer for whenever I can: look at the big picture holistically, but break the design down into individual tests to build a roadmap, rather than shipping one sweeping change that’s difficult to measure. The challenge, and what I find most valuable about this method, is making sure the long-term vision holds regardless of the outcome of any individual experiment it’s made of.
 case_study: true
 tags:
   - Mobile

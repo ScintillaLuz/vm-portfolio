@@ -1,6 +1,6 @@
 ---
 title: Rethinking Tubi’s carousel content design
-subtitle: A framework proposal for turning research insights into greater trust and engagement
+subtitle: A framework for turning research insights into greater trust and engagement
 short_title: Content Design framework, Tubi
 date: 2024-05
 company: Tubi
