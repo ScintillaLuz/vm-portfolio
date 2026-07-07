@@ -79,13 +79,15 @@ module.exports = function (eleventyConfig) {
 
   /* ---------- Shortcodes ---------- */
 
-  // Captioned, lazy-loaded image for case studies
+  // Captioned, lazy-loaded image for case studies.
+  // width/height default to the standard 2400×1350 export size; pass both
+  // explicitly only for images with a different aspect ratio
   eleventyConfig.addShortcode(
     "figure",
-    (src, alt, caption = "", width = "", height = "") => `
+    (src, alt, caption = "", width = 2400, height = 1350) => `
 <figure class="case-study-figure">
   <img src="${src}" alt="${alt}" loading="lazy"
-    ${width ? `width="${width}"` : ""} ${height ? `height="${height}"` : ""}>
+    width="${width}" height="${height}">
   ${caption ? `<figcaption>${caption}</figcaption>` : ""}
 </figure>`
   );

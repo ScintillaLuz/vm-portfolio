@@ -143,6 +143,7 @@
     --font-size-28: 1.75rem;  /* 28px */
     --font-size-32: 2rem;     /* 32px */
     --font-size-50: 3.125rem; /* 50px */
+    --font-size-64: 4rem;     /* 64px */
     --font-size-72: 4.5rem;   /* 72px */
   }
 
@@ -616,12 +617,9 @@
     margin-block-end: var(--space-6);
   }
 
-  .project-detailmeta {
-    margin-block-end: var(--space-12);
-  }
-
   .project-detail-meta {
     font-weight: 600;
+    margin-block-end: var(--space-12);
   }
 
   .project-detail h2:first-of-type,
@@ -637,9 +635,24 @@
     margin-block-end: var(--space-2);
   }
 
+  /* Detail pages are their own 12-column grid: text sits in a centered
+     8-column measure, figures break out to the full container width */
   .project-detail,
   .note-detail {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--space-4);
     margin-block-end: var(--space-30);
+  }
+
+  .project-detail > *,
+  .note-detail > * {
+    grid-column: 3 / 11;
+  }
+
+  .project-detail > .case-study-figure,
+  .note-detail > .case-study-figure {
+    grid-column: 1 / -1;
   }
 
   .note-detail-meta time {
@@ -659,35 +672,29 @@
     font-size: var(--font-size-20);
   }
 
-  /**** Sidebars: projects index on Home, toc on project detail, toc on note detail ****/
+  /**** Sidebar: projects index on Home ****/
 
-  .project-index,
-  .project-toc {
+  .project-index {
     position: sticky;
     top: calc(100px + var(--space-6));
     margin-inline-start: var(--space-30);
   }
 
-  .project-index h3,
-  .project-toc h3 {
+  .project-index h3 {
     margin-block-end: var(--space-2);
   }
 
   .project-index h3,
-  .project-index ul,
-  .project-toc h3,
-  .project-toc ul {
+  .project-index ul {
     font-size: initial;
   }
 
-  .project-index ul,
-  .project-toc ul {
+  .project-index ul {
     list-style: none;
     font-size: var(--font-size-14);
   }
 
-  .project-index ul li:not(:last-child),
-  .project-toc ul li:not(:last-child) {
+  .project-index ul li:not(:last-child) {
     margin-block-end: var(--space-3);
   }
 
@@ -698,19 +705,14 @@
     margin-block-start: var(--space-6);
   }
 
-  /* Toc on project detail specific styles */
-
-  .project-toc {
-    margin-block-start: var(--space-4);
-  }
-
 
 
   /**** Internal pages: About, Other Projects, Contact ****/
 
-  .page-content h1,
-  .design-notes h1 {
-    margin-block-end: var(--space-12);
+
+  .project-detail-title,
+  .note-detail-title {
+    font-size: var(--font-size-64);
   }
 
   .design-notes .note-card h2 {
@@ -741,7 +743,7 @@
   }
 
   .case-study-figure {
-    margin-block: var(--space-10);
+    margin-block-end: var(--space-10);
   }
 
   .case-study-figure img {
@@ -777,6 +779,12 @@
     }
 
     .main-content {
+      grid-column: 1 / -1;
+    }
+
+    /* Detail-page text drops the centered measure and goes full width */
+    .project-detail > *,
+    .note-detail > * {
       grid-column: 1 / -1;
     }
 
@@ -823,8 +831,7 @@
     }
 
     .navigation-menu,
-    .navigation-logo .logo-label,
-    .project-toc {
+    .navigation-logo .logo-label {
       display: none;
     }
 
@@ -1007,6 +1014,10 @@
     /*** Gallery thumbs for preview get arranged in 2 columns ****/
     .gallery-thumbs li {
       flex: 0 0 calc((100% - var(--space-2)) / 2);
+    }
+
+    .case-study-figure {
+      margin-block-end: var(--space-6);
     }
 
   }

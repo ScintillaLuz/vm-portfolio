@@ -3,26 +3,11 @@ layout: base
 has_sidebar: true
 ---
 
-<h1 class="note-detail-title">{{ title }}</h1>
-
-<div class="grid-layout">
-  <article class="main-content note-detail">
-    <div class="note-detail-meta">
-      {% if date %}<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% endif %}
-      {% if description %}<p class="note-detail-description">{{ description }}</p>{% endif %}
-    </div>
-    {{ content | safe }}
-  </article>
-
-  <nav class="sidebar project-toc" aria-label="Table of contents">
-    <h3>Contents</h3>
-    <ul>
-      {% set headings = content | toc %}
-      {% for heading in headings %}
-      <li>
-        <a href="#{{ heading.id }}">{{ heading.text }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</div>
+<article class="note-detail">
+  <h1 class="note-detail-title">{{ title }}</h1>
+  <div class="note-detail-meta">
+    {% if date %}<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>{% endif %}
+    {% if description %}<p class="note-detail-description">{{ description }}</p>{% endif %}
+  </div>
+  {{ content | safe }}
+</article>
