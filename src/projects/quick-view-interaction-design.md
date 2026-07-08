@@ -5,7 +5,9 @@ short_title: Quick-view, Scribd
 date: 2021-04
 company: Scribd
 blurb: |
-  Test
+  This is one of those quick requests that can drop at any designer’s desk. A senior designer was moving into a manager position and asked me to explore visual design variants and interactions for a winning experiment that needed to be productized. 
+  
+  The original design was a quick view panel for getting more information about a Title (book, audiobook, document, and so on), letting users better pick content without leaving the page they were on. We ended up choosing the safest route, building a component very close to the original designs. That said, I quite like some of my experiments, and I think they show how I approach interaction design and motion.
 case_study: false
 tags:
   - Web
