@@ -5,7 +5,7 @@ short_title: Growth experiments, Evernote
 date: 2020-03
 company: 
 blurb: |
-  Test
+  A Head of Growth, two Product Managers, three Designers, a Design Manager, and two dedicated Engineering teams with a Lead each. Meet Evernote's GET, the Growth Experiments Team. As a first-time Growth Designer, this was the most supportive environment I could have asked for. I learned a lot from the divide-and-conquer approach practiced by the designers, relying on their expertise and an invaluable, detailed, searchable archive of fully documented experiments. Here’s a taste of the work I did there. Happy to chat more about it!
 case_study: false
 tags:
   - Growth-design
