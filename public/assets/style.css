@@ -510,8 +510,10 @@
   }
 
   .projects .keep-reading {
-    display: block;
-    margin-block: var(--space-6);
+    font-size: var(--font-size-14);
+    display: inline-block;
+    margin-block-end: var(--space-8);
+    margin-block-start: var(--space-2);
 
   }
 
