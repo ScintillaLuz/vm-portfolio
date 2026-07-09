@@ -1,6 +1,6 @@
 ---
-title: Redesigning Category Pages to win book lovers’ attention
-subtitle: Rethinking page variations as a scalable system, not just a layout
+title: How to win book lovers’ attention
+subtitle: Rethinking Category Pages layout page variations as a scalable system
 short_title: Category Pages, Scribd
 date: 2021-04
 company: Scribd

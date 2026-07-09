@@ -1,5 +1,5 @@
 ---
-title: Growth experiments design at Evernote
+title: Designing for Growth at Evernote
 subtitle: A selection of work for acquisition, activation, monetization
 short_title: Growth experiments, Evernote
 date: 2020-03

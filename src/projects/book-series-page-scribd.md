@@ -1,5 +1,5 @@
 ---
-title: Crafting a compelling Book Series page for Scribd
+title: Crafting a compelling Book Series page
 subtitle: Expanding the SEO acquisition surfaces for the Premium catalog
 short_title: Book Series Pages, Scribd
 date: 2021-12

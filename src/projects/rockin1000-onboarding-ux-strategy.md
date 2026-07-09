@@ -1,5 +1,5 @@
 ---
-title: Growth design strategy for a 0→1 music events startup
+title: Growth design strategy for a music startup
 subtitle: In-depth activation flows and onboarding redesign for clarity, trust, and compliance
 short_title: Growth strategy, Rockin'1000
 date: 2026-03

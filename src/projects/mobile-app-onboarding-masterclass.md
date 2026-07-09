@@ -1,5 +1,5 @@
 ---
-title: Mobile onboarding redesign with a modular twist
+title: Mobile onboarding with a modular twist
 subtitle: Combining feature education with short-form video to increase first-day conversion
 short_title: App onboarding, MasterClass
 date: 2022-03

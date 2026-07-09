@@ -1,5 +1,5 @@
 ---
-title: Your Story Matters – A web-app for domestic abuse survivors
+title: Your Story Matters, web-app for domestic abuse survivors
 subtitle: Design volunteering project with UK non-profit Chayn
 short_title: Your Story Matters, Chayn
 date: 2021-03

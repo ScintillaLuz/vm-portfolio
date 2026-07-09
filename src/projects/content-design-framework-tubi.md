@@ -1,5 +1,5 @@
 ---
-title: Rethinking Tubi’s carousel content design
+title: Rethinking Tubi’s carousels
 subtitle: A framework for turning research insights into greater trust and engagement
 short_title: Content Design framework, Tubi
 date: 2024-05
