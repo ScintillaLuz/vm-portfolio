@@ -476,7 +476,7 @@
   }
 
   .project-card {
-    margin-block-end: var(--space-16);
+    margin-block-end: var(--space-25);
   }
 
   .projects .project-card-meta {
