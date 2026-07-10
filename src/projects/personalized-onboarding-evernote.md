@@ -1,11 +1,15 @@
 ---
 title: Becoming a loyal Evernote note-taker
-subtitle: Web and mobile onboarding personalization for successful activation
+subtitle: Onboarding personalization for a successful first-day activation
 short_title: Onboarding personalization, Evernote
 date: 2020-05
 company: Evernote
 blurb: |
-  Test
+  With increased competition from pre-installed note apps, Evernote took the activation challenge very seriously. At the time I joined the Growth Design team, experiments had corroborated the hypothesis of personalization as a lever for onboarding engagement. I contributed to the design of a Web client test, an effort leading to a 17% activation lift. After that, I took over the lead role, bringing personalization to the apps’ onboarding.
+  
+  The stakes on mobile were higher. It drove the majority of acquisition traffic but offered less real estate, the feature set was different, and app users’ attention is shorter, giving us just a handful of seconds to make a lasting impression. 
+  
+  I deliberately softened the first part of the onboarding to guide users to create their first note without pressure. The experience is brief and drops users in front of features relevant to the use case they chose, rather than asking them to explore every knob of Evernote’s editor to figure out what it could do for them, as the old flow did.
 case_study: true
 tags:
   - Mobile
