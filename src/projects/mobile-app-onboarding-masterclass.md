@@ -14,10 +14,10 @@ tags:
   - Onboarding
   - Growth-design
 images:
-  - /assets/projects/mobile-app-onboarding-masterclass/1.webp
-  - /assets/projects/mobile-app-onboarding-masterclass/2.webp
-  - /assets/projects/mobile-app-onboarding-masterclass/3.webp
-  - /assets/projects/mobile-app-onboarding-masterclass/4.webp
+  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-01.webp
+  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-02.webp
+  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-03.webp
+  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-04.webp
 layout: project.njk
 ---
 

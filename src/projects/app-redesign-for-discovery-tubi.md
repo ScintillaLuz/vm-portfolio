@@ -14,10 +14,10 @@ tags:
   - Retention
   - Design-system
 images:
-  - /assets/projects/app-redesign-for-discovery-tubi/1.webp
-  - /assets/projects/app-redesign-for-discovery-tubi/2.webp
-  - /assets/projects/app-redesign-for-discovery-tubi/3.webp
-  - /assets/projects/app-redesign-for-discovery-tubi/4.webp
+  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-01.webp
+  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-02.webp
+  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-03.webp
+  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-04.webp
 layout: project.njk
 ---
 

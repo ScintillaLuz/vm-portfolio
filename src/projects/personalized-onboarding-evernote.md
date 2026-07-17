@@ -17,10 +17,10 @@ tags:
   - Onboarding
   - Growth-design
 images:
-  - /assets/projects/personalized-onboarding-evernote/1.webp
-  - /assets/projects/personalized-onboarding-evernote/2.webp
-  - /assets/projects/personalized-onboarding-evernote/3.webp
-  - /assets/projects/personalized-onboarding-evernote/4.webp
+  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-01.webp
+  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-02.webp
+  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-03.webp
+  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-04.webp
 layout: project.njk
 ---
 

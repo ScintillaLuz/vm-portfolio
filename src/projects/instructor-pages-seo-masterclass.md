@@ -14,10 +14,10 @@ tags:
   - SEO
   - Growth-design
 images:
-  - /assets/projects/instructor-pages-seo-masterclass/1.webp
-  - /assets/projects/instructor-pages-seo-masterclass/2.webp
-  - /assets/projects/instructor-pages-seo-masterclass/3.webp
-  - /assets/projects/instructor-pages-seo-masterclass/4.webp
+  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-01.webp
+  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-02.webp
+  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-03.webp
+  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-04.webp
 layout: project.njk
 ---
 
