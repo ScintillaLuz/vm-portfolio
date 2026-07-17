@@ -303,13 +303,6 @@
     padding-inline: var(--space-10);
   }
 
-  /* Styling pages without sidebar to have 1 left aligned column */
-  .page-content {
-    max-width: 795px;
-    margin-inline-start: 0;
-  }
-
-
   /**** Header nav styles ****/
 
   .page-header {
@@ -642,10 +635,12 @@
     margin-block-end: var(--space-2);
   }
 
-  /* Detail pages are their own 12-column grid: text sits in a centered
-     8-column measure, figures break out to the full container width */
+  /* Detail pages and static pages (About, Contact, Other Projects) are
+     their own 12-column grid: text sits in a centered 8-column measure,
+     figures break out to the full container width */
   .project-detail,
-  .note-detail {
+  .note-detail,
+  .page-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: var(--space-4);
@@ -653,12 +648,14 @@
   }
 
   .project-detail > *,
-  .note-detail > * {
+  .note-detail > *,
+  .page-content > * {
     grid-column: 3 / 11;
   }
 
   .project-detail > .case-study-figure,
-  .note-detail > .case-study-figure {
+  .note-detail > .case-study-figure,
+  .page-content > .case-study-figure {
     grid-column: 1 / -1;
   }
 
@@ -791,7 +788,8 @@
 
     /* Detail-page text drops the centered measure and goes full width */
     .project-detail > *,
-    .note-detail > * {
+    .note-detail > *,
+    .page-content > * {
       grid-column: 1 / -1;
     }
 
