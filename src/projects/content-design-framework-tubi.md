@@ -16,10 +16,10 @@ tags:
   - Machine Learning
   - Design strategy
 images:
-  - /assets/projects/content-design-framework-tubi/1.webp
-  - /assets/projects/content-design-framework-tubi/2.webp
-  - /assets/projects/content-design-framework-tubi/3.webp
-  - /assets/projects/content-design-framework-tubi/4.webp
+  - /assets/projects/content-design-framework-tubi/tubi-containers-framework-01.webp
+  - /assets/projects/content-design-framework-tubi/tubi-containers-framework-02.webp
+  - /assets/projects/content-design-framework-tubi/tubi-containers-framework-03.webp
+  - /assets/projects/content-design-framework-tubi/tubi-containers-framework-04.webp
 layout: project.njk
 ---
 

@@ -11,10 +11,10 @@ tags:
   - Growth-design
   - Interaction-design
 images:
-  - /assets/projects/growth-design-experiments-evernote/1.webp
-  - /assets/projects/growth-design-experiments-evernote/2.webp
-  - /assets/projects/growth-design-experiments-evernote/3.webp
-  - /assets/projects/growth-design-experiments-evernote/4.webp
+  - /assets/projects/growth-design-experiments-evernote/evernote-growth-01.webp
+  - /assets/projects/growth-design-experiments-evernote/evernote-growth-02.webp
+  - /assets/projects/growth-design-experiments-evernote/evernote-growth-03.webp
+  - /assets/projects/growth-design-experiments-evernote/evernote-growth-04.webp
 layout: project.njk
 ---
 

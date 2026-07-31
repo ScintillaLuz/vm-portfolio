@@ -14,10 +14,10 @@ tags:
   - SEO
   - Design-system
 images:
-  - /assets/projects/category-pages-redesign-scribd/1.webp
-  - /assets/projects/category-pages-redesign-scribd/2.webp
-  - /assets/projects/category-pages-redesign-scribd/3.webp
-  - /assets/projects/category-pages-redesign-scribd/4.webp
+  - /assets/projects/category-pages-redesign-scribd/scribd-category-01.webp
+  - /assets/projects/category-pages-redesign-scribd/scribd-category-02.webp
+  - /assets/projects/category-pages-redesign-scribd/scribd-category-03.webp
+  - /assets/projects/category-pages-redesign-scribd/scribd-category-04.webp
 layout: project.njk
 ---
 

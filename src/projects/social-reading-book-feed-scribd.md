@@ -6,7 +6,7 @@ date: 2020-09
 company: Scribd
 blurb: |
   A few days into my new role at Scribd, I jumped on the Hack Week wagon and joined a team with an idea that needed a designer: turning book highlights into a feed. Recently I took those early sketches and gave them more thought and time, to see what a more mature prototype could look like. If you’re into books, you know social media has its bookworm corners of influencers curating pages and recommending titles, but there isn’t anything yet uniquely dedicated to books. Scribd (now Everand) didn’t develop the idea further, but I‘m still fascinated by its potential.
-case_study: true
+case_study: false
 tags:
   - Mobile
   - Acquisition

@@ -13,10 +13,10 @@ tags:
   - TV
   - Interaction-design
 images:
-  - /assets/projects/living-room-designs-at-tubi/1.webp
-  - /assets/projects/living-room-designs-at-tubi/2.webp
-  - /assets/projects/living-room-designs-at-tubi/3.webp
-  - /assets/projects/living-room-designs-at-tubi/4.webp
+  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-01.webp
+  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-02.webp
+  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-03.webp
+  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-04.webp
 layout: project.njk
 ---
 

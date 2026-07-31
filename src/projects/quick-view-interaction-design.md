@@ -14,10 +14,10 @@ tags:
   - Growth-design
   - Interaction-design
 images:
-  - /assets/projects/quick-view-interaction-design/1.webp
-  - /assets/projects/quick-view-interaction-design/2.webp
-  - /assets/projects/quick-view-interaction-design/3.webp
-  - /assets/projects/quick-view-interaction-design/4.webp
+  - /assets/projects/quick-view-interaction-design/scribd-quickview-01.webp
+  - /assets/projects/quick-view-interaction-design/scribd-quickview-02.webp
+  - /assets/projects/quick-view-interaction-design/scribd-quickview-03.webp
+  - /assets/projects/quick-view-interaction-design/scribd-quickview-04.webp
 layout: project.njk
 ---
 
