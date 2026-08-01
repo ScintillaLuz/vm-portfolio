@@ -150,6 +150,17 @@
   /* Dark theme variables */
   :root[data-theme="dark"] {}
 
+  /* Magenta palette variables */
+  :root[data-palette="magenta"] {
+    --color-primary100: #FFE5FB;
+    --color-primary200: #FFCCF7;
+    --color-primary300: #FFB2F3;
+    --color-primary600: #CC00AD;
+    --color-primary800: #660056;
+    --color-primary900: #4D0041;
+    --color-primary1000: #1A0016;
+  }
+
 }
 
 /**** Base styles ****/
@@ -788,8 +799,7 @@
 
     /* Detail-page text drops the centered measure and goes full width */
     .project-detail > *,
-    .note-detail > *,
-    .page-content > * {
+    .note-detail > * {
       grid-column: 1 / -1;
     }
 

@@ -3,6 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function () {
+        const saved = localStorage.getItem("palette");
+        if (saved === "magenta") {
+          document.documentElement.setAttribute("data-palette", "magenta");
+        }
+      })();
+    </script>
     <title>{{ title }} – Valentina Montagna</title>
     <link rel="stylesheet" href="/assets/style.css">
   </head>
@@ -24,5 +32,6 @@
     </div>
     <script src="/assets/js/header.js"></script>
     <script src="/assets/js/gallery.js"></script>
+    <script src="/assets/js/palette.js"></script>
   </body>
 </html>
