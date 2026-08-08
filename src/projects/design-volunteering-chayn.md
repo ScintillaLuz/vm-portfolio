@@ -14,10 +14,10 @@ tags:
   - Design-system
   - Design for good
 images:
-  - /assets/projects/design-volunteering-chayn/1.webp
-  - /assets/projects/design-volunteering-chayn/2.webp
-  - /assets/projects/design-volunteering-chayn/3.webp
-  - /assets/projects/design-volunteering-chayn/4.webp
+  - /assets/projects/design-volunteering-chayn/chayn-ysm-01.webp
+  - /assets/projects/design-volunteering-chayn/chayn-ysm-02.webp
+  - /assets/projects/design-volunteering-chayn/chayn-ysm-03.webp
+  - /assets/projects/design-volunteering-chayn/chayn-ysm-04.webp
 layout: project.njk
 ---
 

@@ -12,10 +12,10 @@ tags:
   - Acquisition
   - Growth-design
 images:
-  - /assets/projects/social-reading-book-feed-scribd/1.webp
-  - /assets/projects/social-reading-book-feed-scribd/2.webp
-  - /assets/projects/social-reading-book-feed-scribd/3.webp
-  - /assets/projects/social-reading-book-feed-scribd/4.webp
+  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-01.webp
+  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-02.webp
+  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-03.webp
+  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-04.webp
 layout: project.njk
 ---
 
