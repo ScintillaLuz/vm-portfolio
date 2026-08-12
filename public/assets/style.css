@@ -207,6 +207,27 @@
     --color-primary1000: #1A0016;
   }
 
+  /* Dark + magenta — accent tokens re-tinted for magenta on dark backgrounds.
+   Inherits everything else from the dark theme block above. */
+  :root[data-theme="dark"][data-palette="magenta"] {
+    --color-background: #160413;
+    --color-surface: #410B39;
+    --color-link: #F885E6;
+    --color-link-hover: #FFB2F3;
+    --color-link-current: #FFB2F3;
+    --color-border: #F885E6;
+    --color-focus: #FFB2F3;
+    --color-icon-button-bg: #E34FCD;
+    --color-icon-button-bg-hover: #FFB2F3;
+    --color-icon-button-outline: #FFFCFA;
+    --color-thumb-border-hover: #F885E6;
+    --color-thumb-border-active: #FFB2F3;
+    --color-button-accent: #F885E6;
+    --color-button-bg-hover: #410B39;
+    --color-button-text-hover: #FFFCFA;
+    --color-button-accent-hover: #FFB2F3;
+}
+
 }
 
 /**** Base styles ****/
