@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-      (function () {
-        const saved = localStorage.getItem("palette");
-        if (saved === "magenta") {
-          document.documentElement.setAttribute("data-palette", "magenta");
-        }
-      })();
-    </script>
+      <script>
+        (function () {
+          const palette = localStorage.getItem("palette");
+          if (palette === "magenta") {
+            document.documentElement.setAttribute("data-palette", "magenta");
+          }
+
+          const theme = localStorage.getItem("theme");
+          if (theme === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        })();
+      </script>
     <title>{{ title }} – Valentina Montagna</title>
     <link rel="stylesheet" href="/assets/style.css">
   </head>
