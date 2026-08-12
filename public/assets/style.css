@@ -118,6 +118,30 @@
     --color-grey400: #A2A9C3;
     --color-grey900: #282C3E;
 
+    /* Semantic tokens — components reference these roles, not raw palette colors.
+       Dark mode repoints the same roles below. */
+    --color-background: var(--color-light100);
+    --color-surface: var(--color-light100);
+    --color-text: var(--color-primary1000);
+    --color-text-muted: var(--color-grey900);
+    --color-link: var(--color-primary600);
+    --color-link-hover: var(--color-primary900);
+    --color-link-current: var(--color-primary900);
+    --color-border: var(--color-primary300);
+    --color-border-subtle: var(--color-grey200);
+    --color-focus: var(--color-primary600);
+    --color-shadow: rgb(40 44 62 / 0.09);
+    --color-icon-button-bg: var(--color-grey100);
+    --color-icon-button-bg-hover: var(--color-primary100);
+    --color-icon-button-outline: var(--color-primary600);
+    --color-thumb-border-hover: var(--color-primary300);
+    --color-thumb-border-active: var(--color-primary600);
+    --color-button-bg: var(--color-background);
+    --color-button-accent: var(--color-primary600);
+    --color-button-bg-hover: var(--color-primary100);
+    --color-button-text-hover: var(--color-primary900);
+    --color-button-accent-hover: var(--color-primary900);
+
     /* Space variables (spacing scale based on 4px increments) */
     --space-1: 0.25rem;  /* 4px */
     --space-2: 0.5rem;   /* 8px */
@@ -148,7 +172,29 @@
   }
 
   /* Dark theme variables */
-  :root[data-theme="dark"] {}
+  :root[data-theme="dark"] {
+    --color-background: #090911;
+    --color-surface: #131839;
+    --color-text: #FFFCFA;
+    --color-text-muted: var(--color-grey300);
+    --color-link: #5C6CD6;
+    --color-link-hover: #9693EC;
+    --color-link-current: #9693EC;
+    --color-border: #5C6CD6;
+    --color-border-subtle: #282C3E;
+    --color-focus: #9693EC;
+    --color-shadow: rgb(0 0 0 / 0.4);
+    --color-icon-button-bg: #5C6CD6;
+    --color-icon-button-bg-hover: #131839;
+    --color-icon-button-outline: #FFFCFA;
+    --color-thumb-border-hover: #5C6CD6;
+    --color-thumb-border-active: #9693EC;
+    --color-button-bg: var(--color-background);
+    --color-button-accent: #5C6CD6;
+    --color-button-bg-hover: #131839;
+    --color-button-text-hover: #FFFCFA;
+    --color-button-accent-hover: #9693EC;
+  }
 
   /* Magenta palette variables */
   :root[data-palette="magenta"] {
@@ -173,11 +219,11 @@
   }
 
   body {
-    background-color: var(--color-light100);
+    background-color: var(--color-background);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--color-primary1000);
+    color: var(--color-text);
   }
 
   a {
@@ -187,17 +233,17 @@
     text-decoration-thickness: 0.08rem;
     text-underline-offset: 3px;
     text-decoration-skip-ink: none;
-    color: var(--color-primary600);
+    color: var(--color-link);
     transition: color 0.08s ease-out, text-decoration-thickness 0.08s ease-out;
   }
 
   a:hover {
-    color: var(--color-primary900);
+    color: var(--color-link-hover);
     text-decoration-thickness: 0.1rem;
   }
 
   a:focus-visible {
-    outline: 2px solid var(--color-primary600);
+    outline: 2px solid var(--color-focus);
     outline-offset: 3px;
     text-decoration: none;
   }
@@ -224,33 +270,34 @@
 
   .primary-button {
     border-radius: 8px;
-    border: 1px solid var(--color-primary600);
+    border: 1px solid var(--color-button-accent);
     padding: var(--space-2) var(--space-4);
     font-weight: 600;
     font-style: normal;
     text-decoration: none;
-    background: var(--color-light100);
-    color: var(--color-primary600);
-    box-shadow: 4px 4px 0 0 var(--color-primary600);
+    background: var(--color-button-bg);
+    color: var(--color-button-accent);
+    box-shadow: 4px 4px 0 0 var(--color-button-accent);
     transition: box-shadow 0.08s ease-out, background-color 0.08s ease-out, border-color 0.08s ease-out, color 0.08s ease-out;
     cursor: pointer;
   }
 
   .primary-button:hover {
-    border: 1px solid var(--color-primary900);
-    color: var(--color-light900);
-    box-shadow: 4px 4px 0 0 var(--color-primary900);
+    border: 1px solid var(--color-button-accent-hover);
+    background: var(--color-button-bg-hover);
+    color: var(--color-button-text-hover);
+    box-shadow: 4px 4px 0 0 var(--color-button-accent-hover);
   }
 
   .primary-button:active {
-    border: 1px solid var(--color-primary900);
-    background: var(--color-primary100);
-    box-shadow: 2px 2px 0 0 var(--color-primary900);
-    color: var(--color-light900);
+    border: 1px solid var(--color-button-accent-hover);
+    background: var(--color-button-bg-hover);
+    box-shadow: 2px 2px 0 0 var(--color-button-accent-hover);
+    color: var(--color-button-text-hover);
   }
 
   .primary-button:focus-visible {
-    outline: 2px solid var(--color-primary600);
+    outline: 2px solid var(--color-focus);
     outline-offset: 3px;
   }
 
@@ -322,15 +369,15 @@
     top: 0;
     height: 90px;
     z-index: 100;
-    background-color: var(--color-light100);
+    background-color: var(--color-background);
     font-size: var(--font-size-14);
     border-block-end: 1px solid transparent;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
 
   .page-header.is-scrolled {
-    border-block-end-color: var(--color-grey200);
-    box-shadow: 0 2px 4px rgba(40, 44, 62, 0.09);
+    border-block-end-color: var(--color-border-subtle);
+    box-shadow: 0 2px 4px var(--color-shadow);
   }
 
   .main-navigation {
@@ -362,7 +409,7 @@
     text-decoration: underline;
     text-decoration-thickness: 0.14rem;
     text-underline-offset: 3px;
-    color: var(--color-primary900);
+    color: var(--color-link-current);
     font-weight: 700;
   }
 
@@ -386,13 +433,13 @@
   .navigation-links li+li::before {
     content: "•" / "";
     margin-inline-end: var(--space-4);
-    color: var(--color-primary600);
+    color: var(--color-link);
     font-weight: 900;
     user-select: none;
   }
 
   .navigation-links a[aria-current="page"] {
-    color: var(--color-primary900);
+    color: var(--color-link-current);
     font-weight: 700;
     text-decoration-thickness: 0.14rem;
   }
@@ -440,7 +487,7 @@
   .icon-button {
     aspect-ratio: 1;
     width: 100%;
-    background: var(--color-grey100);
+    background: var(--color-icon-button-bg);
     border: none;
     border-radius: var(--space-5);
     cursor: pointer;
@@ -449,13 +496,13 @@
   }
 
   .icon-button:hover {
-    background: var(--color-primary100);
-    outline-color: var(--color-primary600);
+    background: var(--color-icon-button-bg-hover);
+    outline-color: var(--color-icon-button-outline);
   }
 
   .icon-button:focus-visible {
-    outline: 2px solid var(--color-primary600);
-    background: var(--color-primary100);
+    outline: 2px solid var(--color-focus);
+    background: var(--color-icon-button-bg-hover);
   }
 
   .icon-button img {
@@ -470,7 +517,7 @@
     font-size: var(--font-size-50);
     line-height: 1em;
     margin-block-end: var(--space-18);
-    border-block-start: 1px solid var(--color-primary300);
+    border-block-start: 1px solid var(--color-border);
     padding-block-start: var(--space-16);
   }
 
@@ -563,15 +610,15 @@
   }
 
   .thumb-button:hover {
-    border-color: var(--color-primary300);
+    border-color: var(--color-thumb-border-hover);
   }
 
   .thumb-button.is-active {
-    border-color: var(--color-primary600);
+    border-color: var(--color-thumb-border-active);
   }
 
   .thumb-button:focus-visible {
-    outline: 2px solid var(--color-primary600);
+    outline: 2px solid var(--color-focus);
     outline-offset: 2px;
   }
 
@@ -617,7 +664,7 @@
     font-size: var(--font-size-12);
     margin-block-start: var(--space-8);
     margin-block-end: var(--space-8);
-    border-block-start: 1px solid var(--color-primary300);
+    border-block-start: 1px solid var(--color-border);
     padding-block-start: var(--space-8);
   }
 
@@ -770,7 +817,7 @@
   .case-study-figure figcaption {
     margin-block-start: var(--space-2);
     font-size: var(--font-size-14);
-    color: var(--color-grey900);
+    color: var(--color-text-muted);
   }
 
   /**** Tag page ****/
@@ -870,9 +917,9 @@
       top: 90px;
       left: 0;
       right: 0;
-      background-color: var(--color-light100);
-      border-block-end: 1px solid var(--color-grey200);
-      box-shadow: 0 4px 8px rgba(40, 44, 62, 0.09);
+      background-color: var(--color-surface);
+      border-block-end: 1px solid var(--color-border-subtle);
+      box-shadow: 0 4px 8px var(--color-shadow);
       padding: var(--space-6) var(--space-10);
     }
     
