@@ -334,6 +334,27 @@
     border: 0;
   }
 
+  /* Custom cursors — opt-in via the mouse icon button */
+
+  :root[data-cursor="custom"],
+  :root[data-cursor="custom"] * {
+    cursor: image-set(
+      url("/assets/cursors/pixel-cursor.png") 1x,
+      url("/assets/cursors/pixel-cursor_2x.png") 2x
+    ) 16 0, auto;
+  }
+
+  /* Interactive elements keep a distinct pointer so affordance isn't lost */
+  :root[data-cursor="custom"] a,
+  :root[data-cursor="custom"] button,
+  :root[data-cursor="custom"] summary,
+  :root[data-cursor="custom"] [role="button"] {
+    cursor: image-set(
+      url("/assets/cursors/pixel-pointer.png") 1x,
+      url("/assets/cursors/pixel-pointer_2x.png") 2x
+    ) 16 16, pointer;
+  }
+
 }
 
 /**** Layout ****/

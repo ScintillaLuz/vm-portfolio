@@ -14,7 +14,13 @@
           if (theme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
           }
+
+          const cursor = localStorage.getItem("cursor");
+          if (cursor === "custom") {
+            document.documentElement.setAttribute("data-cursor", "custom");
+          }
         })();
+        
       </script>
     <title>{{ title }} – Valentina Montagna</title>
     <link rel="stylesheet" href="/assets/style.css">
@@ -39,5 +45,6 @@
     <script src="/assets/js/gallery.js"></script>
     <script src="/assets/js/palette.js"></script>
     <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/cursor.js"></script>
   </body>
 </html>
