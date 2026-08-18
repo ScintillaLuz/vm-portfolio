@@ -289,39 +289,6 @@
     font-weight: 600;
   }
 
-  .primary-button {
-    border-radius: 8px;
-    border: 1px solid var(--color-button-accent);
-    padding: var(--space-2) var(--space-4);
-    font-weight: 600;
-    font-style: normal;
-    text-decoration: none;
-    background: var(--color-button-bg);
-    color: var(--color-button-accent);
-    box-shadow: 4px 4px 0 0 var(--color-button-accent);
-    transition: box-shadow 0.08s ease-out, background-color 0.08s ease-out, border-color 0.08s ease-out, color 0.08s ease-out;
-    cursor: pointer;
-  }
-
-  .primary-button:hover {
-    border: 1px solid var(--color-button-accent-hover);
-    background: var(--color-button-bg-hover);
-    color: var(--color-button-text-hover);
-    box-shadow: 4px 4px 0 0 var(--color-button-accent-hover);
-  }
-
-  .primary-button:active {
-    border: 1px solid var(--color-button-accent-hover);
-    background: var(--color-button-bg-hover);
-    box-shadow: 2px 2px 0 0 var(--color-button-accent-hover);
-    color: var(--color-button-text-hover);
-  }
-
-  .primary-button:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 3px;
-  }
-
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -332,27 +299,6 @@
     clip-path: inset(50%);
     white-space: nowrap;
     border: 0;
-  }
-
-  /* Custom cursors — opt-in via the mouse icon button */
-
-  :root[data-cursor="custom"],
-  :root[data-cursor="custom"] * {
-    cursor: image-set(
-      url("/assets/cursors/pixel-cursor.png") 1x,
-      url("/assets/cursors/pixel-cursor_2x.png") 2x
-    ) 16 0, auto;
-  }
-
-  /* Interactive elements keep a distinct pointer so affordance isn't lost */
-  :root[data-cursor="custom"] a,
-  :root[data-cursor="custom"] button,
-  :root[data-cursor="custom"] summary,
-  :root[data-cursor="custom"] [role="button"] {
-    cursor: image-set(
-      url("/assets/cursors/pixel-pointer.png") 1x,
-      url("/assets/cursors/pixel-pointer_2x.png") 2x
-    ) 16 16, pointer;
   }
 
 }
@@ -524,59 +470,6 @@
     padding-inline: var(--space-5);
   }
 
-  .icon-button {
-    aspect-ratio: 1;
-    width: 100%;
-    background: var(--color-icon-button-bg);
-    border: none;
-    border-radius: var(--space-5);
-    cursor: pointer;
-    outline: 2px solid transparent;
-    transition: background-color 0.08s ease-out, outline 0.08s ease-out;
-  }
-
-  .icon-button:hover {
-    background: var(--color-icon-button-bg-hover);
-    outline-color: var(--color-icon-button-outline);
-  }
-
-  .icon-button:focus-visible {
-    outline: 2px solid var(--color-focus);
-    background: var(--color-icon-button-bg-hover);
-  }
-
-  .icon-button img {
-    width: 100%;
-    height: auto;
-  }
-
-  .icon-button {
-    position: relative;
-  }
-
-  .icon-button::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + var(--space-2));
-    left: 50%;
-    translate: -50% 0;
-    padding: var(--space-1) var(--space-2);
-    background: var(--color-text);
-    color: var(--color-background);
-    font-size: var(--font-size-12);
-    white-space: nowrap;
-    border-radius: var(--space-1);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.12s ease-out;
-  }
-
-  .icon-button:hover::after,
-  .icon-button:focus-visible::after {
-    opacity: 1;
-  }
-
-
   /**** Projects ****/
 
   main .projects .section-title {
@@ -662,30 +555,6 @@
     object-fit: cover;
     border-radius: var(--space-2);
     display: block;
-  }
-
-  .thumb-button {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: 2px solid transparent;
-    border-radius: calc(var(--space-2) + 2px);
-    background: none;
-    cursor: pointer;
-    transition: border-color 0.08s ease-out;
-  }
-
-  .thumb-button:hover {
-    border-color: var(--color-thumb-border-hover);
-  }
-
-  .thumb-button.is-active {
-    border-color: var(--color-thumb-border-active);
-  }
-
-  .thumb-button:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
   }
 
   /**** Project tags list at the bottom of the project card ****/
@@ -950,10 +819,6 @@
     .project-index {
       display: none;
     }
-
-    .icon-button::after {
-      content: none;
-    }
   }
 
   @media (max-width: 840px) {
@@ -1152,6 +1017,160 @@
       margin-block-end: var(--space-6);
     }
 
+  }
+
+}
+
+/**** Components ****/
+
+@layer components {
+
+  .primary-button {
+    border-radius: 8px;
+    border: 1px solid var(--color-button-accent);
+    padding: var(--space-2) var(--space-4);
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    background: var(--color-button-bg);
+    color: var(--color-button-accent);
+    box-shadow: 4px 4px 0 0 var(--color-button-accent);
+    transition: box-shadow 0.08s ease-out, background-color 0.08s ease-out, border-color 0.08s ease-out, color 0.08s ease-out;
+    cursor: pointer;
+  }
+
+  .primary-button:hover {
+    border: 1px solid var(--color-button-accent-hover);
+    background: var(--color-button-bg-hover);
+    color: var(--color-button-text-hover);
+    box-shadow: 4px 4px 0 0 var(--color-button-accent-hover);
+  }
+
+  .primary-button:active {
+    border: 1px solid var(--color-button-accent-hover);
+    background: var(--color-button-bg-hover);
+    box-shadow: 2px 2px 0 0 var(--color-button-accent-hover);
+    color: var(--color-button-text-hover);
+  }
+
+  .primary-button:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+
+  .icon-button {
+    aspect-ratio: 1;
+    width: 100%;
+    background: var(--color-icon-button-bg);
+    border: none;
+    border-radius: var(--space-5);
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: background-color 0.08s ease-out, outline 0.08s ease-out;
+  }
+
+  .icon-button:hover {
+    background: var(--color-icon-button-bg-hover);
+    outline-color: var(--color-icon-button-outline);
+  }
+
+  .icon-button:focus-visible {
+    outline: 2px solid var(--color-focus);
+    background: var(--color-icon-button-bg-hover);
+  }
+
+  .icon-button img {
+    width: 100%;
+    height: auto;
+  }
+
+  .icon-button {
+    position: relative;
+  }
+
+  .icon-button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + var(--space-2));
+    left: 50%;
+    translate: -50% 0;
+    padding: var(--space-1) var(--space-2);
+    background: var(--color-text);
+    color: var(--color-background);
+    font-size: var(--font-size-12);
+    white-space: nowrap;
+    border-radius: var(--space-1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.12s ease-out;
+  }
+
+  .icon-button:hover::after,
+  .icon-button:focus-visible::after {
+    opacity: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .icon-button::after {
+      content: none;
+    }
+  }
+
+  .thumb-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: calc(var(--space-2) + 2px);
+    background: none;
+    cursor: pointer;
+    transition: border-color 0.08s ease-out;
+  }
+
+  .thumb-button:hover {
+    border-color: var(--color-thumb-border-hover);
+  }
+
+  .thumb-button.is-active {
+    border-color: var(--color-thumb-border-active);
+  }
+
+  .thumb-button:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  /* Custom cursors — opt-in via the mouse icon button.
+     Layered last so the custom cursor always wins over the plain
+     `cursor: pointer` set on interactive elements in @layer layout. */
+
+  :root[data-cursor="custom"],
+  :root[data-cursor="custom"] * {
+    cursor: url("/assets/cursors/pixel-cursor.png") 16 0, auto;
+    cursor: -webkit-image-set(
+      url("/assets/cursors/pixel-cursor.png") 1x,
+      url("/assets/cursors/pixel-cursor_2x.png") 2x
+    ) 16 0, auto;
+    cursor: image-set(
+      url("/assets/cursors/pixel-cursor.png") 1x,
+      url("/assets/cursors/pixel-cursor_2x.png") 2x
+    ) 16 0, auto;
+  }
+
+  /* Interactive elements keep a distinct pointer so affordance isn't lost */
+  :root[data-cursor="custom"] a,
+  :root[data-cursor="custom"] button,
+  :root[data-cursor="custom"] summary,
+  :root[data-cursor="custom"] [role="button"] {
+    cursor: url("/assets/cursors/pixel-pointer.png") 16 16, pointer;
+    cursor: -webkit-image-set(
+      url("/assets/cursors/pixel-pointer.png") 1x,
+      url("/assets/cursors/pixel-pointer_2x.png") 2x
+    ) 16 16, pointer;
+    cursor: image-set(
+      url("/assets/cursors/pixel-pointer.png") 1x,
+      url("/assets/cursors/pixel-pointer_2x.png") 2x
+    ) 16 16, pointer;
   }
 
 }
