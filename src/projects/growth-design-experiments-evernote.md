@@ -11,10 +11,14 @@ tags:
   - Growth-design
   - Interaction-design
 images:
-  - /assets/projects/growth-design-experiments-evernote/evernote-growth-01.webp
-  - /assets/projects/growth-design-experiments-evernote/evernote-growth-02.webp
-  - /assets/projects/growth-design-experiments-evernote/evernote-growth-03.webp
-  - /assets/projects/growth-design-experiments-evernote/evernote-growth-04.webp
+  - src: /assets/projects/growth-design-experiments-evernote/evernote-growth-01.webp
+    alt: The List Gallery entry point for the Beta Lists experiment on desktop, with template cards and a hover state on the "Daily productivity" card
+  - src: /assets/projects/growth-design-experiments-evernote/evernote-growth-02.webp
+    alt: A web pricing page comparing Basic, Premium, and Business plans, with a highlighted treatment for yearly savings
+  - src: /assets/projects/growth-design-experiments-evernote/evernote-growth-03.webp
+    alt: Three mobile plan comparison screens: Personal features and pricing, Professional features and pricing, and a billing options drawer
+  - src: /assets/projects/growth-design-experiments-evernote/evernote-growth-04.webp
+    alt: Three mobile screens showing a guest note-limit prompt, a note editor with a "two notes left" warning banner, and the full-screen sign-up page it leads to
 layout: project.njk
 ---
 

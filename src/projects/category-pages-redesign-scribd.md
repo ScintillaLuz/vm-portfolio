@@ -14,10 +14,14 @@ tags:
   - SEO
   - Design-system
 images:
-  - /assets/projects/category-pages-redesign-scribd/scribd-category-01.webp
-  - /assets/projects/category-pages-redesign-scribd/scribd-category-02.webp
-  - /assets/projects/category-pages-redesign-scribd/scribd-category-03.webp
-  - /assets/projects/category-pages-redesign-scribd/scribd-category-04.webp
+  - src: /assets/projects/category-pages-redesign-scribd/scribd-category-01.webp
+    alt: The top of a category page with the Spotlight section, on desktop and mobile
+  - src: /assets/projects/category-pages-redesign-scribd/scribd-category-02.webp
+    alt: The Author Spotlight module on desktop and mobile
+  - src: /assets/projects/category-pages-redesign-scribd/scribd-category-03.webp
+    alt: A "Dig deeper" module with a grid of titles, on desktop and mobile
+  - src: /assets/projects/category-pages-redesign-scribd/scribd-category-04.webp
+    alt: The All Categories page on desktop and mobile
 layout: project.njk
 ---
 

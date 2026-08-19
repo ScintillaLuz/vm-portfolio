@@ -13,10 +13,14 @@ tags:
   - TV
   - Interaction-design
 images:
-  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-01.webp
-  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-02.webp
-  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-03.webp
-  - /assets/projects/living-room-designs-at-tubi/tubi-OTT-04.webp
+  - src: /assets/projects/living-room-designs-at-tubi/tubi-OTT-01.webp
+    alt: A TV app home screen with a "What's your vibe today?" section and mood-based pill buttons including "Black Girl Experience", "Mean Girls Summer", and "Cozy Mysteries"
+  - src: /assets/projects/living-room-designs-at-tubi/tubi-OTT-02.webp
+    alt: A TV app screen with a "Terror on Tubi" seasonal hub in a spooky visual treatment
+  - src: /assets/projects/living-room-designs-at-tubi/tubi-OTT-03.webp
+    alt: A TV app screen with a "Meet the Heroes" marketing row, the first title selected
+  - src: /assets/projects/living-room-designs-at-tubi/tubi-OTT-04.webp
+    alt: A TV app screen with a personalized "Just for you: Anime Hub" section offering three options: a playable "One Piece" linear TV episode, an "Explore New Movies and Series" button, and a "Your favorite characters" button
 layout: project.njk
 ---
 

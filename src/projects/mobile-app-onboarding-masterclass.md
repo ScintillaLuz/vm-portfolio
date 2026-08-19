@@ -14,10 +14,14 @@ tags:
   - Onboarding
   - Growth-design
 images:
-  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-01.webp
-  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-02.webp
-  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-03.webp
-  - /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-04.webp
+  - src: /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-01.webp
+    alt: Three onboarding screens for picking interests: a full topic list, expanded subtopics such as Design and Music, and a learning-style question
+  - src: /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-02.webp
+    alt: Three onboarding screens with a "Learning starts now" transition, followed by short video clips of instructors Alicia Keys and Jimmy Chin
+  - src: /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-03.webp
+    alt: Three onboarding screens showing the Audio Mode feature as a toggle above a video clip
+  - src: /assets/projects/mobile-app-onboarding-masterclass/mc-onboarding-04.webp
+    alt: Three onboarding screens covering key features: hands-on Sessions, downloadable class guides, and a membership plan paywall
 layout: project.njk
 ---
 

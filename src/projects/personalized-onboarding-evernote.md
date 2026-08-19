@@ -17,10 +17,14 @@ tags:
   - Onboarding
   - Growth-design
 images:
-  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-01.webp
-  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-02.webp
-  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-03.webp
-  - /assets/projects/personalized-onboarding-evernote/en-onboarding-app-04.webp
+  - src: /assets/projects/personalized-onboarding-evernote/en-onboarding-app-01.webp
+    alt: Three onboarding screens: a welcome message, a "Let's create your first note" prompt, and a "Choose what your note is for" question with "Work" selected
+  - src: /assets/projects/personalized-onboarding-evernote/en-onboarding-app-02.webp
+    alt: Three onboarding screens: a "What do you want to get done?" task picker, a push notification permission prompt, and an illustrated loading screen while the app personalizes the experience
+  - src: /assets/projects/personalized-onboarding-evernote/en-onboarding-app-03.webp
+    alt: Three onboarding screens showing a personalized Meeting Notes template, with coachmark tooltips pointing to note-taking and attachment features
+  - src: /assets/projects/personalized-onboarding-evernote/en-onboarding-app-04.webp
+    alt: Three onboarding screens: a coachmark on the checkmark button, a filled-in meeting note, and a home screen with a "Take a tour of Evernote" module
 layout: project.njk
 ---
 

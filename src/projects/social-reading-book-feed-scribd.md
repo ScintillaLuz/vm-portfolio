@@ -12,10 +12,14 @@ tags:
   - Acquisition
   - Growth-design
 images:
-  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-01.webp
-  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-02.webp
-  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-03.webp
-  - /assets/projects/social-reading-book-feed-scribd/scribd-highlights-04.webp
+  - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-01.webp
+    alt: Three onboarding screens: a welcome message, an intro to the feature, and a step for choosing between fiction, non-fiction, or both
+  - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-02.webp
+    alt: Three screens of scrollable book quote cards with likes, comments, and hashtags
+  - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-03.webp
+    alt: Three screens showing an All Highlights view, a "#women-lit" feed collecting highlights with that hashtag, and a highlight with a reader's personal note
+  - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-04.webp
+    alt: Three screens scrolling through a highlight's detail view, from the card with its personal note, to the full note and comments, to the comment field
 layout: project.njk
 ---
 

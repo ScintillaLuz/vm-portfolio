@@ -78,14 +78,14 @@ has_sidebar: true
             {% endif %}
           <div class="project-card-gallery">
             <figure class="gallery-main" aria-live="polite">
-              <img src="{{ project.data.images[0] }}" alt="{{ project.data.title }} preview" loading="lazy">
+              {% set firstImage = project.data.images[0] %}
+              <img src="{{ firstImage.src }}" alt="{{ firstImage.alt }}" loading="lazy">
             </figure>
             <ul class="gallery-thumbs" role="list">
               {% for image in project.data.images %}
               <li>
-                <button class="thumb-button" data-src="{{ image }}"
-                  aria-label="View preview {{ loop.index }} of {{ project.data.title }}">
-                  <img src="{{ image }}" alt="{{ project.data.title }} thumbnail {{ loop.index }}" loading="lazy">
+                <button class="thumb-button" data-src="{{ image.src }}" data-alt="{{ image.alt }}" aria-label="View preview {{ loop.index }} of {{ project.data.title }}">
+                  <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
                 </button>
               </li>
               {% endfor %}

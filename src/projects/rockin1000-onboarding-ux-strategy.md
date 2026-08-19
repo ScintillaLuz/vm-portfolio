@@ -8,16 +8,20 @@ blurb: |
  Rockin’1000 is a small but mighty company from Italy bringing musicians together to live their dreams: playing a stadium show with a mega-band of 1000 members from all walks of life. While they specialize in live events, they developed a mobile app for their community to stay connected and organize the shows.
  
  My business partner and I started with a redesign of the app onboarding, with the goal of reducing early churn. The work quickly expanded into something larger: we tackled all aspects of product activation, from defining the right metrics to collect, to restructuring transactional and marketing emails, to laying the foundations for a new design system library aligned with their recent rebranding.
-case_study: true
+case_study: false
 tags:
   - Mobile
   - Onboarding
   - Design strategy
 images:
-  - /assets/projects/rockin1000-onboarding-ux-strategy/1.webp
-  - /assets/projects/rockin1000-onboarding-ux-strategy/2.webp
-  - /assets/projects/rockin1000-onboarding-ux-strategy/3.webp
-  - /assets/projects/rockin1000-onboarding-ux-strategy/4.webp
+  - src: /assets/projects/rockin1000-onboarding-ux-strategy/1.webp
+    alt: Three screens: a splash screen, sign-up, and account creation
+  - src: /assets/projects/rockin1000-onboarding-ux-strategy/2.webp
+    alt: Three onboarding screens: an illustrated intro, instrument selection, and gender selection
+  - src: /assets/projects/rockin1000-onboarding-ux-strategy/3.webp
+    alt: Three onboarding screens showing a video upload prompt and two recording tips carousel
+  - src: /assets/projects/rockin1000-onboarding-ux-strategy/4.webp
+    alt: Three home screens personalized by video upload status, from under review to approved
 layout: project.njk
 ---
 

@@ -14,10 +14,14 @@ tags:
   - Growth-design
   - Interaction-design
 images:
-  - /assets/projects/quick-view-interaction-design/scribd-quickview-01.webp
-  - /assets/projects/quick-view-interaction-design/scribd-quickview-02.webp
-  - /assets/projects/quick-view-interaction-design/scribd-quickview-03.webp
-  - /assets/projects/quick-view-interaction-design/scribd-quickview-04.webp
+  - src: /assets/projects/quick-view-interaction-design/scribd-quickview-01.webp
+    alt: A desktop screen with a quick view panel overlaid on the carousel, showing details for the first title
+  - src: /assets/projects/quick-view-interaction-design/scribd-quickview-02.webp
+    alt: A desktop screen with a quick view panel as an expanded card in place of the first item in the row, showing that title's details
+  - src: /assets/projects/quick-view-interaction-design/scribd-quickview-03.webp
+    alt: A desktop screen with a quick view panel expanded below the carousel row, showing the selected title's details
+  - src: /assets/projects/quick-view-interaction-design/scribd-quickview-04.webp
+    alt: Three mobile web screens showing how the quick view panel below the row adapts across smaller viewports
 layout: project.njk
 ---
 

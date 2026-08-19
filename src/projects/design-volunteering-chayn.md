@@ -14,10 +14,14 @@ tags:
   - Design-system
   - Design for good
 images:
-  - /assets/projects/design-volunteering-chayn/chayn-ysm-01.webp
-  - /assets/projects/design-volunteering-chayn/chayn-ysm-02.webp
-  - /assets/projects/design-volunteering-chayn/chayn-ysm-03.webp
-  - /assets/projects/design-volunteering-chayn/chayn-ysm-04.webp
+  - src: /assets/projects/design-volunteering-chayn/chayn-ysm-01.webp
+    alt: Three mobile web screens showing the homepage, the "Your Journey" theme list, and a "Stories of survival and resilience" theme card
+  - src: /assets/projects/design-volunteering-chayn/chayn-ysm-02.webp
+    alt: Three mobile web screens showing the "Moving through trauma" theme, the "Explore other themes" list, and a sign-up prompt to save resources
+  - src: /assets/projects/design-volunteering-chayn/chayn-ysm-03.webp
+    alt: Three mobile web screens showing the "Accessing justice through the law" theme, a process map steps card, and an external resource card for Southall Black Sisters
+  - src: /assets/projects/design-volunteering-chayn/chayn-ysm-04.webp
+    alt: Three mobile web screens showing the "Reporting to the police" process map, with expandable notes on each step
 layout: project.njk
 ---
 

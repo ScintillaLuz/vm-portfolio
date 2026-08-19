@@ -14,14 +14,26 @@ tags:
   - SEO
   - Design-system
 images:
-  - /assets/projects/book-series-page-scribd/scribd-series-01.webp
-  - /assets/projects/book-series-page-scribd/scribd-series-02.webp
-  - /assets/projects/book-series-page-scribd/scribd-series-03.webp
-  - /assets/projects/book-series-page-scribd/scribd-series-04.webp
+  - src: /assets/projects/book-series-page-scribd/scribd-series-01.webp
+    alt: Series overview and main character bios on desktop and mobile
+  - src: /assets/projects/book-series-page-scribd/scribd-series-02.webp
+    alt: The list of titles in the series on desktop and mobile, with the first audiobook's detail panel selected and its description below
+  - src: /assets/projects/book-series-page-scribd/scribd-series-03.webp
+    alt: A "More binge-worthy sci-fi and fantasy series" module on desktop and mobile
+  - src: /assets/projects/book-series-page-scribd/scribd-series-04.webp
+    alt: The "Others you might like" and "There's more to discover" modules on desktop and mobile, showing category cards and book recommendations
 layout: project.njk
 ---
 
-## Overview
+## The context: how it started
+
+## The problem: Breaking the overwhelming “big wall of content”
+
+## Using user journeys to identify design opportunities
+
+## Step #1: Turning the Hero card into a true star
+
+## Step #2: A quicker, more efficient Home discovery
 
 MasterClass had grown its content catalogue significantly but the mobile navigation hadn't kept pace. Users were struggling to find content relevant to them.
  Proin eu risus ipsum. Mauris tortor purus, lacinia varius consectetur sit amet, interdum et ligula. Morbi posuere ante ut ornare vestibulum. Etiam varius suscipit mauris. Aliquam erat volutpat. Sed venenatis semper sollicitudin. Quisque commodo rhoncus fermentum. Aliquam erat volutpat. Sed magna tellus, auctor sit amet neque et, iaculis imperdiet nulla. Pellentesque placerat mauris quis massa mattis, ut commodo nunc maximus. Nullam condimentum congue quam, commodo tincidunt risus venenatis eu. Etiam at pellentesque nibh. Cras in erat egestas, venenatis velit sit amet, laoreet erat. Praesent nisl erat, finibus vel egestas sed, ultricies sit amet ante. In quis orci massa.

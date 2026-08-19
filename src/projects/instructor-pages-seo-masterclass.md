@@ -14,10 +14,14 @@ tags:
   - SEO
   - Growth-design
 images:
-  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-01.webp
-  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-02.webp
-  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-03.webp
-  - /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-04.webp
+  - src: /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-01.webp
+    alt: A hero section on desktop and mobile, with a duotone portrait of Daniel Pink, a pull quote, and an achievements list
+  - src: /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-02.webp
+    alt: An in-article table of contents on desktop and mobile, followed by a "Discover MasterClass" call to action
+  - src: /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-03.webp
+    alt: A large highlighted pull quote spanning the content column, on desktop and mobile
+  - src: /assets/projects/instructor-pages-seo-masterclass/mc-instructor-pages-04.webp
+    alt: A class trailer embed for "Daniel Pink Teaches Sales and Persuasion", with a lesson list and membership benefits sidebar
 layout: project.njk
 ---
 

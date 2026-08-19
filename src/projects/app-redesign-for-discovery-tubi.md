@@ -14,10 +14,14 @@ tags:
   - Retention
   - Design-system
 images:
-  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-01.webp
-  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-02.webp
-  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-03.webp
-  - /assets/projects/app-redesign-for-discovery-tubi/tubi-app-04.webp
+  - src: /assets/projects/app-redesign-for-discovery-tubi/tubi-app-01.webp
+    alt: Three home screens showing hero designs for a TV series, custom title art, and a "leaving soon" badge
+  - src: /assets/projects/app-redesign-for-discovery-tubi/tubi-app-02.webp
+    alt: Three screens showing an explore pattern on the home, a new visual treatment for TV series, and a search result grid with content type filters
+  - src: /assets/projects/app-redesign-for-discovery-tubi/tubi-app-03.webp
+    alt: Three screens showing the title details page with a redesigned video preview, the episode list, and a grid of related titles
+  - src: /assets/projects/app-redesign-for-discovery-tubi/tubi-app-04.webp
+    alt: Three screens showing the title details redesign for a movie, with its video preview states
 layout: project.njk
 ---
 

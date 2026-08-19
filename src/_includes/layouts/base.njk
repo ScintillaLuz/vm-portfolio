@@ -3,26 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script>
-        (function () {
-          const palette = localStorage.getItem("palette");
-          if (palette === "magenta") {
-            document.documentElement.setAttribute("data-palette", "magenta");
-          }
 
-          const theme = localStorage.getItem("theme");
-          if (theme === "dark") {
-            document.documentElement.setAttribute("data-theme", "dark");
-          }
+    <script>
+      (function () {
+        const palette = localStorage.getItem("palette");
+        if (palette === "magenta") {
+          document.documentElement.setAttribute("data-palette", "magenta");
+        }
 
-          const cursor = localStorage.getItem("cursor");
-          if (cursor === "custom") {
-            document.documentElement.setAttribute("data-cursor", "custom");
-          }
-        })();
-        
-      </script>
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+
+        const cursor = localStorage.getItem("cursor");
+        if (cursor === "custom") {
+          document.documentElement.setAttribute("data-cursor", "custom");
+        }
+      })();
+    </script>
+
     <title>{{ title }} – Valentina Montagna</title>
+    <meta name="description" content="{{ description or site.description }}">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:title" content="{{ title }} – Valentina Montagna">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ ogImage or '/assets/og-default.png' }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="stylesheet" href="/assets/style.css">
   </head>
   <body id="top">

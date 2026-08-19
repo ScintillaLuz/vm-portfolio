@@ -5,7 +5,7 @@ document.querySelectorAll('.project-card-gallery').forEach(gallery => {
   thumbBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       mainImg.src = btn.dataset.src;
-      mainImg.alt = btn.querySelector('img').alt;
+      mainImg.alt = btn.dataset.alt;
       thumbBtns.forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
     });
