@@ -324,6 +324,7 @@
 
   .site-wrapper>main {
     flex: 1;
+    width: 100%;
   }
 
   /* Creating a grid with 12 columns */
@@ -716,6 +717,11 @@
     margin-block-end: var(--space-2);
   }
 
+  .page-content h1,
+  .design-notes h1 {
+    margin-block-end: var(--space-6);
+  }
+
   .page-content h2 {
     font-size: var(--font-size-28);
   }
@@ -881,11 +887,6 @@
     
     .hero {
       margin-block-end: var(--space-10);
-    }
-
-    .page-content h1,
-    .design-notes h1 {
-      margin-block-end: var(--space-6);
     }
 
     .hero h1,
