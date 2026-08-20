@@ -1,7 +1,7 @@
 ---
-title: App critique ~ Great but not awesome, Google Maps
-description: Lying is a human activity, the AI is just a powerful prediction model. It gives you the wrong answer not because of an intention it doesn't think nor the humans creating the model can inject their thinking since the answer is creating the moment the prompt is sent to it.
-date: 2026-06-30
+title: An app critique of Google Maps
+description: Coming soon!
+date: 2026-08-19
 ---
 
 ## Testing this

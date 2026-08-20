@@ -15,9 +15,9 @@ tags:
   - Design strategy
 images:
   - src: /assets/projects/rockin1000-onboarding-ux-strategy/1.webp
-    alt: Three screens: a splash screen, sign-up, and account creation
+    alt: Three screens showing a splash screen, sign-up, and account creation
   - src: /assets/projects/rockin1000-onboarding-ux-strategy/2.webp
-    alt: Three onboarding screens: an illustrated intro, instrument selection, and gender selection
+    alt: Three onboarding screens showing an illustrated intro, instrument selection, and gender selection
   - src: /assets/projects/rockin1000-onboarding-ux-strategy/3.webp
     alt: Three onboarding screens showing a video upload prompt and two recording tips carousel
   - src: /assets/projects/rockin1000-onboarding-ux-strategy/4.webp

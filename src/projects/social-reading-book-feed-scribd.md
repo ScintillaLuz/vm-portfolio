@@ -13,7 +13,7 @@ tags:
   - Growth-design
 images:
   - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-01.webp
-    alt: Three onboarding screens: a welcome message, an intro to the feature, and a step for choosing between fiction, non-fiction, or both
+    alt: Three onboarding screens showing a welcome message, an intro to the feature, and a step for choosing between fiction, non-fiction, or both
   - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-02.webp
     alt: Three screens of scrollable book quote cards with likes, comments, and hashtags
   - src: /assets/projects/social-reading-book-feed-scribd/scribd-highlights-03.webp

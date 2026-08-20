@@ -20,7 +20,7 @@ images:
   - src: /assets/projects/living-room-designs-at-tubi/tubi-OTT-03.webp
     alt: A TV app screen with a "Meet the Heroes" marketing row, the first title selected
   - src: /assets/projects/living-room-designs-at-tubi/tubi-OTT-04.webp
-    alt: A TV app screen with a personalized "Just for you: Anime Hub" section offering three options: a playable "One Piece" linear TV episode, an "Explore New Movies and Series" button, and a "Your favorite characters" button
+    alt: A TV app screen with a personalized "Just for you, Anime Hub" section offering three options with a playable "One Piece" linear TV episode, an "Explore New Movies and Series" button, and a "Your favorite characters" button
 layout: project.njk
 ---
 

@@ -19,7 +19,7 @@ images:
   - src: /assets/projects/content-design-framework-tubi/tubi-containers-framework-01.webp
     alt: A diagram titled "The Discovery Choices" mapping the question "What can I watch?" to signal categories including vibe, mode, duration, recency, genre, and popularity
   - src: /assets/projects/content-design-framework-tubi/tubi-containers-framework-02.webp
-    alt: A diagram titled "Categorizing the Attributes" grouping discovery signals into three clusters: duration, genre, and a combined popularity, recency, and vibe group
+    alt: A diagram titled "Categorizing the Attributes" grouping discovery signals into three clusters, duration, genre, and a combined popularity, recency, and vibe group
   - src: /assets/projects/content-design-framework-tubi/tubi-containers-framework-03.webp
     alt: A diagram titled "Formulas Examples" showing how combining layers such as vibe, genre, and duration produces carousel titles like "Suspenseful Art-house Movies"
   - src: /assets/projects/content-design-framework-tubi/tubi-containers-framework-04.webp
