@@ -85,7 +85,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode(
     "figure",
     (src, alt, caption = "", width = 2400, height = 1350) => `
-<figure class="case-study-figure">
+<figure class="content-figure">
   <img src="${src}" alt="${alt}" loading="lazy"
     width="${width}" height="${height}">
   ${caption ? `<figcaption>${caption}</figcaption>` : ""}

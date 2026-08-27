@@ -616,15 +616,7 @@
     margin-block-end: var(--space-12);
   }
 
-  .project-detail h2:first-of-type,
-  .note-detail h2:first-of-type,
-  .page-content h2:first-of-type {
-    margin-block-start: 0;
-  }
-
-  .project-detail h2,
-  .note-detail h2,
-  .page-content h2 {
+  .content-layout h2 {
     font-size: var(--font-size-28);
     margin-block-end: var(--space-2);
   }
@@ -632,24 +624,18 @@
   /* Detail pages and static pages (About, Contact, Other Projects) are
      their own 12-column grid: text sits in a centered 8-column measure,
      figures break out to the full container width */
-  .project-detail,
-  .note-detail,
-  .page-content {
+  .content-layout {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: var(--space-4);
     margin-block-end: var(--space-30);
   }
 
-  .project-detail > *,
-  .note-detail > *,
-  .page-content > * {
+  .content-layout > * {
     grid-column: 3 / 11;
   }
 
-  .project-detail > .case-study-figure,
-  .note-detail > .case-study-figure,
-  .page-content > .case-study-figure {
+  .content-layout > .content-figure {
     grid-column: 1 / -1;
   }
 
@@ -663,9 +649,7 @@
     margin-block-end: var(--space-12);
   }
 
-  .project-detail p,
-  .note-detail p,
-  .page-content p {
+  .content-layout p {
     margin-block-end: var(--space-6);
     font-size: var(--font-size-20);
   }
@@ -745,17 +729,17 @@
     margin-block-end: var(--space-4);
   }
 
-  .case-study-figure {
+  .content-figure {
     margin-block-end: var(--space-10);
   }
 
-  .case-study-figure img {
+  .content-figure img {
     width: 100%;
     height: auto;
     border-radius: var(--space-2);
   }
 
-  .case-study-figure figcaption {
+  .content-figure figcaption {
     margin-block-start: var(--space-2);
     font-size: var(--font-size-14);
     color: var(--color-text-muted);
@@ -932,7 +916,7 @@
       margin-block-end: var(--space-2);
     }
 
-    .projecs .project-card-blurb p:first-of-type {
+    .projects .project-card-blurb p:first-of-type {
       margin-block-end: var(--space-2);
     }
 
@@ -1014,7 +998,7 @@
       flex: 0 0 calc((100% - var(--space-2)) / 2);
     }
 
-    .case-study-figure {
+    .content-figure {
       margin-block-end: var(--space-6);
     }
 
