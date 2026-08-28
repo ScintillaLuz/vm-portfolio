@@ -66,17 +66,6 @@ module.exports = function (eleventyConfig) {
       .join("")
   );
 
-  // Extracts h2 headings (id + text) from rendered content, for the TOC sidebar
-  eleventyConfig.addFilter("toc", (content) => {
-    const headings = [];
-    const regex = /<h2[^>]*id="([^"]*)"[^>]*>(.*?)<\/h2>/gi;
-    let match;
-    while ((match = regex.exec(content)) !== null) {
-      headings.push({ id: match[1], text: match[2] });
-    }
-    return headings;
-  });
-
   /* ---------- Shortcodes ---------- */
 
   // Captioned, lazy-loaded image for case studies.
