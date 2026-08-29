@@ -5,9 +5,9 @@ has_sidebar: true
 
 <article class="project-detail content-layout">
   <h1 class="project-detail-title">{{ title }}</h1>
-  <div class="project-detail-meta">
-    <time datetime="{{ date }}">{{ date }}</time>
-    <span class="company">{{ company }}</span>
-  </div>
+    <div class="project-detail-meta">
+      <time datetime="{{ date }}">{{ date | monthYear }}</time>
+      <span class="company">{{ company }}</span>
+    </div>
   {{ content | safe }}
 </article>
