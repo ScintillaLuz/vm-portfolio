@@ -40,6 +40,13 @@
       <header class="page-header">
         {% include "nav.njk" %}
       </header>
+
+      {% if banner_image %}
+        <div class="project-banner" style="--banner-color: {{ banner_color }}">
+          <img src="{{ banner_image }}" alt="" width="1280" height="380">
+        </div>
+      {% endif %}
+
     <div class="site-wrapper">
       <main>
         {% if has_sidebar %}

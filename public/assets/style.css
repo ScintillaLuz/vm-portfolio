@@ -608,6 +608,28 @@
 
   /**** Project detail page and Note detail page ****/
 
+  /**** Project banner ****/
+
+  .project-banner {
+    width: 100%;
+    background: var(--banner-color, var(--color-surface));
+  }
+
+  .project-banner img {
+    display: block;
+    max-width: 1280px;
+    margin-inline: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-detail-header {
+    background: var(--color-background);
+    margin-block-start: calc(var(--space-16) * -1 - 100px);
+    outline: var(--space-10) solid var(--color-background);
+    grid-column: 2 / 12;
+  }
+
   .project-detail-title,
   .note-detail-title {
     margin-block-end: var(--space-6);
@@ -944,6 +966,11 @@
 
     .projects .project-card-tags {
       margin-block-start: var(--space-4);
+    }
+
+    .project-detail-header {
+      margin-block-start: 0;
+      padding-inline: 0;
     }
     
     .project-detail-title,
