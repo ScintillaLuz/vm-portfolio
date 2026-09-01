@@ -529,6 +529,39 @@
 
   }
 
+    /**** Sidebar: projects index on Home ****/
+
+  .project-index {
+    position: sticky;
+    top: calc(100px + var(--space-6));
+    margin-inline-start: var(--space-30);
+  }
+
+  .project-index h3 {
+    margin-block-end: var(--space-2);
+  }
+
+  .project-index h3,
+  .project-index ul {
+    font-size: initial;
+  }
+
+  .project-index ul {
+    list-style: none;
+    font-size: var(--font-size-14);
+  }
+
+  .project-index ul li:not(:last-child) {
+    margin-block-end: var(--space-3);
+  }
+
+  /* Styling the back-to-top button */
+  .project-index .back-to-top {
+    font-size: var(--font-size-14);
+    display: inline-block;
+    margin-block-start: var(--space-6);
+  }
+
 
   /**** Home projects gallery ****/
 
@@ -639,6 +672,35 @@
     content: " • ";
   }
 
+  .at-a-glance {
+    border-inline-start: 1px solid var(--color-border);
+    padding-inline-start: var(--space-4);
+    margin-block: var(--space-10) 0;
+  }
+
+  .at-a-glance #glance-heading {
+    font-size: var(--font-size-20);
+  }
+
+  .at-a-glance__row {
+    margin-block-end: var(--space-1);
+  }
+
+  .at-a-glance__row dt,
+  .at-a-glance__row dd {
+    display: inline;
+    margin: 0;
+  }
+
+  .at-a-glance__row dt {
+    font-size: var(--font-size-14);
+    font-weight: 600;
+  }
+
+  .at-a-glance__row dt::after {
+    content: " ";
+  }
+
   .content-layout h2 {
     font-size: var(--font-size-32);
     font-weight: 600;
@@ -697,41 +759,6 @@
   .content-layout ul li:not(:last-child) {
     margin-block-end: var(--space-2);
   }
-
-  /**** Sidebar: projects index on Home ****/
-
-  .project-index {
-    position: sticky;
-    top: calc(100px + var(--space-6));
-    margin-inline-start: var(--space-30);
-  }
-
-  .project-index h3 {
-    margin-block-end: var(--space-2);
-  }
-
-  .project-index h3,
-  .project-index ul {
-    font-size: initial;
-  }
-
-  .project-index ul {
-    list-style: none;
-    font-size: var(--font-size-14);
-  }
-
-  .project-index ul li:not(:last-child) {
-    margin-block-end: var(--space-3);
-  }
-
-  /* Styling the back-to-top button */
-  .project-index .back-to-top {
-    font-size: var(--font-size-14);
-    display: inline-block;
-    margin-block-start: var(--space-6);
-  }
-
-
 
   /**** Internal pages: About, Other Projects, Contact ****/
 

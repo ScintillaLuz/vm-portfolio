@@ -11,5 +11,23 @@ has_sidebar: true
       <span class="company">{{ company }}</span>
     </div>
   </header>
+
+  {% if glance %}
+    <section class="at-a-glance" aria-labelledby="glance-heading">
+      <h2 id="glance-heading" class="at-a-glance__heading">At a glance</h2>
+      <dl class="at-a-glance__list">
+        {% for field in glanceFields %}
+          {% set value = glance[field.key] %}
+          {% if value %}
+            <div class="at-a-glance__row">
+              <dt>{{ field.label }}</dt>
+              <dd>{% if value is iterable and value is not string %}{{ value | join(", ") }}{% else %}{{ value }}{% endif %}</dd>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </dl>
+    </section>
+  {% endif %}
+
   {{ content | safe }}
 </article>

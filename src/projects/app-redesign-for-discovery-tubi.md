@@ -8,11 +8,18 @@ blurb: |
   The iOS Lead Engineer at Tubi reached out to me for a self-initiated project: she had a strong conviction that the mobile experience needed work, and a green light from Product to go ahead and come up with proposals. Together we also found, and claimed, a parked ticket for increasing the visibility and discoverability of TV Series. We brought the two goals together into one project, giving the iOS and Android teams an opportunity to better sync on experiments and feature releases.
   
   My approach to this revamp is one I like and cheer for whenever I can: look at the big picture holistically, but break the design down into individual tests to build a roadmap, rather than shipping one sweeping change that’s difficult to measure. The challenge, and what I find most valuable about this method, is making sure the long-term vision holds regardless of the outcome of any individual experiment it’s made of.
-case_study: true
 tags:
   - Mobile
   - Retention
   - Design-system
+case_study: true
+glance:
+  role: Senior Product Designer, Content & Discovery (lead and sole designer)
+  team: iOS and Android lead engineers, Senior UX Researcher, one PM
+  timeframe: 2023, 1 month
+  platforms: iOS, Android
+  goal: Improve discoverability of content types for new users in the mobile apps
+  skills: Mobile design, design systems, UI and visual design, A/B experimentation
 images:
   - src: /assets/projects/app-redesign-for-discovery-tubi/tubi-app-01.webp
     alt: Three home screens showing hero designs for a TV series, custom title art, and a "leaving soon" badge
