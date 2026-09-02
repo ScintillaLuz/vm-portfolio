@@ -645,6 +645,12 @@
 
   /**** Project detail page and Note detail page ****/
 
+  .back-link {
+    display: inline-block;
+    font-size: var(--font-size-14);
+    margin-block-end: var(--space-4);
+  }
+
   /**** Project banner ****/
 
   .project-banner {
