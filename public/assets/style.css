@@ -307,6 +307,8 @@
 
 @layer layout {
 
+  /**** Shared layout ****/
+
   /* Sticky footer */
   body {
     min-height: 100dvh;
@@ -350,7 +352,7 @@
     padding-inline: var(--space-10);
   }
 
-  /**** Header nav styles ****/
+  /**** Header and navigation ****/
 
   .page-header {
     display: flex;
@@ -438,8 +440,20 @@
     display: none;
   }
 
+  /**** Footer ****/
 
-  /**** Hero section ****/
+  footer {
+    width: 100%;
+    font-size: var(--font-size-14);
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-block-start: var(--space-8);
+    margin-block-end: var(--space-8);
+    border-block-start: 1px solid var(--color-border);
+    padding-block-start: var(--space-8);
+  }
+
+  /**** Home: hero ****/
 
   .hero {
     margin-block-end: var(--space-18);
@@ -461,8 +475,7 @@
     font-size: var(--font-size-20);
   }
 
-
-  /**** Sidebar button-icons ****/
+  /**** Home: sidebar icons ****/
 
   .sidebar-icons {
     display: grid;
@@ -471,8 +484,7 @@
     padding-inline: var(--space-5);
   }
 
-
-  /**** Home projects card ****/
+  /**** Home: project cards ****/
 
   main .projects .section-title {
     font-size: var(--font-size-50);
@@ -529,7 +541,36 @@
 
   }
 
-    /**** Sidebar: projects index on Home ****/
+  /**** Home: gallery ****/
+
+  .gallery-main img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--space-2);
+  }
+
+  .gallery-thumbs {
+    display: flex;
+    gap: var(--space-2);
+    margin-block-start: var(--space-2);
+    list-style: none;
+  }
+
+  .gallery-thumbs li {
+    flex: 0 0 calc((100% - 3 * var(--space-2)) / 4);
+    border-radius: var(--space-2);
+  }
+
+  .gallery-thumbs img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--space-2);
+    display: block;
+  }
+
+  /**** Home: projects index sidebar ****/
 
   .project-index {
     position: sticky;
@@ -562,88 +603,104 @@
     margin-block-start: var(--space-6);
   }
 
+  /**** Shared: content layout (project detail, note detail, static pages) ****/
 
-  /**** Home projects gallery ****/
-
-  .gallery-main img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: var(--space-2);
-  }
-
-  .gallery-thumbs {
-    display: flex;
-    gap: var(--space-2);
-    margin-block-start: var(--space-2);
-    list-style: none;
-  }
-
-  .gallery-thumbs li {
-    flex: 0 0 calc((100% - 3 * var(--space-2)) / 4);
-    border-radius: var(--space-2);
-  }
-
-  .gallery-thumbs img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: var(--space-2);
-    display: block;
-  }
-
-  /**** Project tags list at the bottom of the project card ****/
-
-  .project-tags {
-    font-size: var(--font-size-base);
-    list-style: none;
+  .content-layout .section-eyebrow {
+    font-size: initial;
     font-weight: 600;
-    line-height: 1.8;
-    margin-block-start: var(--space-8);
-  }
-  
-  .project-tags .tags-label::after {
-    content: ":";
+    color: var(--color-text-muted);
   }
 
-  .project-tags ul {
-    display: inline-block;
-    padding-inline-start: var(--space-1);
-  }
-  
-  .project-tags li {
-    font-size: var(--font-size-base);
-    display: inline-block;
+  .content-layout h2 {
+    font-size: var(--font-size-32);
+    font-weight: 600;
   }
 
-  .project-tags li a {
-    text-transform: lowercase;
+  .content-layout h3 {
+    font-size: var(--font-size-20);
+    font-weight: 600;
   }
 
-  .project-tags li:not(:last-child){
-    margin-inline-end: var(--space-2);
+  .content-layout blockquote {
+    padding-inline-start: var(--space-6);
+    border-inline-start: 3px solid var(--color-border);
+    font-weight: 300;
+    font-size: var(--font-size-32);
   }
 
-  .project-tags li a::before {
-    content: "#";
+  /* Detail pages and static pages (About, Contact, Other Projects) are
+     their own 12-column grid: text sits in a centered 8-column measure,
+     figures break out to the full container width */
+  .content-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--space-4);
+    margin-block-end: var(--space-30);
   }
 
+  .content-layout > * {
+    grid-column: 3 / 11;
+  }
 
-  /**** Footer styles ****/
+  /* Vertical rhythm: every direct child gets space above it, except the first.
+     Specific pairs override this below. */
+  .content-layout > * + * {
+    margin-block-start: var(--space-6);
+  }
 
-  footer {
+  /* Headings sit close to the text they introduce */
+  .content-layout > h2 { margin-block-start: var(--space-12); }
+  .content-layout > h3 { margin-block-start: var(--space-8); }
+  .content-layout > h2 + *,
+  .content-layout > h3 + * { margin-block-start: var(--space-2); }
+
+  /* An eyebrow belongs to the heading that follows it */
+  .content-layout > .section-eyebrow { margin-block-start: var(--space-12); }
+  .content-layout > .section-eyebrow + h2 { margin-block-start: var(--space-1); }
+
+  /* Consecutive figures group more tightly than figure-to-text */
+  .content-layout > .content-figure { margin-block-start: var(--space-10); }
+  .content-layout > .content-figure + .content-figure { margin-block-start: var(--space-3); }
+  .content-layout > .content-figure + * { margin-block-start: var(--space-10); }
+
+  /* Paragraphs within a run sit closer than block-level changes */
+  .content-layout > p + p { margin-block-start: var(--space-3); }
+
+  .content-layout > .content-figure {
+    grid-column: 1 / -1;
+  }
+
+  .content-layout p {
+    font-size: var(--font-size-20);
+  }
+
+  .content-layout > ol,
+  .content-layout > ul {
+    padding-inline-start: var(--space-10);
+    font-size: var(--font-size-20);
+  }
+
+  .content-layout ol li:not(:last-child),
+  .content-layout ul li:not(:last-child) {
+    margin-block-end: var(--space-2);
+  }
+
+  .content-figure img {
     width: 100%;
+    height: auto;
+    border-radius: var(--space-2);
+  }
+
+  .content-figure figcaption {
+    margin-block-start: var(--space-6);
     font-size: var(--font-size-14);
+    line-height: 1.8;
     color: var(--color-text-muted);
     text-align: center;
-    margin-block-start: var(--space-8);
-    margin-block-end: var(--space-8);
-    border-block-start: 1px solid var(--color-border);
-    padding-block-start: var(--space-8);
+    text-wrap: balance;
   }
 
-
-  /**** Project detail page and Note detail page ****/
+  /**** Project detail: banner and header ****/
 
   /* Back to all projects link at the top of the project detail page */
   .back-link {
@@ -676,6 +733,7 @@
 
   .project-detail-title,
   .note-detail-title {
+    font-size: var(--font-size-64);
     margin-block-end: var(--space-6);
   }
 
@@ -711,54 +769,8 @@
   .at-a-glance__row dt::after {
     content: " ";
   }
-  
-  .project-detail .section-eyebrow {
-    font-size: initial;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    margin-block-start: var(--space-12);
-    margin-block-end: var(--space-2);
-  }
 
-  .content-layout h2 {
-    font-size: var(--font-size-32);
-    font-weight: 600;
-    margin-block-end: var(--space-2);
-  }
-
-  .content-layout h3 {
-    margin-block-end: var(--space-2);
-    margin-block-start: var(--space-4);
-    font-size: var(--font-size-20);
-    font-weight: 600;
-  }
-
-  .content-layout blockquote {
-    margin-block-start: var(--space-6);
-    margin-block-end: var(--space-6);
-    padding-inline-start: var(--space-6);
-    border-inline-start: 3px solid var(--color-border);
-    font-weight: 300;
-    font-size: var(--font-size-32);
-  }
-
-  /* Detail pages and static pages (About, Contact, Other Projects) are
-     their own 12-column grid: text sits in a centered 8-column measure,
-     figures break out to the full container width */
-  .content-layout {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: var(--space-4);
-    margin-block-end: var(--space-30);
-  }
-
-  .content-layout > * {
-    grid-column: 3 / 11;
-  }
-
-  .content-layout > .content-figure {
-    grid-column: 1 / -1;
-  }
+  /**** Note detail ****/
 
   .note-detail-meta time {
     display: block;
@@ -770,42 +782,10 @@
     margin-block-end: var(--space-12);
   }
 
-  .content-layout p {
-    margin-block-end: var(--space-3);
-    font-size: var(--font-size-20);
-  }
-
-  .content-layout > ol,
-  .content-layout > ul {
-    padding-inline-start: var(--space-10);
-    margin-block-end: var(--space-3);
-    font-size: var(--font-size-20);
-  }
-
-  .content-layout ol li:not(:last-child),
-  .content-layout ul li:not(:last-child) {
-    margin-block-end: var(--space-2);
-  }
-
-  /**** Internal pages: About, Other Projects, Contact ****/
-
-
-  .project-detail-title,
-  .note-detail-title {
-    font-size: var(--font-size-64);
-  }
+  /**** Design notes index ****/
 
   .design-notes .note-card h2 {
     margin-block-end: var(--space-2);
-  }
-
-  .page-content h1,
-  .design-notes h1 {
-    margin-block-end: var(--space-6);
-  }
-
-  .page-content h2 {
-    font-size: var(--font-size-28);
   }
 
   .note-card {
@@ -821,30 +801,21 @@
     margin-block-end: var(--space-2)
   }
 
+  /**** Static pages: About, Contact, Other Projects ****/
+
+  .page-content h1,
+  .design-notes h1 {
+    margin-block-end: var(--space-6);
+  }
+
+  .page-content h2 {
+    font-size: var(--font-size-28);
+  }
+
   .page-content p,
   .design-notes .note-card p {
     font-size: var(--font-size-20);
     margin-block-end: var(--space-4);
-  }
-
-  .content-figure {
-    margin-block-start: var(--space-6);
-    margin-block-end: var(--space-10);
-  }
-
-  .content-figure img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--space-2);
-  }
-
-  .content-figure figcaption {
-    margin-block-start: var(--space-6);
-    font-size: var(--font-size-14);
-    line-height: 1.8;
-    color: var(--color-text-muted);
-    text-align: center;
-    text-wrap: balance;
   }
 
   /**** Tag page ****/
@@ -853,6 +824,43 @@
     font-size: var(--font-size-50);
   }
 
+  /**** Project tags (shared: home cards and detail pages) ****/
+
+  .project-tags {
+    font-size: var(--font-size-base);
+    list-style: none;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-block-start: var(--space-8);
+  }
+
+  .project-tags .tags-label::after {
+    content: ":";
+  }
+
+  .project-tags ul {
+    display: inline-block;
+    padding-inline-start: var(--space-1);
+  }
+
+  .project-tags li {
+    font-size: var(--font-size-base);
+    display: inline-block;
+  }
+
+  .project-tags li a {
+    text-transform: lowercase;
+  }
+
+  .project-tags li:not(:last-child){
+    margin-inline-end: var(--space-2);
+  }
+
+  .project-tags li a::before {
+    content: "#";
+  }
+
+  /**** Media queries ****/
 
   /**** Tablet and phones adjustments ****/
 
@@ -933,12 +941,12 @@
       list-style: none;
       cursor: pointer;
     }
-    
+
     /* Safari marker removal */
     .mobile-nav summary::-webkit-details-marker {
       display: none;
     }
-    
+
     .mobile-menu-panel {
       position: absolute;
       top: 90px;
@@ -949,7 +957,7 @@
       box-shadow: 0 4px 8px var(--color-shadow);
       padding: var(--space-6) var(--space-10);
     }
-    
+
     .mobile-menu-panel .navigation-links {
       display: flex;
       flex-direction: column;
@@ -960,17 +968,17 @@
       padding: 0;
       font-size: var(--font-size-24);
     }
-    
+
     .navigation-links li {
       margin: var(--space-3) 0;
     }
-    
+
     .navigation-links li+li::before {
       display: none;
     }
 
     /* Mobile font sizing and spacing adjustments */
-    
+
     .hero {
       margin-block-end: var(--space-10);
     }
@@ -985,13 +993,13 @@
     .hero .lede {
       margin-block-end: var(--space-5);
     }
-    
+
     main .projects .section-title {
       font-size: var(--font-size-32);
       margin-block-end: var(--space-10);
       padding-block-start: var(--space-10);
     }
-    
+
     .hero .lede {
       font-size: var(--font-size-20);
     }
@@ -1009,7 +1017,7 @@
     .projects .project-card-blurb {
       margin-block-end: var(--space-4);
     }
-    
+
     .projects .project-card-title {
       font-size: var(--font-size-24);
     }
@@ -1030,27 +1038,26 @@
       margin-block-start: 0;
       padding-inline: 0;
     }
-    
+
     .project-detail-title,
     .note-detail-title {
       font-size: var(--font-size-32);
       margin-block-end: var(--space-3);
     }
-    
+
     .note-detail-meta time {
       margin-block-end: var(--space-8);
     }
-    
+
     .project-detail h2,
     .note-detail h2 {
       font-size: var(--font-size-20);
     }
 
-    .project-detail .section-eyebrow {
-      margin-block-start: var(--space-4);
-      margin-block-end: var(--space-1);
+    .content-layout > .section-eyebrow {
+      margin-block-start: var(--space-8);
     }
-    
+
     .project-detail p,
     .note-detail p,
     .content-layout ol,
@@ -1111,8 +1118,8 @@
       flex: 0 0 calc((100% - var(--space-2)) / 2);
     }
 
-    .content-figure {
-      margin-block-end: var(--space-6);
+    .content-layout > .content-figure {
+      margin-block-start: var(--space-6);
     }
 
   }
