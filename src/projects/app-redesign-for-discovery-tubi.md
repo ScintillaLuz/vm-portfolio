@@ -45,6 +45,8 @@ Sara and I found an old design request about making TV Series easier to find in 
 This was the perfect chance to explore a redesign that could span several screens, maintain a clear long-term vision, and break ideas into experiments so we could see the impact of each change and adjust direction as needed.
 
 
+
+
 <p class="section-eyebrow">The problem</p>
 
 ## Breaking the “big wall of content” 
@@ -56,6 +58,8 @@ The longer someone spends searching, the more likely they are to get frustrated 
 Our user research into how people discover content on Tubi and other platforms revealed something less intuitive yet interesting. Often, users don’t have a specific title in mind when opening a TV app, but they usually know whether they’re in the mood for a movie or TV show, what vibe they’re looking for, and which genres are total deal breakers. Their choices also depend on whether they’re watching alone or with others.
 
 With this in mind, our app could help people find the right match more easily, instead of letting them get lost among thousands of unrelated titles.
+
+
 
 
 <p class="section-eyebrow">The analysis</p>
@@ -75,7 +79,7 @@ I confronted every design choice I found in the app and asked myself: “How is 
 I chose the areas to focus on based on impact. These included: upgrading the hero section on the home screen, instrumenting carousel rows and grid containers to more clearly distinguish content types, improving search result precision, and updating the Title Details page to better fit TV Series.
 
 
-<p class="section-eyebrow">Idea #1</p>
+<p class="section-eyebrow">#1 Elevating TV Series on Home</p>
 
 ## Turning the Hero card into a true star
 
@@ -89,30 +93,35 @@ Led by the principle that video previews needed to be moved to center stage, thi
 - Have room for badges: Live, Coming soom, Leaving soon, Tubi Originals
 - Allow titles of varying lengths (up to 2 lines) and custom title art
 
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-hero-card-video-preview-tvseries.webp", "Four mobile home screens showing the hero card states for previews", "Home screen Hero card: transitioning from poster image to video preview on a TV Series." %}
+
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-hero-card-variations.webp", "Four mobile home screens showing variations for the hero card layout", "Home screen Hero card: layout variations for custom title art, Tubi Original title wrapping on two lines, and badges for titles coming soon or leaving the platform." %}
+
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-hero-card-video-preview-tvseries.webp", "Four mobile home screens showing the hero card states for previews", "Home screen Hero card: transitioning from poster image to video preview on a TV Series." %}
+
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-hero-card-system.webp", "A grid of hero cards and their variations, with columns representing the type, Movie, TV Series, Linear program, Title art, Tub Original, Badges, and the rows representing the states, Default, Preview starts, Preview progress, Call to actions", "A visualization of the hero card variations based on type and state of the card." %}
+
 My suggestion for testing was to decouple the two variables: the design of the card itself from the video previews. The card addressed the functional needs we had for growing our catalog, and it only needed to perform better or be neutral compared to the current design. For the video previews, we instead wanted to quantify their impact on conversion precisely (the start of a watch activity).
 
-{% figure "/assets/debug/debug_03.webp", "Debug wide 16:9", "Here is the caption for the picture." %}
 
 
-<p class="section-eyebrow">Idea #2</p>
+
+<p class="section-eyebrow">#2 Differentiation in containers</p>
+
 
 ## Designing a more efficient Home discovery
 
-Three ideas for making it easier to tell apart content types
-
-
-### A pattern for breaking futile scrolling
+### First: a pattern for breaking futile scrolling
 
 At the top of the Home screen were content-type pills for tabbing into containers for Movies or TV Series only. However, the pattern was misleading (pills are for filtering a current view), and most users would never interact with them. Which is common sense: it’s simply unlikely that, on a (new) streaming platform, the first instinct is to use filters. Most users would scroll, even more so since we’re conditioned by repeated behavior on social content feeds; yet on a content screen, the more a new user scrolls, the less likely they are to engage.
 
 I designed a new element, visually larger and distinctive, noticeable among the title posters, to break the scroll and trigger curiosity, and with it a tap and possibly a new and more successful journey. I moved it down a couple of scrolls from the top of the screen.
 
-I designed a few visual variants for this module, but the experiment's specs focused on what we thought was the best version. I was also interested in seeing how it performed when injected at different numbers of rows from the top, to see whether placement had an impact. What we wanted to measure was overall engagement with the buttons, engagement for each button, and the impact on user conversion (watch activity start) and/or the probability of the user returning for a subsequent session.
+One size doesn’t necessarily fit all, so I had the **idea for a dynamic version of this pattern**, directed to our core users with a weekly Tubi habit and a solid watch history. By bringing personalization, or even customization, we would create a recurring shortcut to their favorite content. If validated by testing, this pattern could work in other places, such as the Explore tab. The right amount of redundancy makes the interface predictable enough to feel familiar.
 
-Going a step further, my proposal for a follow-up
-One size doesn’t necessarily fit all, so I had the idea for a dynamic version of this pattern, directed to our core users with a weekly Tubi habit and a solid watch history. By bringing personalization, or even customization, we would create a recurring shortcut to their favorite content. If validated by testing, this pattern could work in other places, such as the Explore tab. The right amount of redundancy makes the interface predictable enough to feel familiar.
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-homescreen-component-for-exploration.webp", "Three mobile home screens showing a component named Explore Tubi with four big buttons leading to different content types containers", "Explore Tubi component buttons progression. From the left: version for new users, with more generic destinations; dynamic personalized version for a Period Drama lover; Add Your Rabbithole button for customizing the shortcut." %}
 
-I believe sometimes with testing we don’t have to push something to the next round, the “version 2” stage that more often than not, never happens. The dynamic alternative could have been tested in parallel with the simplest version, especially if the effort in building the variation is low.
+What we wanted to measure was overall engagement with the buttons, engagement for each button, and the impact on user conversion (watch activity start) and/or the probability of the user returning for a subsequent session. I was also interested in seeing how placement relative to the top had an impact on engagement with this element, testing 2/3 alternatives.
 
 
 ### Creating a new visual language for TV Series thumbnails
@@ -124,6 +133,10 @@ I proposed two ways to solve this issue with a UI change:
 1. Adding a line of metadata below the posters, showing duration
 2. Combining the metadata with a special visual treatment for the TV series poster
 
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-differentiate-tvseries.webp", "Three mobile screens showing the original UI for the carousels and two alternative visual treatments", "From the left: original UI for the carousels with mixed content types; the carousels with an added line of metadata; the carousels with the metadata below and an accordion-like thumbnail for TV Series." %}
+
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-thumbnail-treatment-everywhere.webp", "Four mobile screens showing the new UI across multiple surfaces", "Testing versatility of the proposed metadata and thumbnail change on the Home, generic carousel rows, a grid container, and on search results." %}
+
 
 ### Introducing filters on grid containers
 
@@ -131,18 +144,28 @@ If we consider a user navigating deeper into a carousel row, or a genre from the
 
 As shown in the mockups for the grid containers, the TV series metadata/thumb treatment and the filters are neither mutually exclusive nor interdependent. No matter what testing order is chosen, or which direction the results sway, the final UI would still be cohesive.
 
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-grid-containers-filters.webp", "Three mobile screens with a grid container showing pill filters selecting All, then Movies, then TV Series", "Filters on a grid container can be tested independently, but can still be combined later with the metadata treatment." %}
 
-<blockquote>My approach to this project was to design changes for specific patterns or components that could be applied across screens and sections of the app. This method means I address critical points in the discovery journey and also achieve an app-wide redesign through a modular series of experiments.</blockquote>
 
-<p class="section-eyebrow">Idea #3</p>
+
+
+<p class="section-eyebrow">#3 Improving search results accuracy</p>
 
 ## Enhancing search results relevance
 
-Keeping in mind the principles of modularity and sustainability, I proposed testing the same content-type filters used on the container grid screens on the search result screen. The engineering effort would have been low, and users would have had one more way to search faster and more precisely.
+Keeping in mind the principles of modularity and sustainability, I proposed testing the same content-type filters used on the container grid screens on the search result screen. The engineering effort would have been low, and users would have had one more way to search faster and more precisely. Going a step further, I built a prototype to demonstrate how filters can respond to the user’s input when typing keyword-related content, such as “tv” or “series”. If a match is found, we automatically apply the filter for the user, which removes an extra tap. 
 
-Going a step further, I built a prototype that demonstrates how filters can respond to the user’s input when typing keyword-related content, such as “tv” or “series”. If a match is found, we automatically apply the filter for the user, which removes an extra tap. The experiment for this surface would measure engagement with the filters to determine whether using the filters is correlated with a greater likelihood of engaging in a watch activity.
+The experiment for this surface would have measured engagement with the filters to determine whether using the filters is correlated with a greater likelihood of engaging in a watch activity.
 
-<p class="section-eyebrow">Idea #4</p>
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-search-results-filters.webp", "Three mobile screens showing what happens when typing k-drama, then k-drama", "From the left: original UI for the carousels with mixed content types; the carousels with an added line of metadata; the carousels with the metadata below and an accordion-like thumbnail for TV Series." %}
+
+
+
+<blockquote>My approach to this project was to design changes for specific patterns or components that could be applied across screens and sections of the app. This method means I address critical points in the discovery journey and also achieve an app-wide redesign through a modular series of experiments.</blockquote>
+
+
+
+<p class="section-eyebrow">#4 Increasing template flexibility</p>
 
 ## Rebuilding Title Details for fast, effective discovery  
 
@@ -159,6 +182,12 @@ My goal was to create a layout that users could scan easily, a functional page f
 4. For TV Series, I swapped the Seasons dropdown button for numbered buttons so users could immediately see how long a series was and fiddle with the interface less.
 5. Again on TV Series, I tabbed the episodes list with the “You Might Also Like” recommendations; check out how I combined that grid with the metadata treatment.
 
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-titledetails-redesign-comparison.webp", "Four mobile title details screens comparing the legacy layout to the redesigned template for a movie and a TV Series", "Layout comparison between legacy layout and the new, redesigned template: Movie on the left, TV Series on the right. Top of the page." %}
+
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-titledetails-series-template.webp", "Four mobile title details screens for a TV Series showing the top of the screen, the episodes list, the seasons toggle, and the bottom of the page with a grid of related titles", "The TV Series template from top to bottom: on the episodes list the dropdown for Seasons has been replaced with buttons, and the You Might Also Like grid of related title is now closing the page." %}
+
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-titledetails-video-preview.webp", "Four mobile title details screens showing the video preview states for a movie, with the preview controls overlaying the clip and a call to action for replaying at the end", "The video preview is using the same language of the Hero card on the Home, with the appropriate adjustments: the call to action overlaying the video is now just a link-button; the primary action is in the below button." %}
+
 
 ### Transforming Tubi into the best guide on Tubi’s content
 
@@ -168,8 +197,13 @@ Outside of Tubi, there were many ways to get a read on a title’s quality or vi
 
 I designed a highlight as a small, visually catchy, easy-to-parse element that sits right above the blurb to minimize scrolling. Tubi was among the first tech companies to secure a contract with OpenAI, so using their technology would have made it possible to build an experiment for a subset of our titles with relatively low effort.
 
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-titledetails-highlights.webp", "Four mobile title details screens with examples of different Highlights, an award for I, Tonya, and actor snippet for Scandal, a Letterboxd review for Luther, a Rotten Tomatoes critics and audience score for Rye Lane", "Example showing placement and variations for the Highlight concept." %}
 
-<p class="section-eyebrow">Bonus idea</p>
+{% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-highlights-system.webp", "Twelve highlight elements arranged by type in four columns, Rating sources, Blog and social media, Personalized recommendations, and Awards, actors, ...", "Concept for a system of Highlights, organized by types." %}
+
+
+
+<p class="section-eyebrow">#5 Bonus idea</p>
 
 ## The quickview drawer
 
