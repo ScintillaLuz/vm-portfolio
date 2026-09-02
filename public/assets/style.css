@@ -645,13 +645,14 @@
 
   /**** Project detail page and Note detail page ****/
 
+  /* Back to all projects link at the top of the project detail page */
   .back-link {
     display: inline-block;
     font-size: var(--font-size-14);
     margin-block-end: var(--space-4);
   }
 
-  /**** Project banner ****/
+  /* Project detail opening image banner */
 
   .project-banner {
     width: 100%;
