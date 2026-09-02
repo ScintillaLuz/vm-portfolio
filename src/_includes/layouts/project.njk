@@ -30,4 +30,16 @@ has_sidebar: true
   {% endif %}
 
   {{ content | safe }}
+
+  {% if tags %}
+    <div class="project-tags">
+      <span class="tags-label">Categories</span>
+      <ul role="list">
+        {% for tag in tags %}
+        <li><a class="tag" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
 </article>

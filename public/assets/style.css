@@ -594,35 +594,37 @@
 
   /**** Project tags list at the bottom of the project card ****/
 
-  .project-card-tags {
+  .project-tags {
+    font-size: var(--font-size-base);
     list-style: none;
     font-weight: 600;
     line-height: 1.8;
     margin-block-start: var(--space-8);
   }
   
-  .project-card-tags .tags-label::after {
+  .project-tags .tags-label::after {
     content: ":";
   }
 
-  .project-card-tags ul {
+  .project-tags ul {
     display: inline-block;
     padding-inline-start: var(--space-1);
   }
   
-  .project-card-tags li {
+  .project-tags li {
+    font-size: var(--font-size-base);
     display: inline-block;
   }
 
-  .project-card-tags li a {
+  .project-tags li a {
     text-transform: lowercase;
   }
 
-  .project-card-tags li:not(:last-child) {
+  .project-tags li:not(:last-child){
     margin-inline-end: var(--space-2);
   }
 
-  .project-card-tags li a::before {
+  .project-tags li a::before {
     content: "#";
   }
 
@@ -766,8 +768,8 @@
     font-size: var(--font-size-20);
   }
 
-  .content-layout ol,
-  .content-layout ul {
+  .content-layout > ol,
+  .content-layout > ul {
     padding-inline-start: var(--space-10);
     margin-block-end: var(--space-3);
     font-size: var(--font-size-20);
@@ -893,7 +895,7 @@
       grid-template-columns: 1fr;
     }
 
-    .project-card-tags {
+    .project-card .project-tags {
       grid-column: 1 / -1;
       order: -1;
     }
@@ -1013,7 +1015,7 @@
       margin-block-end: var(--space-2);
     }
 
-    .projects .project-card-tags {
+    .projects .project-tags {
       margin-block-start: var(--space-4);
     }
 
