@@ -631,7 +631,9 @@
 
   footer {
     width: 100%;
-    font-size: var(--font-size-12);
+    font-size: var(--font-size-14);
+    color: var(--color-text-muted);
+    text-align: center;
     margin-block-start: var(--space-8);
     margin-block-end: var(--space-8);
     border-block-start: 1px solid var(--color-border);
@@ -673,8 +675,8 @@
   }
 
   .at-a-glance {
-    border-inline-start: 1px solid var(--color-border);
-    padding-inline-start: var(--space-4);
+    border-inline-start: 2px solid var(--color-border);
+    padding-inline-start: var(--space-6);
     margin-block: var(--space-10) 0;
   }
 
@@ -700,6 +702,14 @@
   .at-a-glance__row dt::after {
     content: " ";
   }
+  
+  .project-detail .section-eyebrow {
+    font-size: initial;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-block-start: var(--space-12);
+    margin-block-end: var(--space-2);
+  }
 
   .content-layout h2 {
     font-size: var(--font-size-32);
@@ -707,12 +717,20 @@
     margin-block-end: var(--space-2);
   }
 
-  .project-detail .section-eyebrow {
-    font-size: initial;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    margin-block-start: var(--space-10);
+  .content-layout h3 {
     margin-block-end: var(--space-2);
+    margin-block-start: var(--space-4);
+    font-size: var(--font-size-20);
+    font-weight: 600;
+  }
+
+  .content-layout blockquote {
+    margin-block-start: var(--space-6);
+    margin-block-end: var(--space-6);
+    padding-inline-start: var(--space-6);
+    border-inline-start: 3px solid var(--color-border);
+    font-weight: 300;
+    font-size: var(--font-size-32);
   }
 
   /* Detail pages and static pages (About, Contact, Other Projects) are
@@ -801,6 +819,7 @@
   }
 
   .content-figure {
+    margin-block-start: var(--space-6);
     margin-block-end: var(--space-10);
   }
 
@@ -811,9 +830,12 @@
   }
 
   .content-figure figcaption {
-    margin-block-start: var(--space-2);
+    margin-block-start: var(--space-6);
     font-size: var(--font-size-14);
+    line-height: 1.8;
     color: var(--color-text-muted);
+    text-align: center;
+    text-wrap: balance;
   }
 
   /**** Tag page ****/
