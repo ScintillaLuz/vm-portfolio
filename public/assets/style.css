@@ -913,15 +913,6 @@
       padding-inline: 0;
     }
     
-    .project-card {
-      grid-template-columns: 1fr;
-    }
-    
-    .project-card .project-tags {
-      grid-column: 1 / -1;
-      order: -1;
-    }
-    
     /* Hiding the Projects index sidebar */
     .project-index {
       display: none;
