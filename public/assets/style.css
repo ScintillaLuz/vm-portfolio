@@ -842,6 +842,10 @@
     list-style: none;
     font-weight: 600;
     line-height: 1.8;
+  }
+
+  .project-card-content > .project-tags,
+  .content-layout > .project-tags {
     margin-block-start: var(--space-8);
   }
 
@@ -1026,9 +1030,6 @@
       margin-block-end: var(--space-2);
     }
 
-    .projects .project-tags {
-      margin-block-start: var(--space-4);
-    }
 
     /* Homepage font sizing adjustments */
 
