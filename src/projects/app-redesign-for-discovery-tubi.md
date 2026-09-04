@@ -160,9 +160,7 @@ The experiment for this surface would have measured engagement with the filters 
 {% figure "/assets/projects/app-redesign-for-discovery-tubi/tubi-search-results-filters.webp", "Three mobile screens showing what happens when typing k-drama, then k-drama", "From the left: original UI for the carousels with mixed content types; the carousels with an added line of metadata; the carousels with the metadata below and an accordion-like thumbnail for TV Series." %}
 
 
-
 <blockquote>My approach to this project was to design changes for specific patterns or components that could be applied across screens and sections of the app. This method means I address critical points in the discovery journey and also achieve an app-wide redesign through a modular series of experiments.</blockquote>
-
 
 
 <p class="section-eyebrow">#4 Increasing template flexibility</p>

@@ -655,16 +655,20 @@
   .content-layout > h3 + * { margin-block-start: var(--space-2); }
 
   /* An eyebrow belongs to the heading that follows it */
-  .content-layout > .section-eyebrow { margin-block-start: var(--space-12); }
+  .content-layout > .section-eyebrow { margin-block-start: var(--space-16); }
   .content-layout > .section-eyebrow + h2 { margin-block-start: var(--space-1); }
+  .content-layout > .section-eyebrow + h2 + h3 { margin-block-start: var(--space-4); }
+
+  /* At-a-glance top margin */
+  .content-layout > .at-a-glance { margin-block-start: var(--space-10); }
 
   /* Consecutive figures group more tightly than figure-to-text */
   .content-layout > .content-figure { margin-block-start: var(--space-10); }
-  .content-layout > .content-figure + .content-figure { margin-block-start: var(--space-3); }
+  .content-layout > .content-figure + .content-figure { margin-block-start: var(--space-8); }
   .content-layout > .content-figure + * { margin-block-start: var(--space-10); }
 
   /* Paragraphs within a run sit closer than block-level changes */
-  .content-layout > p + p { margin-block-start: var(--space-3); }
+  .content-layout > p + p { margin-block-start: var(--space-4); }
 
   .content-layout > .content-figure {
     grid-column: 1 / -1;
@@ -692,7 +696,7 @@
   }
 
   .content-figure figcaption {
-    margin-block-start: var(--space-6);
+    margin-block-start: var(--space-4);
     font-size: var(--font-size-14);
     line-height: 1.8;
     color: var(--color-text-muted);
@@ -741,16 +745,23 @@
     content: " • ";
   }
 
+  /*** At a glance section on project detail ***/
+
   .at-a-glance {
     border-inline-start: 2px solid var(--color-border);
     padding-inline-start: var(--space-6);
-    margin-block: var(--space-10) 0;
   }
 
   .at-a-glance #glance-heading {
     font-size: var(--font-size-20);
   }
-
+  
+  /* Creating space between the heading and the list of details. */
+  .at-a-glance dl {
+    margin-block-start: var(--space-4);
+  }
+  
+  /* Spacing the rows */
   .at-a-glance__row {
     margin-block-end: var(--space-1);
   }
@@ -770,7 +781,7 @@
     content: " ";
   }
 
-  /**** Note detail ****/
+  /**** Note detail specific styles ****/
 
   .note-detail-meta time {
     display: block;
@@ -879,45 +890,58 @@
       grid-column: 1 / -1;
     }
 
+    /**** Homepage adjustments ****/
+
+    .hero .lede {
+      margin-block-end: var(--space-6);
+    }
+    
+    .hero,
+    .projects {
+      padding-inline: 0;
+    }
+    
+    .sidebar {
+      grid-column: 1 / -1;
+      order: -1;
+      margin-block-end: var(--space-8);
+    }
+    
+    .sidebar-icons {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 480px;
+      padding-inline: 0;
+    }
+    
+    .project-card {
+      grid-template-columns: 1fr;
+    }
+    
+    .project-card .project-tags {
+      grid-column: 1 / -1;
+      order: -1;
+    }
+    
+    /* Hiding the Projects index sidebar */
+    .project-index {
+      display: none;
+    }
+
+    /**** Project detail page adjustments ****/
+
     /* Detail-page text drops the centered measure and goes full width */
     .project-detail > *,
     .note-detail > * {
       grid-column: 1 / -1;
     }
 
-    .hero .lede {
-      margin-block-end: var(--space-6);
+    /* Shrinking the outline on the project detail header so it doesn't get cut off */
+    .project-detail-header {
+      outline: var(--space-6) solid var(--color-background)
     }
 
-    .hero,
-    .projects {
-      padding-inline: 0;
-    }
-
-    .sidebar {
-      grid-column: 1 / -1;
-      order: -1;
-      margin-block-end: var(--space-8);
-    }
-
-    .sidebar-icons {
-      grid-template-columns: repeat(4, 1fr);
-      max-width: 480px;
-      padding-inline: 0;
-    }
-
-    .project-card {
-      grid-template-columns: 1fr;
-    }
-
-    .project-card .project-tags {
-      grid-column: 1 / -1;
-      order: -1;
-    }
-
-    /* Hiding the Projects index sidebar */
-    .project-index {
-      display: none;
+    /* Reducing the spacing above the eyebrow on project detail and note detail pages */
+    .content-layout > .section-eyebrow { margin-block-start: var(--space-10);
     }
   }
 
@@ -946,6 +970,8 @@
     .mobile-nav summary::-webkit-details-marker {
       display: none;
     }
+
+    /***  Mobile menu styling: the panel that drops down when the hamburger menu is clicked. ***/
 
     .mobile-menu-panel {
       position: absolute;
@@ -977,41 +1003,20 @@
       display: none;
     }
 
-    /* Mobile font sizing and spacing adjustments */
+    /* Homepage spacing adjustments */
 
     .hero {
       margin-block-end: var(--space-10);
     }
-
-    .hero h1,
-    .page-content h1,
-    .design-notes h1 {
-      font-size: var(--font-size-50);
-    }
-
+    
     .hero h1,
     .hero .lede {
       margin-block-end: var(--space-5);
     }
 
     main .projects .section-title {
-      font-size: var(--font-size-32);
       margin-block-end: var(--space-10);
       padding-block-start: var(--space-10);
-    }
-
-    .hero .lede {
-      font-size: var(--font-size-20);
-    }
-
-    .hero .intro-text,
-    .projects .project-card-blurb {
-      font-size: initial;
-      line-height: 1.7;
-    }
-
-    .page-content h2 {
-      font-size: var(--font-size-24);
     }
 
     .projects .project-card-blurb {
@@ -1034,53 +1039,92 @@
       margin-block-start: var(--space-4);
     }
 
+    /* Homepage font sizing adjustments */
+
+    .hero h1,
+    .page-content h1,
+    .design-notes h1 {
+      font-size: var(--font-size-50);
+    }
+
+    main .projects .section-title {
+      font-size: var(--font-size-32);
+    }
+
+    .hero .lede {
+      font-size: var(--font-size-20);
+    }
+
+    .hero .intro-text,
+    .projects .project-card-blurb {
+      font-size: initial;
+      line-height: 1.7;
+    }
+
+    /*** Project detail and note detail spacing adjustments ***/
+    
+    /* Spacing adjustments for rhythm */  
+    .content-layout > * + * { margin-block-start: var(--space-4); }
+    .content-layout > h2 { margin-block-start: var(--space-8); }
+    .content-layout > h3 { margin-block-start: var(--space-6); }
+    .content-layout > .at-a-glance { margin-block-start: var(--space-8); }
+    .content-layout > .content-figure { margin-block-start: var(--space-6); }
+    .content-layout > .content-figure + * { margin-block-start: var(--space-6); }
+    
+    /* Adjusting spacing after heading on at-a-glance section */
+    .at-a-glance dl {
+      margin-block-start: var(--space-2);
+    }
+    
+    .content-layout > .section-eyebrow {
+      margin-block-start: var(--space-8);
+    }
+    
+    .note-detail-meta time {
+      margin-block-end: var(--space-8);
+    }
+    
+    .note-detail-meta .note-detail-description {
+      margin-block-end: var(--space-8);
+    }
+    
     .project-detail-header {
       margin-block-start: 0;
       padding-inline: 0;
     }
-
+    
+    /*** Project detail and note detail pages: font sizing adjustments ***/
     .project-detail-title,
     .note-detail-title {
       font-size: var(--font-size-32);
-      margin-block-end: var(--space-3);
     }
 
-    .note-detail-meta time {
-      margin-block-end: var(--space-8);
+    .page-content h2 {
+      font-size: var(--font-size-24);
     }
 
-    .project-detail h2,
-    .note-detail h2 {
-      font-size: var(--font-size-20);
-    }
-
-    .content-layout > .section-eyebrow {
-      margin-block-start: var(--space-8);
-    }
-
-    .project-detail p,
-    .note-detail p,
-    .content-layout ol,
-    .content-layout ul {
+    .content-layout p,
+    .content-layout > ol,
+    .content-layout > ul {
       font-size: initial;
       line-height: 1.7;
     }
 
     .note-detail-meta .note-detail-description {
-      margin-block-end: var(--space-8);
       font-size: var(--font-size-20);
       line-height: 1.5;
     }
-
-    .page-content p,
+    
     .design-notes .note-card p {
       font-size: initial;
       line-height: 1.7;
     }
 
+    /*** Footer adjustments ***/
+
     footer {
-      font-size: var(--font-size-14);
-      text-align: center;
+      padding-inline-start: var(--space-6);
+      padding-inline-end: var(--space-6);
     }
 
   }
@@ -1096,17 +1140,17 @@
       /* full width, -1 means last line */
     }
 
+    main .projects .section-title {
+      margin-block-end: var(--space-8);
+    }
+
     .sidebar {
       margin-block-end: var(--space-5);
     }
-
+    
     .sidebar-icons {
       max-width: 100%;
       gap: var(--space-2);
-    }
-
-    main .projects .section-title {
-      margin-block-end: var(--space-8);
     }
 
     .gallery-thumbs {
@@ -1116,10 +1160,6 @@
     /*** Gallery thumbs for preview get arranged in 2 columns ****/
     .gallery-thumbs li {
       flex: 0 0 calc((100% - var(--space-2)) / 2);
-    }
-
-    .content-layout > .content-figure {
-      margin-block-start: var(--space-6);
     }
 
   }
