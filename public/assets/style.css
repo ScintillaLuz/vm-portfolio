@@ -503,8 +503,32 @@
     margin-block-end: var(--space-25);
   }
 
-  .projects .project-card-meta {
-    margin-block-end: var(--space-2);
+  /* Vertical rhythm: every direct child gets space above it, except the first.
+     Specific pairs override this below. */
+  .project-card-content > * + * {
+    margin-block-start: var(--space-2);
+  }
+
+  /* Subtitle sits close under the title; the blurb needs more room above it */
+  .project-card-content > .project-card-subtitle + .project-card-blurb {
+    margin-block-start: var(--space-4);
+  }
+
+  /* Blurb to whichever comes next (keep-reading, or straight to the gallery) */
+  .project-card-content > .project-card-blurb + .keep-reading,
+  .project-card-content > .project-card-blurb + .project-card-gallery {
+    margin-block-start: var(--space-4);
+  }
+
+  /* Keep-reading needs more breathing room before the gallery */
+  .project-card-content > .keep-reading + .project-card-gallery {
+    margin-block-start: var(--space-8);
+  }
+
+  /* Gallery to tags — stacked selector outranks both the base rule above
+     and the shared .project-tags margin rule, regardless of source order */
+  .project-card-content > .project-card-gallery + .project-tags {
+    margin-block-start: var(--space-8);
   }
 
   .projects .project-card-meta time::after {
@@ -514,31 +538,25 @@
   .projects .project-card-title {
     font-size: var(--font-size-28);
     line-height: 1.5em;
-    margin-block-end: var(--space-2);
     font-weight: 600;
   }
 
   .projects .project-card-subtitle {
     font-size: var(--font-size-20);
     font-weight: 600;
-    margin-block-end: var(--space-4);
   }
 
   .projects .project-card-blurb {
-    margin-block-end: var(--space-3);
     font-size: var(--font-size-20);
   }
 
-  .projects .project-card-blurb p {
-    margin-block-end: var(--space-4);
+  .projects .project-card-blurb > p + p {
+    margin-block-start: var(--space-4);
   }
 
   .projects .keep-reading {
     font-size: var(--font-size-14);
     display: inline-block;
-    margin-block-end: var(--space-8);
-    margin-block-start: var(--space-2);
-
   }
 
   /**** Home: gallery ****/
@@ -844,7 +862,6 @@
     line-height: 1.8;
   }
 
-  .project-card-content > .project-tags,
   .content-layout > .project-tags {
     margin-block-start: var(--space-8);
   }
@@ -1014,20 +1031,20 @@
       padding-block-start: var(--space-10);
     }
 
-    .projects .project-card-blurb {
-      margin-block-end: var(--space-4);
+    .project-card-content > .project-card-subtitle + .project-card-blurb {
+      margin-block-start: var(--space-2);
+    }
+
+    .project-card-content > .project-card-gallery + .project-tags {
+      margin-block-start: var(--space-4);
+    }
+
+    .projects .project-card-blurb > p + p {
+      margin-block-start: var(--space-2);
     }
 
     .projects .project-card-title {
       font-size: var(--font-size-24);
-    }
-
-    .projects .project-card-subtitle {
-      margin-block-end: var(--space-2);
-    }
-
-    .projects .project-card-blurb p:first-of-type {
-      margin-block-end: var(--space-2);
     }
 
 
