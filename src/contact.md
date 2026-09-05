@@ -5,16 +5,13 @@ title: Contact
 
 # Contact
 
-## Final test headings
+Reach out at [valentina.montagna.design@gmail.com](mailto:valentina.montagna.design@gmail.com)
 
-Fusce tincidunt interdum massa lobortis molestie. Nunc sed tellus ultrices, tristique lectus vitae, dignissim tortor. Curabitur feugiat mi sit amet lectus suscipit, in varius ante accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam euismod mi augue, et porta orci aliquam placerat. Nam eleifend varius dolor, id consequat magna pellentesque ut. Quisque justo odio, convallis nec tortor non, viverra gravida arcu.
+I am happy to receive cold emails and love to network! Feel free to just drop me a line to say hi, or to chat about design. If it’s professionally related, I will respond within 24 hours; otherwise, it might be a few days.
 
-Fusce tincidunt interdum massa lobortis molestie. Nunc sed tellus ultrices, tristique lectus vitae, dignissim tortor. Curabitur feugiat mi sit amet lectus suscipit, in varius ante accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam euismod mi augue, et porta orci aliquam placerat. Nam eleifend varius dolor, id consequat magna pellentesque ut. Quisque justo odio, convallis nec tortor non, viverra gravida arcu.
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/scintillaluz).
 
-## Final test headings
+## Location and time zones
 
-Fusce tincidunt interdum massa lobortis molestie. Nunc sed tellus ultrices, tristique lectus vitae, dignissim tortor. Curabitur feugiat mi sit amet lectus suscipit, in varius ante accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam euismod mi augue, et porta orci aliquam placerat. Nam eleifend varius dolor, id consequat magna pellentesque ut. Quisque justo odio, convallis nec tortor non, viverra gravida arcu.
+I am currently located in Berkeley, California (USA), working in the PST time zone. I have friends and connections in Europe and have worked remotely with distributed teams since 2015. Because of that, I am very used to accommodating time zones in other parts of the world; if you want to work with me or chat about a project, we’ll find a way.
 
-## Final test headings
-
-Fusce tincidunt interdum massa lobortis molestie. Nunc sed tellus ultrices, tristique lectus vitae, dignissim tortor. Curabitur feugiat mi sit amet lectus suscipit, in varius ante accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam euismod mi augue, et porta orci aliquam placerat. Nam eleifend varius dolor, id consequat magna pellentesque ut. Quisque justo odio, convallis nec tortor non, viverra gravida arcu.
