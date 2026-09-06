@@ -382,7 +382,8 @@
 
   main .projects .section-title,
   .tag-page h1,
-  .design-notes h1 {
+  .design-notes h1,
+  .page-content h1 {
     font-size: var(--font-size-50);
     line-height: var(--leading-tight);
     font-weight: var(--weight-black);
@@ -394,8 +395,7 @@
     font-weight: var(--weight-bold);
   }
 
-  .content-layout h2,
-  .page-content h2 {
+  .content-layout h2 {
     font-size: var(--font-size-32);
     line-height: var(--leading-snug);
     font-weight: var(--weight-medium);
@@ -418,7 +418,9 @@
   .content-layout p,
   .content-layout > ol,
   .content-layout > ul,
-  .hero .intro-text {
+  .hero .intro-text,
+  .projects .project-card-blurb,
+  .design-notes .note-card p {
     font-size: var(--font-size-20);
     line-height: var(--leading-relaxed);
     font-weight: var(--weight-regular);
@@ -454,20 +456,6 @@
     font-size: var(--font-size-base);
     line-height: var(--leading-normal);
     font-weight: var(--weight-medium);
-  }
-
-  .page-content h1 {
-    font-size: var(--font-size-50);
-    line-height: var(--leading-tight);
-    font-weight: var(--weight-black);
-  }
-
-  .projects .project-card-blurb,
-  .page-content p,
-  .design-notes .note-card p {
-    font-size: var(--font-size-20);
-    line-height: var(--leading-relaxed);
-    font-weight: var(--weight-regular);
   }
 
   .note-detail-meta .note-detail-description {
@@ -908,14 +896,10 @@
     margin-block-end: var(--space-2)
   }
 
-  /**** Static pages: About, Contact, Other Projects ****/
-
-  .page-content h1,
   .design-notes h1 {
     margin-block-end: var(--space-6);
   }
 
-  .page-content p,
   .design-notes .note-card p {
     margin-block-end: var(--space-4);
   }
@@ -1046,8 +1030,7 @@
       line-height: var(--leading-normal);
     }
 
-    .content-layout h2,
-    .page-content h2 {
+    .content-layout h2 {
       font-size: var(--font-size-24);
     }
 
@@ -1072,7 +1055,6 @@
     .content-layout > ul,
     .hero .intro-text,
     .projects .project-card-blurb,
-    .page-content p,
     .design-notes .note-card p {
       font-size: var(--font-size-base);
     }
