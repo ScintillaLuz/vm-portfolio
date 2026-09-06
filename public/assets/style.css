@@ -1149,6 +1149,10 @@
       padding-block-start: var(--space-10);
     }
 
+    .project-card {
+      margin-block-end: var(--space-16);
+    }
+
     .project-card-content > .project-card-subtitle + .project-card-blurb {
       margin-block-start: var(--space-2);
     }
@@ -1159,6 +1163,11 @@
 
     .projects .project-card-blurb > p + p {
       margin-block-start: var(--space-2);
+    }
+
+    .project-tags ul {
+      display: block;
+      padding-inline-start: 0;
     }
 
     /*** Project detail and note detail spacing adjustments ***/
