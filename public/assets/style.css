@@ -970,7 +970,8 @@
       grid-template-columns: 1fr;
     }
 
-    .main-content {
+    .main-content,
+    .content-layout > * {
       grid-column: 1 / -1;
     }
 
