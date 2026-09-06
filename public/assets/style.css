@@ -169,6 +169,20 @@
     --font-size-50: 3.125rem; /* 50px */
     --font-size-64: 4rem;     /* 64px */
     --font-size-72: 4.5rem;   /* 72px */
+
+    /* Line height — always unitless so the ratio inherits, not a computed px value */
+    --leading-none: 1;
+    --leading-tight: 1.1;
+    --leading-snug: 1.3;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.6;
+
+    /* Weight */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 600;
+    --weight-bold: 700;
+    --weight-black: 900;
   }
 
   /* Dark theme variables */
@@ -280,8 +294,6 @@
   }
 
   h1 {
-    font-size: var(--font-size-72);
-    line-height: 1.25em;
     font-weight: 900;
   }
 
@@ -350,6 +362,139 @@
     margin-inline: auto;
     margin-block-start: var(--space-16);
     padding-inline: var(--space-10);
+  }
+
+  /**** Typography scale (desktop) ****/
+
+  .hero h1 {
+    font-size: var(--font-size-72);
+    line-height: var(--leading-none);
+    font-weight: var(--weight-black);
+  }
+
+  .project-detail-title,
+  .note-detail-title {
+    font-size: var(--font-size-64);
+    line-height: var(--leading-tight);
+    font-weight: var(--weight-black);
+  }
+
+  main .projects .section-title,
+  .tag-page h1,
+  .design-notes h1 {
+    font-size: var(--font-size-50);
+    line-height: var(--leading-tight);
+    font-weight: var(--weight-black);
+  }
+
+  .hero .lede {
+    font-size: var(--font-size-32);
+    line-height: var(--leading-snug);
+    font-weight: var(--weight-bold);
+  }
+
+  .content-layout h2 {
+    font-size: var(--font-size-32);
+    line-height: var(--leading-snug);
+    font-weight: var(--weight-medium);
+  }
+
+  .projects .project-card-title,
+  .page-content h2 {
+    font-size: var(--font-size-28);
+    line-height: var(--leading-snug);
+    font-weight: var(--weight-medium);
+  }
+
+  .content-layout h3,
+  .projects .project-card-subtitle,
+  .at-a-glance #glance-heading {
+    font-size: var(--font-size-20);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-medium);
+  }
+
+  .content-layout p,
+  .content-layout > ol,
+  .content-layout > ul,
+  .hero .intro-text {
+    font-size: var(--font-size-20);
+    line-height: var(--leading-relaxed);
+    font-weight: var(--weight-regular);
+  }
+
+  .projects .project-card-meta,
+  .project-detail-meta,
+  .project-tags {
+    font-size: var(--font-size-base);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-regular);
+  }
+
+  .at-a-glance__row dt {
+    font-size: var(--font-size-base);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-medium);
+  }
+
+  .at-a-glance__row dd {
+    font-size: var(--font-size-base);
+    line-height: var(--leading-relaxed);
+    font-weight: var(--weight-regular);
+  }
+
+  .content-figure figcaption {
+    font-size: var(--font-size-14);
+    line-height: var(--leading-relaxed);
+    font-weight: var(--weight-regular);
+  }
+
+  .content-layout .section-eyebrow {
+    font-size: var(--font-size-base);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-medium);
+  }
+
+  .page-content h1 {
+    font-size: var(--font-size-50);
+    line-height: var(--leading-tight);
+    font-weight: var(--weight-black);
+  }
+
+  .projects .project-card-blurb,
+  .page-content p,
+  .design-notes .note-card p {
+    font-size: var(--font-size-20);
+    line-height: var(--leading-relaxed);
+    font-weight: var(--weight-regular);
+  }
+
+  .note-detail-meta .note-detail-description {
+    font-size: var(--font-size-24);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-regular);
+  }
+
+  .note-card-meta {
+    font-size: var(--font-size-base);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-medium);
+  }
+
+  .projects .keep-reading,
+  .back-link,
+  .project-index .back-to-top,
+  .project-index h3,
+  .project-index ul {
+    font-size: var(--font-size-14);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-medium);
+  }
+
+  .content-layout blockquote {
+    font-size: var(--font-size-32);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-light);
   }
 
   /**** Header and navigation ****/
@@ -461,18 +606,14 @@
 
   .hero h1 {
     margin-block-end: var(--space-4);
-    line-height: 1em;
   }
 
   .hero .lede {
     margin-block-end: var(--space-10);
-    font-size: var(--font-size-32);
-    font-weight: 700;
   }
 
   .hero .intro-text {
     margin-block-end: var(--space-4);
-    font-size: var(--font-size-20);
   }
 
   /**** Home: sidebar icons ****/
@@ -487,16 +628,9 @@
   /**** Home: project cards ****/
 
   main .projects .section-title {
-    font-size: var(--font-size-50);
-    line-height: 1em;
     margin-block-end: var(--space-18);
     border-block-start: 1px solid var(--color-border);
     padding-block-start: var(--space-16);
-  }
-
-  .projects h2 {
-    font-weight: 900;
-    line-height: 1.2em;
   }
 
   .project-card {
@@ -535,27 +669,11 @@
     content: " • ";
   }
 
-  .projects .project-card-title {
-    font-size: var(--font-size-28);
-    line-height: 1.5em;
-    font-weight: 600;
-  }
-
-  .projects .project-card-subtitle {
-    font-size: var(--font-size-20);
-    font-weight: 600;
-  }
-
-  .projects .project-card-blurb {
-    font-size: var(--font-size-20);
-  }
-
   .projects .project-card-blurb > p + p {
     margin-block-start: var(--space-4);
   }
 
   .projects .keep-reading {
-    font-size: var(--font-size-14);
     display: inline-block;
   }
 
@@ -600,14 +718,8 @@
     margin-block-end: var(--space-2);
   }
 
-  .project-index h3,
-  .project-index ul {
-    font-size: initial;
-  }
-
   .project-index ul {
     list-style: none;
-    font-size: var(--font-size-14);
   }
 
   .project-index ul li:not(:last-child) {
@@ -616,7 +728,6 @@
 
   /* Styling the back-to-top button */
   .project-index .back-to-top {
-    font-size: var(--font-size-14);
     display: inline-block;
     margin-block-start: var(--space-6);
   }
@@ -624,26 +735,12 @@
   /**** Shared: content layout (project detail, note detail, static pages) ****/
 
   .content-layout .section-eyebrow {
-    font-size: initial;
-    font-weight: 600;
     color: var(--color-text-muted);
-  }
-
-  .content-layout h2 {
-    font-size: var(--font-size-32);
-    font-weight: 600;
-  }
-
-  .content-layout h3 {
-    font-size: var(--font-size-20);
-    font-weight: 600;
   }
 
   .content-layout blockquote {
     padding-inline-start: var(--space-6);
     border-inline-start: 3px solid var(--color-border);
-    font-weight: 300;
-    font-size: var(--font-size-32);
   }
 
   /* Detail pages and static pages (About, Contact, Other Projects) are
@@ -692,14 +789,9 @@
     grid-column: 1 / -1;
   }
 
-  .content-layout p {
-    font-size: var(--font-size-20);
-  }
-
   .content-layout > ol,
   .content-layout > ul {
     padding-inline-start: var(--space-10);
-    font-size: var(--font-size-20);
   }
 
   .content-layout ol li:not(:last-child),
@@ -715,8 +807,6 @@
 
   .content-figure figcaption {
     margin-block-start: var(--space-4);
-    font-size: var(--font-size-14);
-    line-height: 1.8;
     color: var(--color-text-muted);
     text-align: center;
     text-wrap: balance;
@@ -727,7 +817,6 @@
   /* Back to all projects link at the top of the project detail page */
   .back-link {
     display: inline-block;
-    font-size: var(--font-size-14);
     margin-block-end: var(--space-4);
   }
 
@@ -755,7 +844,6 @@
 
   .project-detail-title,
   .note-detail-title {
-    font-size: var(--font-size-64);
     margin-block-end: var(--space-6);
   }
 
@@ -770,10 +858,6 @@
     padding-inline-start: var(--space-6);
   }
 
-  .at-a-glance #glance-heading {
-    font-size: var(--font-size-20);
-  }
-  
   /* Creating space between the heading and the list of details. */
   .at-a-glance dl {
     margin-block-start: var(--space-4);
@@ -790,11 +874,6 @@
     margin: 0;
   }
 
-  .at-a-glance__row dt {
-    font-size: var(--font-size-14);
-    font-weight: 600;
-  }
-
   .at-a-glance__row dt::after {
     content: " ";
   }
@@ -807,7 +886,6 @@
   }
 
   .note-detail-meta .note-detail-description {
-    font-size: var(--font-size-24);
     margin-block-end: var(--space-12);
   }
 
@@ -826,7 +904,6 @@
   }
 
   .note-card-meta {
-    font-weight: 600;
     margin-block-end: var(--space-2)
   }
 
@@ -837,29 +914,15 @@
     margin-block-end: var(--space-6);
   }
 
-  .page-content h2 {
-    font-size: var(--font-size-28);
-  }
-
   .page-content p,
   .design-notes .note-card p {
-    font-size: var(--font-size-20);
     margin-block-end: var(--space-4);
-  }
-
-  /**** Tag page ****/
-
-  .tag-page h1 {
-    font-size: var(--font-size-50);
   }
 
   /**** Project tags (shared: home cards and detail pages) ****/
 
   .project-tags {
-    font-size: var(--font-size-base);
     list-style: none;
-    font-weight: 600;
-    line-height: 1.8;
   }
 
   .content-layout > .project-tags {
@@ -876,7 +939,6 @@
   }
 
   .project-tags li {
-    font-size: var(--font-size-base);
     display: inline-block;
   }
 
