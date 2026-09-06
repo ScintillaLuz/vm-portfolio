@@ -840,7 +840,7 @@
     background: var(--color-background);
     margin-block-start: calc(var(--space-16) * -1 - 100px);
     outline: var(--space-10) solid var(--color-background);
-    grid-column: 2 / 12;
+    grid-column: 3 / 11;
   }
 
   .project-detail-title,
