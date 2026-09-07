@@ -8,7 +8,8 @@ blurb: |
   When I was the lead designer of their SEO team, Scribd was still something like a hydra with two heads. Born as a place for uploading and sharing PDFs, it expanded into a book and audiobook subscription service, adding a Premium catalog of titles that became the core of the business model. But the overflowing volume of user-generated documents that made their SEO strategy so effective also meant Google didn’t recognize Scribd as a place for book readers.
   
   The SEO Product Manager set things in motion by redesigning key landing pages of the Premium book catalog. My first task was to redesign the Category Pages to capture readers’ attention and drive them to the Title Page, the highest-converting surface we had. It was a long and articulated project, and I laid out some ambitious goals: designing a modular layout structure that would allow for future experimentation; creating a content flow that would keep visitors engaged with the page as long as possible; and expanding our newly born design system with components that could benefit the site at large.
-case_study: true
+permalink: false
+case_study: false
 tags:
   - Web
   - SEO

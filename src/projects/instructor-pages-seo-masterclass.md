@@ -8,7 +8,8 @@ blurb: |
   At the time I joined the team, a new Product Manager was taking the lead on rebuilding MasterClass’ SEO strategy, moving away from the simplistic approach of publishing as many Articles as possible. Loosely connected to the platform’s offering, all Articles shared one template with a brief text randomly interrupted by promos and CTAs trying to divert readers’ attention toward the subscription.
   
   The Product Manager wanted stronger alignment with both the brand and the audience. He kicked things off with Instructor Pages, a new format of SEO articles telling the compelling stories of MasterClass’ popular instructors, with the goal of ranking high on SERPs and drawing higher-intent traffic. My task was to design a new template where immersive reading would organically lead into conversion, with the possibility of reusing and adapting the new layout and components to retrofit the older Articles.
-case_study: true
+permalink: false
+case_study: false
 tags:
   - Web
   - SEO

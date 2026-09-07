@@ -8,6 +8,7 @@ blurb: |
   If I had to pick one reason I chose to be a designer, I’d say it’s to never be bored, and designing for an environment I haven’t yet designed for is the perfect antidote to boredom. At Tubi I had the chance to pick up new skills, experiencing both curiosity and frustration working on OTT. 
   
   Human/device interactions on TVs are somehow the polar opposite of mobile: where touch interfaces make our actions quick and less conscious, using a remote intrinsically carries a level of clunkiness that sits right between the user and what they want to achieve. When it comes to speccing, TV has its own set of complications, from the big divide between Roku and the rest of the HTML5-based platforms, to the fact that remotes come in different forms with different buttons. <strong> Here are a few mocks from my OTT designs. </strong>
+permalink: false
 case_study: false
 tags:
   - TV

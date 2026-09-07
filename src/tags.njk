@@ -9,6 +9,8 @@ pagination:
     - projects
     - designNotes
 permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: 'Projects tagged "{{ tag }}"'
 ---
 
 <section class="tag-page">

@@ -10,7 +10,8 @@ blurb: |
   The stakes on mobile were higher. It drove the majority of acquisition traffic but offered less real estate, the feature set was different, and app users’ attention is shorter, giving us just a handful of seconds to make a lasting impression. 
   
   I deliberately softened the first part of the onboarding to guide users to create their first note without pressure. The experience is brief and drops users in front of features relevant to the use case they chose, rather than asking them to explore every knob of Evernote’s editor to figure out what it could do for them, as the old flow did.
-case_study: true
+permalink: false
+case_study: false
 tags:
   - Mobile
   - Web

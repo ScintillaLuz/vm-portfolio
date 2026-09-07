@@ -8,7 +8,8 @@ blurb: |
   “Design is a blocker.” That’s what the Lead Mobile Engineer told me right after I joined MasterClass. My Design Manager explained that the Growth team was at capacity and we needed a solid vision for the apps’ onboarding, one that could unfold into a progression of experiments. Oh! They wanted that vision ready in two weeks. Thankfully I had solid growth and onboarding experience to draw from.
   
   My final concept brought together three elements: a compelling story to present what members got access to and convince users to subscribe; short videos to drop prospective members immediately into learning mode; and a modular approach to the narrative units composing the onboarding itself, allowing us to quickly test and measure conversion, keep the onboarding story cohesive, and have a chain of alternatives lined up for experimentation.
-case_study: true
+permalink: false
+case_study: false
 tags:
   - Mobile
   - Onboarding

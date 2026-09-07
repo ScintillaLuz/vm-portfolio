@@ -8,6 +8,7 @@ blurb: |
   Design-for-good initiatives don’t always get the resources that commercial ideas do, but the impact they have on individuals and communities is real, and the passion that drives non-profits is exceptional. Founded by Hera Hussain, Chayn is one of these organizations, developing digital experiences for victims of domestic and gender-based violence. During the pandemic I signed up as a volunteer at Chayn and quickly got moved to design, as I was the only one with those skills.
   
   Over the course of a couple of years I learned a lot and passed on as much Figma knowledge as I could, to empower the team to design on their own. Now offline, Your Story Matters was one of the projects I contributed to, working on everything from information architecture to design system components. Because it doesn’t exist anymore, I took some time to clean up and rework my designs, to show you how I work independently outside a commercial setting.
+permalink: false
 case_study: false
 tags:
   - Web
