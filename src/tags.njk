@@ -10,7 +10,7 @@ pagination:
     - designNotes
 permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
-  title: 'Projects tagged "{{ tag }}"'
+  title: 'Projects tagged “{{ tag }}”'
 ---
 
 <section class="tag-page">
@@ -18,9 +18,13 @@ eleventyComputed:
   <ul>
     {% set taggedProjects = collections[tag] %}
     {% for project in taggedProjects %}
-    <li>
-      <a href="{{ project.url }}">{{ project.data.title }}</a>
-    </li>
+      <li>
+        {% if project.data.case_study %}
+          <a href="{{ project.url }}">{{ project.data.title }}</a>
+        {% else %}
+          {{ project.data.title }}
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 </section>

@@ -788,6 +788,10 @@
     margin-block-end: var(--space-2);
   }
 
+  .tag-page > ul {
+    margin-block-start: var(--space-6);
+  }
+
   .content-figure img {
     width: 100%;
     height: auto;
@@ -1182,6 +1186,10 @@
     .project-detail-header {
       margin-block-start: 0;
       padding-inline: 0;
+    }
+
+    .tag-page > ul {
+      margin-block-start: var(--space-4);
     }
     
     /*** Footer adjustments ***/
