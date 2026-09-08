@@ -13,18 +13,33 @@ eleventyComputed:
   title: 'Projects tagged “{{ tag }}”'
 ---
 
-<section class="tag-page">
-  <h1>Projects tagged "{{ tag }}"</h1>
-  <ul>
-    {% set taggedProjects = collections[tag] %}
-    {% for project in taggedProjects %}
-      <li>
-        {% if project.data.case_study %}
-          <a href="{{ project.url }}">{{ project.data.title }}</a>
-        {% else %}
-          {{ project.data.title }}
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+<section class="projects tag-page">
+  <h1>Projects tagged &ldquo;{{ tag }}&rdquo;</h1>
+  {% for project in collections[tag] %}
+  <article class="tag-card">
+    {% if project.data.images %}
+    <div class="tag-card-media">
+      <img src="{{ project.data.images[0].src }}" alt="{{ project.data.images[0].alt }}" loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="tag-card-content">
+      <div class="project-card-meta">
+        <time datetime="{{ project.data.date }}">{{ project.data.date | monthYear }}</time>
+        <span class="company">{{ project.data.company }}</span>
+      </div>
+
+      <h2 class="tag-card-title">
+        <a href="{% if project.data.case_study %}{{ project.url }}{% else %}/#{{ project.data.title | slugify }}{% endif %}">{{ project.data.title }}</a>
+      </h2>
+
+      {% if project.data.subtitle %}
+      <p class="tag-card-subtitle">{{ project.data.subtitle }}</p>
+      {% endif %}
+
+      <p class="tag-card-blurb">{{ project.data.blurb }}</p>
+    </div>
+  </article>
+  {% endfor %}
+  <a href="/#projects" class="primary-button"><span aria-hidden="true">←</span> All projects</a>
 </section>

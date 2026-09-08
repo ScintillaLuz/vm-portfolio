@@ -401,7 +401,8 @@
     font-weight: var(--weight-medium);
   }
 
-  .projects .project-card-title {
+  .projects .project-card-title,
+  .projects .tag-card-title {
     font-size: var(--font-size-28);
     line-height: var(--leading-snug);
     font-weight: var(--weight-medium);
@@ -409,6 +410,7 @@
 
   .content-layout h3,
   .projects .project-card-subtitle,
+  .projects .tag-card-subtitle,
   .at-a-glance #glance-heading {
     font-size: var(--font-size-20);
     line-height: var(--leading-normal);
@@ -778,6 +780,10 @@
     grid-column: 1 / -1;
   }
 
+  .content-layout > .tag-page {
+    grid-column: 1 / -1;
+  }
+
   .content-layout > ol,
   .content-layout > ul {
     padding-inline-start: var(--space-10);
@@ -786,10 +792,6 @@
   .content-layout ol li:not(:last-child),
   .content-layout ul li:not(:last-child) {
     margin-block-end: var(--space-2);
-  }
-
-  .tag-page > ul {
-    margin-block-start: var(--space-6);
   }
 
   .content-figure img {
@@ -943,6 +945,77 @@
     content: "#";
   }
 
+  /*** Tag page ***/
+
+  .tag-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+  
+  .tag-page > h1 + .tag-card {
+    margin-block-start: var(--space-12);
+  }
+
+  .tag-card-content {
+    padding-inline-start: var(--space-6);
+    padding-inline-end: var(--space-6);
+  }
+  
+  .tag-card-content > * + * {
+    margin-block-start: var(--space-2);
+  }
+  
+  .tag-card + .tag-card {
+    margin-block-start: var(--space-12);
+  }
+
+  .content-layout > .tag-card-title {
+    font-size: var(--font-size-28);
+    line-height: var(--leading-snug);
+    font-weight: var(--weight-medium);
+  }
+
+  .tag-card-subtitle {
+    font-size: var(--font-size-20);
+    line-height: var(--leading-normal);
+    font-weight: var(--weight-medium);
+  }
+
+  .tag-card-media img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--space-2);
+    border: 2px solid transparent;
+    transition: border-color 0.08s ease-out;
+  }
+
+  .tag-card:hover .tag-card-media img {
+    border-color: var(--color-link);
+  }
+
+  /* One link, whole card clickable */
+  .tag-card-title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .tag-card-blurb {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .tag-page > .primary-button {
+    display: inline-block;
+    margin-block-start: var(--space-12);
+  }
+
   /**** Media queries ****/
 
   /**** Tablet and phones adjustments ****/
@@ -1006,6 +1079,16 @@
 
     /* Reducing the spacing above the eyebrow on project detail and note detail pages */
     .content-layout > .section-eyebrow { margin-block-start: var(--space-10);
+    }
+
+    /* Tag page adjustments: the tag cards are stacked vertically, and the spacing between them is reduced. */
+    .tag-card {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+
+    .tag-card-content {
+      padding-inline: 0;
     }
   }
 
@@ -1186,10 +1269,6 @@
     .project-detail-header {
       margin-block-start: 0;
       padding-inline: 0;
-    }
-
-    .tag-page > ul {
-      margin-block-start: var(--space-4);
     }
     
     /*** Footer adjustments ***/
