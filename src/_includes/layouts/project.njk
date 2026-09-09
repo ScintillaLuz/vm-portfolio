@@ -5,7 +5,7 @@ has_sidebar: true
 
 <article class="project-detail content-layout">
   <header class="project-detail-header">
-    <a href="/#projects" class="back-link">← All projects</a>
+    <a href="/#projects" class="back-link">{% include "icon-arrow-left.njk" %} All projects</a>
     <h1 class="project-detail-title">{{ title }}</h1>
     <div class="project-detail-meta">
       <time datetime="{{ date }}">{{ date | monthYear }}</time>
@@ -43,7 +43,7 @@ has_sidebar: true
     </div>
     {% endif %}
 
-  <a href="/#projects" class="primary-button back-link"><span aria-hidden="true">←</span> Back to all projects</a>
+  <a href="/#projects" class="primary-button back-link">{% include "icon-arrow-left.njk" %} Back to all projects</a>
     
 
 </article>

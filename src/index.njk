@@ -73,7 +73,7 @@ has_sidebar: true
           <div class="project-card-blurb">{{ project.data.blurb | paragraphs | safe }}</div>
             {% if project.data.case_study %}
               <a class="keep-reading primary-button" href="{{ project.url }}">
-                Keep reading<span class="visually-hidden">: {{ project.data.title }}</span><span aria-hidden="true"> →</span>
+                Keep reading<span class="visually-hidden">: {{ project.data.title }}</span> {% include "icon-arrow-right.njk" %}
               </a>
             {% endif %}
           <div class="project-card-gallery">
@@ -116,7 +116,7 @@ has_sidebar: true
         </li>
         {% endfor %}
       </ul>
-      <a href="#top" class="primary-button back-to-top">Back to top <span aria-hidden="true">↑</span></a>
+      <a href="#top" class="primary-button back-to-top">Back to top {% include "icon-arrow-up.njk" %}</a>
     </nav>
   </div>
 
