@@ -34,7 +34,7 @@ has_sidebar: true
 
   {% if tags %}
     <div class="project-tags">
-      <span class="tags-label">Categories</span>
+      <span class="tags-label visually-hidden">Categories</span>
       <ul role="list">
         {% for tag in tags %}
         <li><a class="tag" href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
@@ -42,6 +42,8 @@ has_sidebar: true
       </ul>
     </div>
     {% endif %}
+
+  <a href="/#projects" class="primary-button back-link"><span aria-hidden="true">←</span> Back to all projects</a>
     
 
 </article>

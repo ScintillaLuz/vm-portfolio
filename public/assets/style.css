@@ -917,18 +917,10 @@
   }
 
   .content-layout > .project-tags {
-    margin-block-start: var(--space-8);
+    margin-block-start: var(--space-12);
   }
 
-  .project-tags .tags-label::after {
-    content: ":";
-  }
-
-  .project-tags ul {
-    display: inline-block;
-    padding-inline-start: var(--space-1);
-  }
-
+  .project-tags ul,
   .project-tags li {
     display: inline-block;
   }
@@ -938,7 +930,7 @@
   }
 
   .project-tags li:not(:last-child){
-    margin-inline-end: var(--space-2);
+    margin-inline-end: var(--space-3);
   }
 
   .project-tags li a::before {
@@ -1011,9 +1003,14 @@
     overflow: hidden;
   }
 
-  .tag-page > .primary-button {
+  .tag-page > .back-link {
     display: inline-block;
     margin-block-start: var(--space-12);
+  }
+
+  /* On content-layout pages the button is a grid element, so we need to override the default justify-self: center to align it to the left */
+  .content-layout > .back-link {
+    justify-self: start;
   }
 
   /**** Media queries ****/
@@ -1090,14 +1087,18 @@
     .tag-card-content {
       padding-inline: 0;
     }
-  }
+
+    .tag-page .back-link {
+      display: block;
+      text-align: center;
+    }
 
   @media (max-width: 840px) {
 
     /**** Typography scale (mobile) ****/
 
     .hero h1 {
-      font-size: var(--font-size-50);
+      font-size: var(--font-size-64);
     }
 
     .project-detail-title,
@@ -1109,24 +1110,34 @@
     .page-content h1,
     .tag-page h1,
     .design-notes h1 {
-      font-size: var(--font-size-32);
+      font-size: var(--font-size-40);
     }
 
     .hero .lede {
       font-size: var(--font-size-20);
+      line-height: var(--leading-relaxed);
+    }
+
+    .projects .keep-reading,
+    .back-link {
+      font-size: var(--font-size-base);
       line-height: var(--leading-normal);
+      font-weight: var(--weight-medium);
     }
 
     .content-layout h2 {
-      font-size: var(--font-size-24);
-    }
-
-    .projects .project-card-title {
-      font-size: var(--font-size-24);
+      font-size: var(--font-size-28);
+      line-height: var(--leading-snug);
+      font-weight: var(--weight-medium);
     }
 
     .content-figure figcaption {
       text-align: left;
+      text-wrap: auto;
+    }
+
+    .content-figure figcaption {
+      font-size: var(--font-size-base);
     }
 
     .content-layout blockquote {
@@ -1135,15 +1146,6 @@
 
     .note-detail-meta .note-detail-description {
       font-size: var(--font-size-20);
-    }
-
-    .content-layout p,
-    .content-layout > ol,
-    .content-layout > ul,
-    .hero .intro-text,
-    .projects .project-card-blurb,
-    .design-notes .note-card p {
-      font-size: var(--font-size-base);
     }
 
     .main-navigation {
@@ -1222,21 +1224,13 @@
       margin-block-end: var(--space-16);
     }
 
-    .project-card-content > .project-card-subtitle + .project-card-blurb {
-      margin-block-start: var(--space-2);
-    }
-
-    .project-card-content > .project-card-gallery + .project-tags {
+    .project-card-content > .project-card-subtitle + .project-card-blurb,
+    .project-card-content > .project-card-gallery + .project-tags{
       margin-block-start: var(--space-4);
     }
 
     .projects .project-card-blurb > p + p {
       margin-block-start: var(--space-2);
-    }
-
-    .project-tags ul {
-      display: block;
-      padding-inline-start: 0;
     }
 
     /*** Project detail and note detail spacing adjustments ***/
